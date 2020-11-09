@@ -14,12 +14,12 @@ public class Profesional extends Persona implements Serializable {
     private Pais paisObtuvoTitulo;
     private Pais[] listaEnumPais = inicializoListaEnumPaises();
     private ArrayList<Mensaje> casillaDeEntrada;
-
+    private String contraseña;
     //Constructor
 
     public Profesional() {
         super("no ingreso nombre", "no ingreso apellido", "no ingreso usuario",
-              "no ingreso fecha nacimiento", null);
+              "no ingreso fecha nacimiento", null,"no ingreso contrasñea");
         this.setFotoPerfil(new javax.swing
                            .ImageIcon(getClass()
                            .getResource

@@ -12,15 +12,17 @@ public abstract class Persona implements Serializable {
     private String nombreUsuario;
     private String fechaNacimiento;
     private ImageIcon fotoPerfil;
+    private String contraseña;
 
     //Cosntructor
     public Persona(String nombre, String apellidos, String nombreUsuario,
-                   String fechaNacimiento, ImageIcon fotoPerfil) {
+                   String fechaNacimiento, ImageIcon fotoPerfil, String unaContraseña) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.nombreUsuario = nombreUsuario;
         this.fechaNacimiento = fechaNacimiento;
         this.fotoPerfil = fotoPerfil;
+        this.contraseña = unaContraseña;
     }
 
     //Metodos de la clase persona
@@ -63,7 +65,16 @@ public abstract class Persona implements Serializable {
     public void setFotoPerfil(ImageIcon fotoPerfil) {
         this.fotoPerfil = fotoPerfil;
     }
+    
+    public String getContraseña() {
+        return contraseña;
+    }
 
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
+    
+    
     //Redefino el equals
     @Override
     public boolean equals(Object obj) {

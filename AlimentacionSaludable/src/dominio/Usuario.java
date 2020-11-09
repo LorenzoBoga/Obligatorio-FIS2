@@ -3,7 +3,6 @@ package dominio;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import java.io.Serializable;
-import java.util.Objects;
 import java.util.Optional;
 
 public class Usuario extends Persona implements Serializable {
@@ -25,14 +24,15 @@ public class Usuario extends Persona implements Serializable {
     private ComidaPorDia historialDelDia;
     private ArrayList<Mensaje> casillaDeEntrada;
     private String fechaUltimaAdicion;
+    private String contraseña;
 
     //Costructor
     public Usuario(Nacionalidades nacionalidad, double pesoKg, double alturaCm,
             Preferencias preferenciasAlimentarias, Restricciones restricciones,
             PlanDeAlimentacion plan, String sexo, String nombre,
             String apellidos, String nombreUsuario, String fechaNacimiento,
-            ImageIcon fotoPerfil) {
-        super(nombre, apellidos, nombreUsuario, fechaNacimiento, fotoPerfil);
+            ImageIcon fotoPerfil, String unaContraseña) {
+        super(nombre, apellidos, nombreUsuario, fechaNacimiento, fotoPerfil,unaContraseña);
         this.nacionalidad = nacionalidad;
         this.pesoKg = pesoKg;
         this.alturaCm = alturaCm;
@@ -48,11 +48,12 @@ public class Usuario extends Persona implements Serializable {
         this.listaEnumNac = inicializoListaEnum();
         this.casillaDeEntrada = new ArrayList<Mensaje>();
         this.fechaUltimaAdicion = "no se ingreso";
+        this.contraseña = unaContraseña;
     }
 
     public Usuario() {
         super("no ingreso nombre", "no ingreso apellido", "no ingreso usuario",
-              "no ingreso fecha nacimiento", null);
+              "no ingreso fecha nacimiento", null, "no ingreso contraseña");
         this.setFotoPerfil(new javax
                            .swing.ImageIcon(getClass()
                            .getResource
@@ -209,6 +210,14 @@ public class Usuario extends Persona implements Serializable {
         this.historialComidas = historialComidas;
     }
 
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
+    
     public enum Nacionalidades {
         Alemana, Argentina, Australiana, Austriaca, Brasileña, Canadiense,
         Chilena, China, Colombiana, Cubana, Ecuatoriana, Egipcia,

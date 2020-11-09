@@ -1,6 +1,5 @@
 package dominio;
 
-import com.toedter.calendar.JDateChooser;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
@@ -9,11 +8,9 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Optional;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 
 public class Sistema implements Serializable {
 
