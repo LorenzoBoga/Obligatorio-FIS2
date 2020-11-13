@@ -510,6 +510,7 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
             usuario.setFotoPerfil((ImageIcon) fotoPerfil.getIcon());
             etiquetaMensajeAlAceptar.setText("Usuario editado correctamente");
             usuario.setContraseña(cajaContraseña.getText().trim());
+            interfaz.actualizarFotoYNombre();
         } else {
             etiquetaMensajeAlAceptar.setText("Error al editar el usuario");
             if (nombreValido == false) {

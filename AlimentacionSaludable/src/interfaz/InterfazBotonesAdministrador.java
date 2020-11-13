@@ -35,6 +35,7 @@ public class InterfazBotonesAdministrador extends javax.swing.JPanel {
     private void initComponents() {
 
         panelBotonesAdministrador = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         btnRegistrarUsuario = new javax.swing.JButton();
         btnRegistrarProfesional = new javax.swing.JButton();
         btnRegistrarAlimento = new javax.swing.JButton();
@@ -48,6 +49,12 @@ public class InterfazBotonesAdministrador extends javax.swing.JPanel {
         panelBotonesAdministrador.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         panelBotonesAdministrador.setPreferredSize(new java.awt.Dimension(246, 784));
         panelBotonesAdministrador.setLayout(null);
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Administrador");
+        jLabel1.setOpaque(true);
+        panelBotonesAdministrador.add(jLabel1);
+        jLabel1.setBounds(0, 620, 250, 60);
 
         btnRegistrarUsuario.setBackground(new java.awt.Color(255, 0, 102));
         btnRegistrarUsuario.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -157,6 +164,7 @@ public class InterfazBotonesAdministrador extends javax.swing.JPanel {
     private javax.swing.JButton btnRegistrarProfesional;
     private javax.swing.JButton btnRegistrarUsuario;
     private javax.swing.JLabel fondo;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel panelBotonesAdministrador;
     // End of variables declaration//GEN-END:variables
 }

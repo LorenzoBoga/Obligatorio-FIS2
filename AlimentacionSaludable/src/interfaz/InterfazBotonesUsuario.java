@@ -2,8 +2,11 @@ package interfaz;
 
 import dominio.Sistema;
 import dominio.Usuario;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
 public class InterfazBotonesUsuario extends javax.swing.JPanel {
 
@@ -21,8 +24,16 @@ public class InterfazBotonesUsuario extends javax.swing.JPanel {
         ventana.add(this);
         ventana.add(actual);
         etiquetaUsuarioActual.setText(this.usuarioActual.getNombre());
+        actualizarFotoYNombre();
+        etiquetaNombreUsuario.setHorizontalAlignment(SwingConstants.CENTER);
     }
 
+    public void actualizarFotoYNombre(){
+        ImageIcon fotoUsuario = usuarioActual.getFotoPerfil();
+        Icon fotoProfesional = new ImageIcon(fotoUsuario.getImage());
+        etiquetaFotoUsuario.setIcon(fotoProfesional);
+        etiquetaNombreUsuario.setText(usuarioActual.getNombreUsuario());
+    }
     public JPanel getActual() {
         return actual;
     }
@@ -44,6 +55,8 @@ public class InterfazBotonesUsuario extends javax.swing.JPanel {
     private void initComponents() {
 
         panelBotonesUsuario = new javax.swing.JPanel();
+        etiquetaNombreUsuario = new javax.swing.JLabel();
+        etiquetaFotoUsuario = new javax.swing.JLabel();
         btnHome = new javax.swing.JButton();
         btnPedirPlan = new javax.swing.JButton();
         btnConsultaDirecta = new javax.swing.JButton();
@@ -61,6 +74,18 @@ public class InterfazBotonesUsuario extends javax.swing.JPanel {
         panelBotonesUsuario.setMinimumSize(new java.awt.Dimension(250, 784));
         panelBotonesUsuario.setPreferredSize(new java.awt.Dimension(250, 784));
         panelBotonesUsuario.setLayout(null);
+
+        etiquetaNombreUsuario.setText("jLabel2");
+        etiquetaNombreUsuario.setOpaque(true);
+        panelBotonesUsuario.add(etiquetaNombreUsuario);
+        etiquetaNombreUsuario.setBounds(0, 730, 330, 50);
+
+        etiquetaFotoUsuario.setText("jLabel1");
+        etiquetaFotoUsuario.setMaximumSize(new java.awt.Dimension(210, 240));
+        etiquetaFotoUsuario.setMinimumSize(new java.awt.Dimension(210, 240));
+        etiquetaFotoUsuario.setPreferredSize(new java.awt.Dimension(0, 0));
+        panelBotonesUsuario.add(etiquetaFotoUsuario);
+        etiquetaFotoUsuario.setBounds(30, 430, 210, 290);
 
         btnHome.setBackground(new java.awt.Color(255, 0, 102));
         btnHome.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -214,6 +239,8 @@ public class InterfazBotonesUsuario extends javax.swing.JPanel {
     private javax.swing.JButton btnHome;
     private javax.swing.JButton btnPedirPlan;
     private javax.swing.JButton btnPerfil;
+    private javax.swing.JLabel etiquetaFotoUsuario;
+    private javax.swing.JLabel etiquetaNombreUsuario;
     private javax.swing.JLabel etiquetaUsuarioActual;
     private javax.swing.JLabel fondo;
     private javax.swing.JPanel panelBotonesUsuario;
