@@ -1,6 +1,5 @@
 package interfaz;
 
-import dominio.Persona;
 import dominio.Sistema;
 import dominio.Profesional;
 import dominio.Usuario;
@@ -178,21 +177,21 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
         panelRegProf.add(listaPaisDeGraduacion);
         listaPaisDeGraduacion.setBounds(560, 420, 160, 39);
 
-        etiquetaErrorContraseña.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        etiquetaErrorContraseña.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         panelRegProf.add(etiquetaErrorContraseña);
-        etiquetaErrorContraseña.setBounds(740, 110, 400, 50);
+        etiquetaErrorContraseña.setBounds(750, 110, 390, 40);
 
         etiquetaErrorApellidoProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorApellidoProf);
-        etiquetaErrorApellidoProf.setBounds(720, 170, 400, 26);
+        etiquetaErrorApellidoProf.setBounds(750, 180, 400, 26);
 
         etiquetaErrorNombreUsuarioProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorNombreUsuarioProf);
-        etiquetaErrorNombreUsuarioProf.setBounds(720, 220, 400, 26);
+        etiquetaErrorNombreUsuarioProf.setBounds(750, 220, 390, 26);
 
         etiquetaErrorNombreTituloProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorNombreTituloProf);
-        etiquetaErrorNombreTituloProf.setBounds(740, 320, 410, 26);
+        etiquetaErrorNombreTituloProf.setBounds(760, 330, 380, 30);
 
         etiquetaMensajeAlAceptar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaMensajeAlAceptar);
@@ -208,7 +207,7 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
 
         etiquetaErrorFechaNacimiento.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorFechaNacimiento);
-        etiquetaErrorFechaNacimiento.setBounds(740, 270, 390, 26);
+        etiquetaErrorFechaNacimiento.setBounds(760, 276, 380, 20);
 
         fechaGraduacion.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
@@ -220,7 +219,7 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
 
         etiquetaErrorFechaGraduacion.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorFechaGraduacion);
-        etiquetaErrorFechaGraduacion.setBounds(740, 370, 310, 26);
+        etiquetaErrorFechaGraduacion.setBounds(760, 370, 380, 26);
 
         btnCambiarFoto.setBackground(new java.awt.Color(255, 0, 102));
         btnCambiarFoto.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -257,7 +256,7 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
 
         etiquetaErrorNombreProf1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorNombreProf1);
-        etiquetaErrorNombreProf1.setBounds(740, 70, 400, 26);
+        etiquetaErrorNombreProf1.setBounds(760, 70, 380, 26);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
