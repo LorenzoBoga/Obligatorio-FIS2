@@ -43,6 +43,7 @@ public class PanelAgregarComidasAPlan extends javax.swing.JPanel {
         listaComidas = new javax.swing.JList();
         btnAgregarComida = new javax.swing.JButton();
         btnVolver = new javax.swing.JButton();
+        mensajeAlAgregar = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1147, 784));
@@ -72,7 +73,7 @@ public class PanelAgregarComidasAPlan extends javax.swing.JPanel {
             }
         });
         add(btnAgregarComida);
-        btnAgregarComida.setBounds(640, 530, 210, 37);
+        btnAgregarComida.setBounds(640, 530, 210, 39);
 
         btnVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/volver.png"))); // NOI18N
         btnVolver.setBorderPainted(false);
@@ -84,6 +85,10 @@ public class PanelAgregarComidasAPlan extends javax.swing.JPanel {
         });
         add(btnVolver);
         btnVolver.setBounds(10, 10, 100, 60);
+
+        mensajeAlAgregar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        add(mensajeAlAgregar);
+        mensajeAlAgregar.setBounds(350, 530, 280, 40);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
@@ -97,6 +102,7 @@ public class PanelAgregarComidasAPlan extends javax.swing.JPanel {
     private void btnAgregarComidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarComidaActionPerformed
         Alimento alimentoAAgregar = (Alimento) listaComidas.getSelectedValue();
         listaAModificar.add(alimentoAAgregar);
+        mensajeAlAgregar.setText(alimentoAAgregar.getNombre() + " agregado a dieta");
     }//GEN-LAST:event_btnAgregarComidaActionPerformed
 
 
@@ -106,5 +112,6 @@ public class PanelAgregarComidasAPlan extends javax.swing.JPanel {
     private javax.swing.JLabel etiquetaTitulo;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList listaComidas;
+    private javax.swing.JLabel mensajeAlAgregar;
     // End of variables declaration//GEN-END:variables
 }

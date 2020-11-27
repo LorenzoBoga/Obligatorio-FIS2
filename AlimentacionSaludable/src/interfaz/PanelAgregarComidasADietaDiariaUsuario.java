@@ -31,6 +31,7 @@ public class PanelAgregarComidasADietaDiariaUsuario extends javax.swing.JPanel {
         etiquetaTitulo = new javax.swing.JLabel();
         btnAgregarComida = new javax.swing.JButton();
         btnVolver = new javax.swing.JButton();
+        mensajeAlAgregar = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1147, 784));
@@ -61,7 +62,7 @@ public class PanelAgregarComidasADietaDiariaUsuario extends javax.swing.JPanel {
             }
         });
         add(btnAgregarComida);
-        btnAgregarComida.setBounds(660, 540, 210, 37);
+        btnAgregarComida.setBounds(660, 540, 210, 39);
 
         btnVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/volver.png"))); // NOI18N
         btnVolver.setBorderPainted(false);
@@ -73,6 +74,10 @@ public class PanelAgregarComidasADietaDiariaUsuario extends javax.swing.JPanel {
         });
         add(btnVolver);
         btnVolver.setBounds(0, 10, 110, 70);
+
+        mensajeAlAgregar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        add(mensajeAlAgregar);
+        mensajeAlAgregar.setBounds(340, 540, 310, 40);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAgregarComidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarComidaActionPerformed
@@ -80,6 +85,7 @@ public class PanelAgregarComidasADietaDiariaUsuario extends javax.swing.JPanel {
         interfaz.getUsuarioActual().getHistorialDelDia().getComidasIngeridas().add(comidaSeleccionada);
         LocalDate diaActual = LocalDate.now();
         interfaz.getUsuarioActual().setFechaUltimaAdicion(diaActual.toString());
+        mensajeAlAgregar.setText(comidaSeleccionada.getNombre() + " agregado a dieta");
     }//GEN-LAST:event_btnAgregarComidaActionPerformed
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
@@ -97,5 +103,6 @@ public class PanelAgregarComidasADietaDiariaUsuario extends javax.swing.JPanel {
     private javax.swing.JLabel etiquetaTitulo;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList listaComidasDiarias;
+    private javax.swing.JLabel mensajeAlAgregar;
     // End of variables declaration//GEN-END:variables
 }
