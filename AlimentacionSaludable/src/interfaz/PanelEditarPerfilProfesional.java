@@ -115,7 +115,7 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
             }
         });
         panelRegProf.add(cajaContraseñaProfesional);
-        cajaContraseñaProfesional.setBounds(560, 170, 160, 33);
+        cajaContraseñaProfesional.setBounds(560, 170, 160, 37);
 
         cajaApellidosProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         cajaApellidosProf.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -129,7 +129,7 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
             }
         });
         panelRegProf.add(cajaApellidosProf);
-        cajaApellidosProf.setBounds(560, 120, 160, 33);
+        cajaApellidosProf.setBounds(560, 120, 160, 37);
 
         cajaNombreTituloProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         cajaNombreTituloProf.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -138,7 +138,7 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
             }
         });
         panelRegProf.add(cajaNombreTituloProf);
-        cajaNombreTituloProf.setBounds(560, 270, 160, 33);
+        cajaNombreTituloProf.setBounds(560, 270, 160, 37);
 
         btnAceptarProf.setBackground(new java.awt.Color(255, 0, 102));
         btnAceptarProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -162,7 +162,7 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
         listaPaisDeGraduacion.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         listaPaisDeGraduacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         panelRegProf.add(listaPaisDeGraduacion);
-        listaPaisDeGraduacion.setBounds(560, 370, 160, 38);
+        listaPaisDeGraduacion.setBounds(560, 370, 160, 39);
 
         etiquetaErrorContraseñaProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorContraseñaProf);
@@ -176,9 +176,9 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
         panelRegProf.add(etiquetaErrorFechaGProf);
         etiquetaErrorFechaGProf.setBounds(730, 320, 370, 26);
 
-        etiquetaErrorNombreTituloProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        etiquetaErrorNombreTituloProf.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         panelRegProf.add(etiquetaErrorNombreTituloProf);
-        etiquetaErrorNombreTituloProf.setBounds(730, 270, 340, 30);
+        etiquetaErrorNombreTituloProf.setBounds(730, 270, 410, 30);
 
         etiquetaMensajeAlAceptar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaMensajeAlAceptar);
@@ -190,7 +190,7 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
             }
         });
         panelRegProf.add(fechaNacimiento);
-        fechaNacimiento.setBounds(560, 220, 160, 19);
+        fechaNacimiento.setBounds(560, 220, 160, 29);
 
         etiquetaErrorFechaNacimiento.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorFechaNacimiento);
@@ -202,7 +202,7 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
             }
         });
         panelRegProf.add(fechaGraduacion);
-        fechaGraduacion.setBounds(560, 320, 160, 19);
+        fechaGraduacion.setBounds(560, 320, 160, 29);
 
         etiquetaErrorFechaGraduacion.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorFechaGraduacion);
@@ -250,7 +250,7 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
             }
         });
         panelRegProf.add(cajaNombreProf1);
-        cajaNombreProf1.setBounds(560, 70, 160, 33);
+        cajaNombreProf1.setBounds(560, 70, 160, 37);
 
         etiquetaErrorNombreProf1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorNombreProf1);
@@ -320,6 +320,11 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
             profesional.setFechaGraduacion(fGraduacion);
             profesional.setPaisObtuvoTitulo(profesional.getListaEnumPais()[listaPaisDeGraduacion.getSelectedIndex()]);
             etiquetaMensajeAlAceptar.setText("Profesional editado correctamente");
+            etiquetaErrorApellidoProf.setText("");
+            etiquetaErrorFechaGraduacion.setText("");
+            etiquetaErrorFechaNacimiento.setText("");
+            etiquetaErrorNombreProf1.setText("");
+            etiquetaErrorNombreTituloProf.setText("");
             interfaz.actualizarFotoYNombre();
         } else {
             etiquetaMensajeAlAceptar.setText("Error al editar el profesional");

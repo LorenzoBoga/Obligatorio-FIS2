@@ -524,7 +524,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
         boolean sexoPred = sexoPredeterminado();
         if (apellidoValido && nombreUsuarioValido
                 && altura && peso && fNacimientoValido && contraseñaValida) {
-            usuario.setNombre(cajaContraseña.getText());
+            usuario.setNombre(cajaNombre1.getText());
             usuario.setApellidos(cajaApellidos.getText());
             usuario.setNombreUsuario(cajaNombUsuario.getText());
             usuario.setNacionalidad(usuario.getListaEnumNac()[listaNacionalidadesUsuario.getSelectedIndex()]);

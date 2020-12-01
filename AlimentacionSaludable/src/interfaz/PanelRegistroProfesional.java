@@ -281,16 +281,16 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cajaContraseñaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaContraseñaFocusLost
-        String nombre = cajaContraseña.getText();
-        if (nombre.trim().isEmpty()) {
-            etiquetaErrorContraseña.setText("El nombre no puede ser vacío");
+    String contraseña = cajaContraseña.getText();
+        if (contraseña.trim().isEmpty()) {
+            cajaContraseña.setText("La contraseña no puede ser vacía");
         }
     }//GEN-LAST:event_cajaContraseñaFocusLost
 
     private void cajaApellidosProfFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaApellidosProfFocusLost
-        String contraseña = cajaContraseña.getText();
-        if (contraseña.trim().isEmpty()) {
-            etiquetaErrorContraseña.setText("La contraseña no puede ser vacía");
+        String apellido = cajaApellidosProf.getText();
+        if (apellido.trim().isEmpty()) {
+            etiquetaErrorApellidoProf.setText("El apellido no puede ser vacío");
         }
     }//GEN-LAST:event_cajaApellidosProfFocusLost
 
@@ -350,6 +350,13 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
             profesional.setFotoPerfil((ImageIcon) fotoPerfil.getIcon());
             sistema.getListaProfesionales().add(profesional);
             etiquetaMensajeAlAceptar.setText("Profesional registrado correctamente");
+            etiquetaErrorApellidoProf.setText("");
+            etiquetaErrorContraseña.setText("");
+            etiquetaErrorFechaGraduacion.setText("");
+            etiquetaErrorFechaNacimiento.setText("");
+            etiquetaErrorNombreProf1.setText("");
+            etiquetaErrorNombreTituloProf.setText("");
+            etiquetaErrorNombreUsuarioProf.setText("");
             profesional.setContraseña(cajaContraseña.getText().trim());
         } else {
             etiquetaMensajeAlAceptar.setText("Error al ingresar el profesional");

@@ -132,7 +132,7 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
             }
         });
         panelEditarPerfilUsuario.add(cajaContraseña);
-        cajaContraseña.setBounds(480, 130, 160, 33);
+        cajaContraseña.setBounds(480, 130, 160, 37);
 
         cajaApellidos.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         cajaApellidos.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -141,7 +141,7 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
             }
         });
         panelEditarPerfilUsuario.add(cajaApellidos);
-        cajaApellidos.setBounds(480, 90, 160, 33);
+        cajaApellidos.setBounds(480, 90, 160, 37);
 
         etiquetaPeso.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         etiquetaPeso.setText("Peso:");
@@ -165,7 +165,7 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
             }
         });
         panelEditarPerfilUsuario.add(cajaAltura);
-        cajaAltura.setBounds(480, 330, 160, 33);
+        cajaAltura.setBounds(480, 330, 160, 37);
 
         cajaPeso.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         cajaPeso.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -174,15 +174,15 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
             }
         });
         panelEditarPerfilUsuario.add(cajaPeso);
-        cajaPeso.setBounds(480, 280, 160, 33);
+        cajaPeso.setBounds(480, 280, 160, 37);
 
         etiquetaMedidaPeso.setText("Kg");
         panelEditarPerfilUsuario.add(etiquetaMedidaPeso);
-        etiquetaMedidaPeso.setBounds(650, 330, 14, 14);
+        etiquetaMedidaPeso.setBounds(650, 330, 20, 16);
 
         etiquetaMedidaAltura.setText("Cm");
         panelEditarPerfilUsuario.add(etiquetaMedidaAltura);
-        etiquetaMedidaAltura.setBounds(650, 280, 18, 14);
+        etiquetaMedidaAltura.setBounds(650, 280, 40, 16);
 
         btnAceptarUsuario.setBackground(new java.awt.Color(255, 0, 102));
         btnAceptarUsuario.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -216,7 +216,7 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
             }
         });
         panelEditarPerfilUsuario.add(listaNacionalidadesUsuario);
-        listaNacionalidadesUsuario.setBounds(480, 180, 160, 38);
+        listaNacionalidadesUsuario.setBounds(480, 180, 160, 39);
 
         etiquetaSexo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         etiquetaSexo.setText("Sexo:");
@@ -270,7 +270,7 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
             }
         });
         panelEditarPerfilUsuario.add(checkBoxIntoleranteLactosa);
-        checkBoxIntoleranteLactosa.setBounds(590, 410, 271, 37);
+        checkBoxIntoleranteLactosa.setBounds(590, 410, 274, 33);
 
         checkBoxDiabetico.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         checkBoxDiabetico.setText("Diabético");
@@ -331,7 +331,7 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
             }
         });
         panelEditarPerfilUsuario.add(fechaNacimiento);
-        fechaNacimiento.setBounds(480, 230, 160, 19);
+        fechaNacimiento.setBounds(480, 230, 160, 29);
 
         etiquetaErrorFechaNacimiento.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelEditarPerfilUsuario.add(etiquetaErrorFechaNacimiento);
@@ -398,7 +398,7 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
             }
         });
         panelEditarPerfilUsuario.add(btnCambiarFoto);
-        btnCambiarFoto.setBounds(30, 390, 210, 39);
+        btnCambiarFoto.setBounds(30, 390, 210, 45);
 
         btnVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/volver.png"))); // NOI18N
         btnVolver.setBorderPainted(false);
@@ -428,7 +428,7 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
             }
         });
         panelEditarPerfilUsuario.add(cajaNombre1);
-        cajaNombre1.setBounds(480, 50, 160, 33);
+        cajaNombre1.setBounds(480, 50, 160, 37);
 
         etiquetaErrorNombre1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelEditarPerfilUsuario.add(etiquetaErrorNombre1);
@@ -485,7 +485,7 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_cajaPesoFocusLost
 
     private void btnAceptarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarUsuarioActionPerformed
-        boolean nombreValido = !cajaContraseña.getText().trim().isEmpty();
+        boolean nombreValido = !cajaNombre1.getText().trim().isEmpty();
         boolean apellidoValido = !cajaApellidos.getText().trim().isEmpty();
         boolean fNacimientoValido = fechaNacimiento.getCalendar() != null;
         boolean altura = pidoDatoNumerico(cajaAltura.getText(), 0, 265, etiquetaErrorAltura);
@@ -494,7 +494,7 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
          boolean contraseñaValida = validarContraseña(cajaContraseña.getText().trim());
         if (nombreValido && apellidoValido
                 && altura && peso && fNacimientoValido && contraseñaValida) {
-            usuario.setNombre(cajaContraseña.getText());
+            usuario.setNombre(cajaNombre1.getText());
             usuario.setApellidos(cajaApellidos.getText());
             usuario.setNacionalidad(usuario.getListaEnumNac()[listaNacionalidadesUsuario.getSelectedIndex()]);
             SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
@@ -510,6 +510,11 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
             usuario.setFotoPerfil((ImageIcon) fotoPerfil.getIcon());
             etiquetaMensajeAlAceptar.setText("Usuario editado correctamente");
             usuario.setContraseña(cajaContraseña.getText().trim());
+            etiquetaMensajeAlAceptar.setText("Profesional editado correctamente");
+            etiquetaErrorApellido.setText("");
+            etiquetaErrorFechaNacimiento.setText("");
+            etiquetaErrorNombre1.setText("");
+            etiquetaErrorNombreUsuario.setText("");
             interfaz.actualizarFotoYNombre();
         } else {
             etiquetaMensajeAlAceptar.setText("Error al editar el usuario");
