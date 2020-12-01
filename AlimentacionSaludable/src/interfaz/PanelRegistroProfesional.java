@@ -80,17 +80,17 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
         etiquetaContraseña.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         etiquetaContraseña.setText("Contraseña:");
         panelRegProf.add(etiquetaContraseña);
-        etiquetaContraseña.setBounds(412, 110, 130, 29);
+        etiquetaContraseña.setBounds(410, 220, 130, 29);
 
         etiquetaApellidosProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         etiquetaApellidosProf.setText("Apellidos:");
         panelRegProf.add(etiquetaApellidosProf);
-        etiquetaApellidosProf.setBounds(440, 170, 110, 30);
+        etiquetaApellidosProf.setBounds(440, 110, 110, 30);
 
         etiquetaUsuarioProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         etiquetaUsuarioProf.setText("Nombre de Usuario:");
         panelRegProf.add(etiquetaUsuarioProf);
-        etiquetaUsuarioProf.setBounds(330, 220, 220, 26);
+        etiquetaUsuarioProf.setBounds(320, 170, 220, 26);
 
         etiquetaFechaNacProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         etiquetaFechaNacProf.setText("Fecha de nacimiento:");
@@ -119,7 +119,7 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
             }
         });
         panelRegProf.add(cajaContraseña);
-        cajaContraseña.setBounds(560, 110, 160, 37);
+        cajaContraseña.setBounds(560, 220, 160, 33);
 
         cajaApellidosProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         cajaApellidosProf.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -133,7 +133,7 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
             }
         });
         panelRegProf.add(cajaApellidosProf);
-        cajaApellidosProf.setBounds(560, 170, 160, 37);
+        cajaApellidosProf.setBounds(560, 110, 160, 33);
 
         cajaUsuarioProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         cajaUsuarioProf.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -142,7 +142,7 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
             }
         });
         panelRegProf.add(cajaUsuarioProf);
-        cajaUsuarioProf.setBounds(560, 220, 160, 37);
+        cajaUsuarioProf.setBounds(560, 170, 160, 33);
 
         cajaNombreTituloProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         cajaNombreTituloProf.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -151,7 +151,7 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
             }
         });
         panelRegProf.add(cajaNombreTituloProf);
-        cajaNombreTituloProf.setBounds(560, 320, 160, 37);
+        cajaNombreTituloProf.setBounds(560, 320, 160, 33);
 
         btnAceptarProf.setBackground(new java.awt.Color(255, 0, 102));
         btnAceptarProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -165,7 +165,7 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
             }
         });
         panelRegProf.add(btnAceptarProf);
-        btnAceptarProf.setBounds(850, 610, 150, 45);
+        btnAceptarProf.setBounds(850, 610, 150, 39);
 
         etiquetaPaisDeGraduacion.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         etiquetaPaisDeGraduacion.setText("País de graduación:");
@@ -175,23 +175,23 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
         listaPaisDeGraduacion.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         listaPaisDeGraduacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         panelRegProf.add(listaPaisDeGraduacion);
-        listaPaisDeGraduacion.setBounds(560, 420, 160, 39);
+        listaPaisDeGraduacion.setBounds(560, 420, 160, 38);
 
         etiquetaErrorContraseña.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         panelRegProf.add(etiquetaErrorContraseña);
-        etiquetaErrorContraseña.setBounds(750, 110, 390, 40);
+        etiquetaErrorContraseña.setBounds(730, 220, 390, 30);
 
         etiquetaErrorApellidoProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorApellidoProf);
-        etiquetaErrorApellidoProf.setBounds(750, 180, 400, 26);
+        etiquetaErrorApellidoProf.setBounds(730, 110, 400, 26);
 
         etiquetaErrorNombreUsuarioProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorNombreUsuarioProf);
-        etiquetaErrorNombreUsuarioProf.setBounds(750, 220, 390, 26);
+        etiquetaErrorNombreUsuarioProf.setBounds(730, 170, 390, 26);
 
         etiquetaErrorNombreTituloProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorNombreTituloProf);
-        etiquetaErrorNombreTituloProf.setBounds(760, 330, 380, 30);
+        etiquetaErrorNombreTituloProf.setBounds(730, 320, 380, 30);
 
         etiquetaMensajeAlAceptar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaMensajeAlAceptar);
@@ -203,7 +203,7 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
             }
         });
         panelRegProf.add(fechaNacimiento);
-        fechaNacimiento.setBounds(560, 270, 160, 29);
+        fechaNacimiento.setBounds(560, 270, 160, 19);
 
         etiquetaErrorFechaNacimiento.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorFechaNacimiento);
@@ -215,11 +215,11 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
             }
         });
         panelRegProf.add(fechaGraduacion);
-        fechaGraduacion.setBounds(560, 370, 160, 29);
+        fechaGraduacion.setBounds(560, 370, 160, 19);
 
         etiquetaErrorFechaGraduacion.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorFechaGraduacion);
-        etiquetaErrorFechaGraduacion.setBounds(760, 370, 380, 26);
+        etiquetaErrorFechaGraduacion.setBounds(730, 370, 380, 26);
 
         btnCambiarFoto.setBackground(new java.awt.Color(255, 0, 102));
         btnCambiarFoto.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -252,11 +252,11 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
             }
         });
         panelRegProf.add(cajaNombreProf1);
-        cajaNombreProf1.setBounds(560, 60, 160, 37);
+        cajaNombreProf1.setBounds(560, 60, 160, 33);
 
         etiquetaErrorNombreProf1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorNombreProf1);
-        etiquetaErrorNombreProf1.setBounds(760, 70, 380, 26);
+        etiquetaErrorNombreProf1.setBounds(730, 60, 380, 26);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

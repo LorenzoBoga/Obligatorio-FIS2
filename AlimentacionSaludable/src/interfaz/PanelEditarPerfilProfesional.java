@@ -81,12 +81,12 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
         etiquetaContraseñaProfesional.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         etiquetaContraseñaProfesional.setText("Contraseña:");
         panelRegProf.add(etiquetaContraseñaProfesional);
-        etiquetaContraseñaProfesional.setBounds(412, 120, 130, 29);
+        etiquetaContraseñaProfesional.setBounds(410, 170, 130, 29);
 
         etiquetaApellidosProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         etiquetaApellidosProf.setText("Apellidos:");
         panelRegProf.add(etiquetaApellidosProf);
-        etiquetaApellidosProf.setBounds(440, 170, 110, 30);
+        etiquetaApellidosProf.setBounds(440, 120, 110, 30);
 
         etiquetaFechaNacProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         etiquetaFechaNacProf.setText("Fecha de nacimiento:");
@@ -115,7 +115,7 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
             }
         });
         panelRegProf.add(cajaContraseñaProfesional);
-        cajaContraseñaProfesional.setBounds(560, 120, 160, 33);
+        cajaContraseñaProfesional.setBounds(560, 170, 160, 33);
 
         cajaApellidosProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         cajaApellidosProf.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -129,7 +129,7 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
             }
         });
         panelRegProf.add(cajaApellidosProf);
-        cajaApellidosProf.setBounds(560, 170, 160, 33);
+        cajaApellidosProf.setBounds(560, 120, 160, 33);
 
         cajaNombreTituloProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         cajaNombreTituloProf.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -166,11 +166,11 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
 
         etiquetaErrorContraseñaProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorContraseñaProf);
-        etiquetaErrorContraseñaProf.setBounds(730, 120, 310, 26);
+        etiquetaErrorContraseñaProf.setBounds(730, 170, 310, 26);
 
         etiquetaErrorApellidoProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorApellidoProf);
-        etiquetaErrorApellidoProf.setBounds(740, 170, 330, 26);
+        etiquetaErrorApellidoProf.setBounds(730, 120, 330, 26);
 
         etiquetaErrorFechaGProf.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegProf.add(etiquetaErrorFechaGProf);
