@@ -23,7 +23,7 @@ public class PanelCambioDeUsuario extends javax.swing.JPanel {
         ventana = unaVentana;
         sistema = unSistema;
         interfazProf = unaInterfaz;
-        listaTiposDeUsuarios.setModel(new DefaultComboBoxModel(sistema.getListaTiposDeUsuario()));
+        
         actualizarLista();
     }
 
@@ -35,7 +35,7 @@ public class PanelCambioDeUsuario extends javax.swing.JPanel {
         ventana = unaVentana;
         sistema = unSistema;
         interfazUsr = unaInterfaz;
-        listaTiposDeUsuarios.setModel(new DefaultComboBoxModel(sistema.getListaTiposDeUsuario()));
+        
         actualizarLista();
     }
 
@@ -47,7 +47,6 @@ public class PanelCambioDeUsuario extends javax.swing.JPanel {
         ventana = unaVentana;
         sistema = unSistema;
         interfazAdm = unaInterfaz;
-        listaTiposDeUsuarios.setModel(new DefaultComboBoxModel(sistema.getListaTiposDeUsuario()));
         actualizarLista();
     }
 
@@ -57,8 +56,6 @@ public class PanelCambioDeUsuario extends javax.swing.JPanel {
         initComponents();
         ventana = unaVentana;
         sistema = unSistema;
-        listaTiposDeUsuarios.setModel(new DefaultComboBoxModel(sistema.getListaTiposDeUsuario()));
-        listaTiposDeUsuarios.setSelectedIndex(0);
         actualizarLista();
     }
 
@@ -66,16 +63,19 @@ public class PanelCambioDeUsuario extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         btnCambiarUsuario = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         listaUsuarios = new javax.swing.JList();
-        listaTiposDeUsuarios = new javax.swing.JComboBox();
         etiquetaTiposDeUsuarios = new javax.swing.JLabel();
         etiquetaTitulo = new javax.swing.JLabel();
         btnPruebaAdministrador = new javax.swing.JButton();
         cajaContraseña = new javax.swing.JTextField();
         etiquetaContraseña = new javax.swing.JLabel();
         etiquetaErrorContraseña = new javax.swing.JLabel();
+        radioProfesional = new javax.swing.JRadioButton();
+        radioUsuario = new javax.swing.JRadioButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1147, 784));
@@ -101,24 +101,10 @@ public class PanelCambioDeUsuario extends javax.swing.JPanel {
         add(jScrollPane1);
         jScrollPane1.setBounds(350, 80, 290, 340);
 
-        listaTiposDeUsuarios.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        listaTiposDeUsuarios.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                listaTiposDeUsuariosFocusLost(evt);
-            }
-        });
-        listaTiposDeUsuarios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                listaTiposDeUsuariosActionPerformed(evt);
-            }
-        });
-        add(listaTiposDeUsuarios);
-        listaTiposDeUsuarios.setBounds(90, 160, 180, 39);
-
         etiquetaTiposDeUsuarios.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         etiquetaTiposDeUsuarios.setText("Tipo de Usuario");
         add(etiquetaTiposDeUsuarios);
-        etiquetaTiposDeUsuarios.setBounds(60, 120, 180, 29);
+        etiquetaTiposDeUsuarios.setBounds(40, 80, 180, 29);
 
         etiquetaTitulo.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         etiquetaTitulo.setForeground(new java.awt.Color(255, 0, 102));
@@ -157,12 +143,32 @@ public class PanelCambioDeUsuario extends javax.swing.JPanel {
         etiquetaErrorContraseña.setForeground(new java.awt.Color(51, 51, 51));
         add(etiquetaErrorContraseña);
         etiquetaErrorContraseña.setBounds(670, 190, 300, 50);
+
+        buttonGroup1.add(radioProfesional);
+        radioProfesional.setText("Profesional");
+        radioProfesional.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioProfesionalActionPerformed(evt);
+            }
+        });
+        add(radioProfesional);
+        radioProfesional.setBounds(60, 130, 110, 28);
+
+        buttonGroup1.add(radioUsuario);
+        radioUsuario.setText("Usuario");
+        radioUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioUsuarioActionPerformed(evt);
+            }
+        });
+        add(radioUsuario);
+        radioUsuario.setBounds(60, 180, 111, 28);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCambiarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarUsuarioActionPerformed
         if (listaUsuarios.getSelectedValue() != null) {
             this.limpioInterfaces();
-            if (listaTiposDeUsuarios.getSelectedItem() == Sistema.tipoUsuario.Profesional) {
+            if ( radioProfesional.isSelected()) {
                 Profesional profSeleccionado = (Profesional) listaUsuarios.getSelectedValue();
                 if(profSeleccionado.getContraseña().equals(cajaContraseña.getText())){
                     ventana.remove(this);
@@ -172,7 +178,7 @@ public class PanelCambioDeUsuario extends javax.swing.JPanel {
                     etiquetaErrorContraseña.setText("Contraseña incorrecta");
                 }
             }
-            if (listaTiposDeUsuarios.getSelectedItem() == Sistema.tipoUsuario.Usuario) {
+            if ( radioUsuario.isSelected()) {
                 Usuario usuarioSeleccionado = (Usuario) listaUsuarios.getSelectedValue();
                 if(usuarioSeleccionado.getContraseña().equals(cajaContraseña.getText())){
                     ventana.remove(this);
@@ -203,31 +209,31 @@ public class PanelCambioDeUsuario extends javax.swing.JPanel {
         ventana.pack();
     }//GEN-LAST:event_btnPruebaAdministradorActionPerformed
 
-    private void listaTiposDeUsuariosFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_listaTiposDeUsuariosFocusLost
-        actualizarLista();
-    }//GEN-LAST:event_listaTiposDeUsuariosFocusLost
-
-    private void listaTiposDeUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaTiposDeUsuariosActionPerformed
-        actualizarLista();
-    }//GEN-LAST:event_listaTiposDeUsuariosActionPerformed
-
     private void cajaContraseñaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaContraseñaFocusLost
 
     }//GEN-LAST:event_cajaContraseñaFocusLost
+
+    private void radioProfesionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioProfesionalActionPerformed
+        actualizarLista();
+    }//GEN-LAST:event_radioProfesionalActionPerformed
+
+    private void radioUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioUsuarioActionPerformed
+         actualizarLista();
+    }//GEN-LAST:event_radioUsuarioActionPerformed
     void actualizarLista() {
-        if (sistema.getListaUsuarios().size() < 1 && listaTiposDeUsuarios.getSelectedItem() == Sistema.tipoUsuario.Usuario) {
+        if (sistema.getListaUsuarios().size() < 1 && radioUsuario.isSelected()) {
             btnCambiarUsuario.setEnabled(false);
         } else {
-            if (sistema.getListaProfesionales().size() < 1 && listaTiposDeUsuarios.getSelectedItem() == Sistema.tipoUsuario.Profesional) {
+            if (sistema.getListaProfesionales().size() < 1 && radioProfesional.isSelected()) {
                 btnCambiarUsuario.setEnabled(false);
             } else {
                 btnCambiarUsuario.setEnabled(true);
             }
         }
-        if (listaTiposDeUsuarios.getSelectedItem() == Sistema.tipoUsuario.Profesional) {
+        if ( radioProfesional.isSelected()) {
             listaUsuarios.setListData(sistema.getListaProfesionales().toArray());
         }
-        if (listaTiposDeUsuarios.getSelectedItem() == Sistema.tipoUsuario.Usuario) {
+        if (radioUsuario.isSelected()) {
             listaUsuarios.setListData(sistema.getListaUsuarios().toArray());
         }
     }
@@ -250,13 +256,16 @@ public class PanelCambioDeUsuario extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCambiarUsuario;
     private javax.swing.JButton btnPruebaAdministrador;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JTextField cajaContraseña;
     private javax.swing.JLabel etiquetaContraseña;
     private javax.swing.JLabel etiquetaErrorContraseña;
     private javax.swing.JLabel etiquetaTiposDeUsuarios;
     private javax.swing.JLabel etiquetaTitulo;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JComboBox listaTiposDeUsuarios;
     private javax.swing.JList listaUsuarios;
+    private javax.swing.JRadioButton radioProfesional;
+    private javax.swing.JRadioButton radioUsuario;
     // End of variables declaration//GEN-END:variables
 }
