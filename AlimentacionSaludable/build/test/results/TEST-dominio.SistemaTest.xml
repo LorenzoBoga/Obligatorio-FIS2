@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="DESKTOP-4MGEVKN" name="dominio.SistemaTest" skipped="0" tests="20" time="0.446" timestamp="2020-12-03T17:42:09">
+<testsuite errors="0" failures="1" hostname="DESKTOP-4MGEVKN" name="dominio.SistemaTest" skipped="0" tests="20" time="0.513" timestamp="2020-12-03T17:46:41">
   <properties>
     <property name="netbeans.autoupdate.country" value="UY" />
     <property name="javac.test.classpath" value="C:\Netbeans\NetBeans 8.2\java\modules\ext\AbsoluteLayout.jar:DateChooser.jar:jcalendar-1.4.jar:build/classes:C:\Netbeans\NetBeans 8.2\platform\modules\ext\junit-4.12.jar:C:\Netbeans\NetBeans 8.2\platform\modules\ext\hamcrest-core-1.3.jar" />
@@ -38,7 +38,7 @@
     <property name="user.name" value="User" />
     <property name="copylibs.rebase" value="true" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner dominio.SistemaTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\User\Desktop\Obligatorio-FIS2\AlimentacionSaludable\build\test\results\TEST-dominio.SistemaTest.xml crashfile=C:\Users\User\Desktop\Obligatorio-FIS2\AlimentacionSaludable\build\junitvmwatcher2077744308822311308.properties propsfile=C:\Users\User\Desktop\Obligatorio-FIS2\AlimentacionSaludable\build\junit5901654432339869579.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner dominio.SistemaTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\User\Desktop\Obligatorio-FIS2\AlimentacionSaludable\build\test\results\TEST-dominio.SistemaTest.xml crashfile=C:\Users\User\Desktop\Obligatorio-FIS2\AlimentacionSaludable\build\junitvmwatcher3170590543116652773.properties propsfile=C:\Users\User\Desktop\Obligatorio-FIS2\AlimentacionSaludable\build\junit643219770342585015.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -289,7 +289,7 @@
     <property name="libs.CopyLibs.classpath" value="C:\Netbeans\NetBeans 8.2\java\ant\extra\org-netbeans-modules-java-j2seproject-copylibstask.jar" />
     <property name="libs.spring-framework300.classpath" value="C:\Netbeans\NetBeans 8.2\ide\modules\org-apache-commons-logging.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\cglib-2.2.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-aop-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-aspects-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-beans-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-build-src-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-context-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-context-support-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-core-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-expression-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-framework-bom-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-instrument-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-instrument-tomcat-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-jdbc-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-jms-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-orm-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-oxm-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-struts-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-test-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-tx-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-web-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-webmvc-3.2.7.RELEASE.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\spring-3.0\spring-webmvc-portlet-3.2.7.RELEASE.jar" />
     <property name="libs.hamcrest.src" value="" />
-    <property name="run.jvmargs" value="  -javaagent:&quot;C:\Users\User\AppData\Roaming\NetBeans\8.2\modules\ext\jacocoagent.jar&quot;=includes=alimentacionsaludable.*:dominio.*:imagenes.*:interfaz.*,destfile=&quot;C:\Users\User\Desktop\Obligatorio-FIS2\AlimentacionSaludable\jacoco.exec-698379374672600&quot;" />
+    <property name="run.jvmargs" value="  -javaagent:&quot;C:\Users\User\AppData\Roaming\NetBeans\8.2\modules\ext\jacocoagent.jar&quot;=includes=alimentacionsaludable.*:dominio.*:imagenes.*:interfaz.*,destfile=&quot;C:\Users\User\Desktop\Obligatorio-FIS2\AlimentacionSaludable\jacoco.exec-698646342858400&quot;" />
     <property name="libs.hibernate4-persistence.classpath" value="C:\Netbeans\NetBeans 8.2\java\modules\ext\hibernate4\antlr-2.7.7.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\hibernate4\c3p0-0.9.2.1.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-c3p0-4.3.1.Final.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\hibernate4\mchange-commons-java-0.2.3.4.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\hibernate4\dom4j-1.6.1.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\hibernate4\ehcache-core-2.4.3.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-ehcache-4.3.1.Final.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-core-4.3.1.Final.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\hibernate4\jboss-logging-3.1.3.GA.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-commons-annotations-4.0.4.Final.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-entitymanager-4.3.1.Final.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\hibernate4\javassist-3.18.1-GA.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\hibernate4\jboss-transaction-api_1.2_spec-1.0.0.Final.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\hibernate4\slf4j-api-1.6.1.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\hibernate4\slf4j-simple-1.6.1.jar;C:\Netbeans\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-jpa-2.1-api-1.0.0.Final.jar" />
     <property name="libs.JAXB-ENDORSED.src" value="" />
     <property name="dist.archive.excludes" value="" />
@@ -309,22 +309,22 @@
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
-  <testcase classname="dominio.SistemaTest" name="testRegistroUsuarioInvalido" time="0.27" />
-  <testcase classname="dominio.SistemaTest" name="testGetListaTiposDeUsuario" time="0.001" />
-  <testcase classname="dominio.SistemaTest" name="testResizeImageIconFalse" time="0.019" />
+  <testcase classname="dominio.SistemaTest" name="testRegistroUsuarioInvalido" time="0.284" />
+  <testcase classname="dominio.SistemaTest" name="testGetListaTiposDeUsuario" time="0.003" />
+  <testcase classname="dominio.SistemaTest" name="testResizeImageIconFalse" time="0.02" />
   <testcase classname="dominio.SistemaTest" name="testGetUsuarioActivo" time="0.0" />
   <testcase classname="dominio.SistemaTest" name="testRegistroProfesional" time="0.001" />
   <testcase classname="dominio.SistemaTest" name="testPidoDatoNumericoInvalido" time="0.001" />
   <testcase classname="dominio.SistemaTest" name="testSetListaUsuarios" time="0.001" />
-  <testcase classname="dominio.SistemaTest" name="testSetListaTiposDeUsuarios" time="0.0" />
-  <testcase classname="dominio.SistemaTest" name="testSetListaAlimentos" time="0.016" />
-  <testcase classname="dominio.SistemaTest" name="testPidoDatoNumericoInvalido2" time="0.001" />
+  <testcase classname="dominio.SistemaTest" name="testSetListaTiposDeUsuarios" time="0.001" />
+  <testcase classname="dominio.SistemaTest" name="testSetListaAlimentos" time="0.006" />
+  <testcase classname="dominio.SistemaTest" name="testPidoDatoNumericoInvalido2" time="0.0" />
   <testcase classname="dominio.SistemaTest" name="testPidoDatoNumericoInvalido3" time="0.001" />
   <testcase classname="dominio.SistemaTest" name="testSistemaPorParametro" time="0.0" />
   <testcase classname="dominio.SistemaTest" name="testResizeImageIconTrue" time="0.001" />
-  <testcase classname="dominio.SistemaTest" name="testRegistroAlimento" time="0.0" />
-  <testcase classname="dominio.SistemaTest" name="testSetListaProfesionales" time="0.0" />
-  <testcase classname="dominio.SistemaTest" name="testRegistroAlimentoInvalido" time="0.009">
+  <testcase classname="dominio.SistemaTest" name="testRegistroAlimento" time="0.001" />
+  <testcase classname="dominio.SistemaTest" name="testSetListaProfesionales" time="0.001" />
+  <testcase classname="dominio.SistemaTest" name="testRegistroAlimentoInvalido" time="0.007">
     <failure type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError
 	at dominio.SistemaTest.testRegistroAlimentoInvalido(SistemaTest.java:252)
 </failure>
@@ -332,7 +332,7 @@
   <testcase classname="dominio.SistemaTest" name="testValuesTipoUsuario" time="0.0" />
   <testcase classname="dominio.SistemaTest" name="testSetUsuarioActivo" time="0.0" />
   <testcase classname="dominio.SistemaTest" name="testRegistroUsuario" time="0.001" />
-  <testcase classname="dominio.SistemaTest" name="testRegistroProfesionalInvalido" time="0.001" />
+  <testcase classname="dominio.SistemaTest" name="testRegistroProfesionalInvalido" time="0.0" />
   <system-out><![CDATA[registroUsuario
 getListaTiposDeUsuario
 resizeImageIcon

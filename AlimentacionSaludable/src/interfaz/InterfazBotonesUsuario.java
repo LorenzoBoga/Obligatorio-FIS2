@@ -78,14 +78,14 @@ public class InterfazBotonesUsuario extends javax.swing.JPanel {
         etiquetaNombreUsuario.setText("jLabel2");
         etiquetaNombreUsuario.setOpaque(true);
         panelBotonesUsuario.add(etiquetaNombreUsuario);
-        etiquetaNombreUsuario.setBounds(0, 730, 330, 50);
+        etiquetaNombreUsuario.setBounds(0, 660, 270, 50);
 
         etiquetaFotoUsuario.setText("jLabel1");
         etiquetaFotoUsuario.setMaximumSize(new java.awt.Dimension(210, 240));
         etiquetaFotoUsuario.setMinimumSize(new java.awt.Dimension(210, 240));
         etiquetaFotoUsuario.setPreferredSize(new java.awt.Dimension(0, 0));
         panelBotonesUsuario.add(etiquetaFotoUsuario);
-        etiquetaFotoUsuario.setBounds(30, 430, 210, 290);
+        etiquetaFotoUsuario.setBounds(20, 410, 210, 250);
 
         btnHome.setBackground(new java.awt.Color(255, 0, 102));
         btnHome.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -179,12 +179,12 @@ public class InterfazBotonesUsuario extends javax.swing.JPanel {
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo2.png"))); // NOI18N
         panelBotonesUsuario.add(fondo);
-        fondo.setBounds(0, 0, 330, 790);
+        fondo.setBounds(0, 0, 270, 790);
         panelBotonesUsuario.add(etiquetaUsuarioActual);
         etiquetaUsuarioActual.setBounds(23, 604, 282, 42);
 
         add(panelBotonesUsuario);
-        panelBotonesUsuario.setBounds(-1, 0, 330, 810);
+        panelBotonesUsuario.setBounds(-1, 0, 270, 810);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeActionPerformed

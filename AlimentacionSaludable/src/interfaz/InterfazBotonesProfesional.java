@@ -78,13 +78,13 @@ public class InterfazBotonesProfesional extends javax.swing.JPanel {
         etiquetaNombreProfesional.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         etiquetaNombreProfesional.setOpaque(true);
         add(etiquetaNombreProfesional);
-        etiquetaNombreProfesional.setBounds(0, 640, 260, 50);
+        etiquetaNombreProfesional.setBounds(0, 530, 260, 50);
 
         etiquetaFotoProfesional.setBackground(new java.awt.Color(0, 51, 204));
         etiquetaFotoProfesional.setMaximumSize(new java.awt.Dimension(210, 240));
         etiquetaFotoProfesional.setMinimumSize(new java.awt.Dimension(210, 240));
         add(etiquetaFotoProfesional);
-        etiquetaFotoProfesional.setBounds(20, 350, 210, 290);
+        etiquetaFotoProfesional.setBounds(20, 280, 210, 230);
 
         btnHome.setBackground(new java.awt.Color(255, 0, 102));
         btnHome.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
