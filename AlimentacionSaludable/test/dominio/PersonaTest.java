@@ -28,7 +28,50 @@ public class PersonaTest {
     @After
     public void tearDown() {
     }
-
+    
+    @Test
+    public void testGetFechaNacimiento(){
+        Persona instance = new Usuario();
+        instance.setFechaNacimiento("fecha");
+        String expResult = "fecha";
+        String result = instance.getFechaNacimiento();
+        assertEquals(expResult, result);
+    }
+    
+     @Test
+    public void testGetApellidos(){
+        Persona instance = new Usuario();
+        instance.setApellidos("apellido");
+        String expResult = "apellido";
+        String result = instance.getApellidos();
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testGetContraseña(){
+        Persona instance = new Usuario();
+        instance.setContraseña("contraseña");
+        String expResult = "contraseña";
+        String result = instance.getContraseña();
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testSetContraseña(){
+        Persona instance = new Usuario();
+        String contraseña = "contraseña";
+        instance.setContraseña(contraseña);
+        assertEquals(contraseña, instance.getContraseña());
+    }
+    @Test
+    public void testGetFotoPerfil(){
+        ImageIcon expResult = new ImageIcon();
+        Persona instance = new Usuario();
+        instance.setFotoPerfil(expResult);
+        ImageIcon result = instance.getFotoPerfil();
+        assertEquals(expResult, result);
+    }
+    
     @Test
     public void testGetNombre() {
         System.out.println("getNombre");
@@ -69,7 +112,7 @@ public class PersonaTest {
     public class PersonaImpl extends Persona {
 
         public PersonaImpl() {
-            super("", "", "", "", null);
+            super("", "", "", "", null,"");
         }
     }
     

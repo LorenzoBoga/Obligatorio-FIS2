@@ -35,6 +35,59 @@ public class SistemaTest {
     }
 
     @Test
+    public void testSetUsuarioActivo(){
+        Sistema instance = new Sistema();
+        instance.setUsuarioActivo(Sistema.tipoUsuario.Usuario);
+        assertEquals(Sistema.tipoUsuario.Usuario, instance.getUsuarioActivo());
+    }
+    
+    @Test
+    public void testGetUsuarioActivo(){
+        Sistema instance = new Sistema();
+        instance.setUsuarioActivo(Sistema.tipoUsuario.Usuario);
+        Sistema.tipoUsuario result = instance.getUsuarioActivo();
+        assertEquals(Sistema.tipoUsuario.Usuario, result);
+    }
+    
+    @Test
+    public void testSetListaAlimentos(){
+        Sistema instance = new Sistema();
+        Alimento alimento = new Alimento();
+        ArrayList<Alimento> expResult = new ArrayList();
+        expResult.add(alimento);
+        instance.setListaAlimentos(expResult);
+        assertEquals(expResult, instance.getListaAlimentos());
+    }
+    
+    @Test
+    public void testSetListaUsuarios(){
+        Sistema instance = new Sistema();
+        Usuario user = new Usuario();
+        ArrayList<Usuario> expResult = new ArrayList();
+        expResult.add(user);
+        instance.setListaUsuarios(expResult);
+        assertEquals(expResult, instance.getListaUsuarios());
+    }
+    
+     @Test
+    public void testSetListaProfesionales(){
+        Sistema instance = new Sistema();
+        Profesional prof = new Profesional();
+        ArrayList<Profesional> expResult = new ArrayList();
+        expResult.add(prof);
+        instance.setListaProfesionales(expResult);
+        assertEquals(expResult, instance.getListaProfesionales());
+    }
+    
+    @Test
+    public void testSetListaTiposDeUsuarios(){
+        Sistema instance = new Sistema();
+        Sistema.tipoUsuario[] expResult = {Sistema.tipoUsuario.Profesional, Sistema.tipoUsuario.Usuario};
+        instance.setListaTiposDeUsuario(expResult);
+        assertArrayEquals(expResult, instance.getListaTiposDeUsuario());
+    }
+    
+    @Test
     public void testGetListaTiposDeUsuario() {
         System.out.println("getListaTiposDeUsuario");
         Sistema instance = new Sistema();
@@ -63,6 +116,18 @@ public class SistemaTest {
         Sistema instance = new Sistema();
         boolean result = instance.pidoDatoNumerico(dato, min, max);
         assertFalse(result);
+    }
+    
+    
+    @Test
+    public void testPidoDatoNumericoInvalido3() {
+        System.out.println("pidoDatoNumericoInvalido3");
+        int dato = 1;
+        int min = 0;
+        int max = 2;
+        Sistema instance = new Sistema();
+        boolean result = instance.pidoDatoNumerico(dato, min, max);
+        assertTrue(result);
     }
 
     @Test

@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>PanelEditarPerfilUsuario.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;AlimentacionSaludable&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">interfaz</a> &gt; <span class="el_source">PanelEditarPerfilUsuario.java</span></div><h1>PanelEditarPerfilUsuario.java</h1><pre class="source lang-java linenums">package interfaz;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>PanelEditarPerfilUsuario.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;AlimentacionSaludable&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">interfaz</a> &gt; <span class="el_source">PanelEditarPerfilUsuario.java</span></div><h1>PanelEditarPerfilUsuario.java</h1><pre class="source lang-java linenums">package interfaz;
 
 import dominio.Sistema;
 import dominio.Usuario;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -24,587 +22,631 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
 
     //Constructor
     public PanelEditarPerfilUsuario(Sistema unSistema, JFrame unaVentana,
-<span class="nc" id="L27">            InterfazBotonesUsuario interfazActual) {</span>
-<span class="nc" id="L28">        initComponents();</span>
-<span class="nc" id="L29">        sistema = unSistema;</span>
-<span class="nc" id="L30">        ventana = unaVentana;</span>
-<span class="nc" id="L31">        interfaz = interfazActual;</span>
-<span class="nc" id="L32">        usuario = interfaz.getUsuarioActual();</span>
-<span class="nc" id="L33">        grupoBotonesSexo.add(rBtnFemeninoUsuario);</span>
-<span class="nc" id="L34">        grupoBotonesSexo.add(rBtnMasculinoUsuario);</span>
-<span class="nc" id="L35">        rBtnMasculinoUsuario.setSelected(true);</span>
-<span class="nc" id="L36">        grupoBotonesPreferencias.add(rBVegano);</span>
-<span class="nc" id="L37">        grupoBotonesPreferencias.add(rBVegetariano);</span>
-<span class="nc" id="L38">        grupoBotonesPreferencias.add(rBMacrobiotico);</span>
-<span class="nc" id="L39">        grupoBotonesPreferencias.add(rBOrganico);</span>
-<span class="nc" id="L40">        Usuario.Nacionalidades[] listaNac = usuario.getListaEnumNac();</span>
-<span class="nc" id="L41">        listaNacionalidadesUsuario.setModel(new DefaultComboBoxModel(listaNac));</span>
-<span class="nc" id="L42">        listaNacionalidadesUsuario.setSelectedIndex(Usuario.Nacionalidades.Uruguaya.ordinal());</span>
-<span class="nc" id="L43">        usuario.setListaRestricciones(new boolean[usuario.getListaRestricciones().length]);</span>
-<span class="nc" id="L44">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Ninguna);</span>
-<span class="nc" id="L45">        fotoPerfil.setSize(210, 240);</span>
-<span class="nc" id="L46">    }</span>
+<span class="nc" id="L25">            InterfazBotonesUsuario interfazActual) {</span>
+<span class="nc" id="L26">        initComponents();</span>
+<span class="nc" id="L27">        sistema = unSistema;</span>
+<span class="nc" id="L28">        ventana = unaVentana;</span>
+<span class="nc" id="L29">        interfaz = interfazActual;</span>
+<span class="nc" id="L30">        usuario = interfaz.getUsuarioActual();</span>
+<span class="nc" id="L31">        grupoBotonesSexo.add(rBtnFemeninoUsuario);</span>
+<span class="nc" id="L32">        grupoBotonesSexo.add(rBtnMasculinoUsuario);</span>
+<span class="nc" id="L33">        rBtnMasculinoUsuario.setSelected(true);</span>
+<span class="nc" id="L34">        grupoBotonesPreferencias.add(rBVegano);</span>
+<span class="nc" id="L35">        grupoBotonesPreferencias.add(rBVegetariano);</span>
+<span class="nc" id="L36">        grupoBotonesPreferencias.add(rBMacrobiotico);</span>
+<span class="nc" id="L37">        grupoBotonesPreferencias.add(rBOrganico);</span>
+<span class="nc" id="L38">        Usuario.Nacionalidades[] listaNac = usuario.getListaEnumNac();</span>
+<span class="nc" id="L39">        listaNacionalidadesUsuario.setModel(new DefaultComboBoxModel(listaNac));</span>
+<span class="nc" id="L40">        listaNacionalidadesUsuario.setSelectedIndex(Usuario.Nacionalidades.Uruguaya.ordinal());</span>
+<span class="nc" id="L41">        usuario.setListaRestricciones(new boolean[usuario.getListaRestricciones().length]);</span>
+<span class="nc" id="L42">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Ninguna);</span>
+<span class="nc" id="L43">        fotoPerfil.setSize(210, 240);</span>
+<span class="nc" id="L44">    }</span>
 
     @SuppressWarnings(&quot;unchecked&quot;)
     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<span class="nc" id="L52">        grupoBotonesSexo = new javax.swing.ButtonGroup();</span>
-<span class="nc" id="L53">        grupoBotonesPreferencias = new javax.swing.ButtonGroup();</span>
-<span class="nc" id="L54">        panelEditarPerfilUsuario = new javax.swing.JPanel();</span>
-<span class="nc" id="L55">        etiquetaNombre = new javax.swing.JLabel();</span>
-<span class="nc" id="L56">        etiquetaApellidos = new javax.swing.JLabel();</span>
-<span class="nc" id="L57">        etiquetaFDNaciomiento = new javax.swing.JLabel();</span>
-<span class="nc" id="L58">        etiquetaFotoPerfil = new javax.swing.JLabel();</span>
-<span class="nc" id="L59">        cajaNombre = new javax.swing.JTextField();</span>
-<span class="nc" id="L60">        cajaApellidos = new javax.swing.JTextField();</span>
-<span class="nc" id="L61">        etiquetaPeso = new javax.swing.JLabel();</span>
-<span class="nc" id="L62">        etiquetaAltura = new javax.swing.JLabel();</span>
-<span class="nc" id="L63">        cajaAltura = new javax.swing.JTextField();</span>
-<span class="nc" id="L64">        cajaPeso = new javax.swing.JTextField();</span>
-<span class="nc" id="L65">        etiquetaMedidaPeso = new javax.swing.JLabel();</span>
-<span class="nc" id="L66">        etiquetaMedidaAltura = new javax.swing.JLabel();</span>
-<span class="nc" id="L67">        btnAceptarUsuario = new javax.swing.JButton();</span>
-<span class="nc" id="L68">        etiquetaTitulo = new javax.swing.JLabel();</span>
-<span class="nc" id="L69">        etiquetaNacionalidadUsuario = new javax.swing.JLabel();</span>
-<span class="nc" id="L70">        listaNacionalidadesUsuario = new javax.swing.JComboBox();</span>
-<span class="nc" id="L71">        etiquetaSexo = new javax.swing.JLabel();</span>
-<span class="nc" id="L72">        rBtnMasculinoUsuario = new javax.swing.JRadioButton();</span>
-<span class="nc" id="L73">        rBtnFemeninoUsuario = new javax.swing.JRadioButton();</span>
-<span class="nc" id="L74">        etiquetaRestricciones = new javax.swing.JLabel();</span>
-<span class="nc" id="L75">        checkBoxCeliaco = new javax.swing.JCheckBox();</span>
-<span class="nc" id="L76">        checkBoxIntoleranteLactosa = new javax.swing.JCheckBox();</span>
-<span class="nc" id="L77">        checkBoxDiabetico = new javax.swing.JCheckBox();</span>
-<span class="nc" id="L78">        checkBoxHipertension = new javax.swing.JCheckBox();</span>
-<span class="nc" id="L79">        etiquetaErrorNombre = new javax.swing.JLabel();</span>
-<span class="nc" id="L80">        etiquetaErrorApellido = new javax.swing.JLabel();</span>
-<span class="nc" id="L81">        etiquetaErrorNombreUsuario = new javax.swing.JLabel();</span>
-<span class="nc" id="L82">        etiquetaErrorAltura = new javax.swing.JLabel();</span>
-<span class="nc" id="L83">        etiquetaErrorPeso = new javax.swing.JLabel();</span>
-<span class="nc" id="L84">        etiquetaMensajeAlAceptar = new javax.swing.JLabel();</span>
-<span class="nc" id="L85">        fotoPerfil = new javax.swing.JLabel();</span>
-<span class="nc" id="L86">        fechaNacimiento = new com.toedter.calendar.JDateChooser();</span>
-<span class="nc" id="L87">        etiquetaErrorFechaNacimiento = new javax.swing.JLabel();</span>
-<span class="nc" id="L88">        etiquetaPreferencias = new javax.swing.JLabel();</span>
-<span class="nc" id="L89">        rBVegano = new javax.swing.JRadioButton();</span>
-<span class="nc" id="L90">        rBVegetariano = new javax.swing.JRadioButton();</span>
-<span class="nc" id="L91">        rBMacrobiotico = new javax.swing.JRadioButton();</span>
-<span class="nc" id="L92">        rBOrganico = new javax.swing.JRadioButton();</span>
-<span class="nc" id="L93">        btnCambiarFoto = new javax.swing.JButton();</span>
-<span class="nc" id="L94">        btnVolver = new javax.swing.JButton();</span>
+<span class="nc" id="L50">        grupoBotonesSexo = new javax.swing.ButtonGroup();</span>
+<span class="nc" id="L51">        grupoBotonesPreferencias = new javax.swing.ButtonGroup();</span>
+<span class="nc" id="L52">        panelEditarPerfilUsuario = new javax.swing.JPanel();</span>
+<span class="nc" id="L53">        etiquetaContraseña = new javax.swing.JLabel();</span>
+<span class="nc" id="L54">        etiquetaApellidos = new javax.swing.JLabel();</span>
+<span class="nc" id="L55">        etiquetaFDNaciomiento = new javax.swing.JLabel();</span>
+<span class="nc" id="L56">        etiquetaFotoPerfil = new javax.swing.JLabel();</span>
+<span class="nc" id="L57">        cajaContraseña = new javax.swing.JTextField();</span>
+<span class="nc" id="L58">        cajaApellidos = new javax.swing.JTextField();</span>
+<span class="nc" id="L59">        etiquetaPeso = new javax.swing.JLabel();</span>
+<span class="nc" id="L60">        etiquetaAltura = new javax.swing.JLabel();</span>
+<span class="nc" id="L61">        cajaAltura = new javax.swing.JTextField();</span>
+<span class="nc" id="L62">        cajaPeso = new javax.swing.JTextField();</span>
+<span class="nc" id="L63">        etiquetaMedidaPeso = new javax.swing.JLabel();</span>
+<span class="nc" id="L64">        etiquetaMedidaAltura = new javax.swing.JLabel();</span>
+<span class="nc" id="L65">        btnAceptarUsuario = new javax.swing.JButton();</span>
+<span class="nc" id="L66">        etiquetaTitulo = new javax.swing.JLabel();</span>
+<span class="nc" id="L67">        etiquetaNacionalidadUsuario = new javax.swing.JLabel();</span>
+<span class="nc" id="L68">        listaNacionalidadesUsuario = new javax.swing.JComboBox();</span>
+<span class="nc" id="L69">        etiquetaSexo = new javax.swing.JLabel();</span>
+<span class="nc" id="L70">        rBtnMasculinoUsuario = new javax.swing.JRadioButton();</span>
+<span class="nc" id="L71">        rBtnFemeninoUsuario = new javax.swing.JRadioButton();</span>
+<span class="nc" id="L72">        etiquetaRestricciones = new javax.swing.JLabel();</span>
+<span class="nc" id="L73">        checkBoxCeliaco = new javax.swing.JCheckBox();</span>
+<span class="nc" id="L74">        checkBoxIntoleranteLactosa = new javax.swing.JCheckBox();</span>
+<span class="nc" id="L75">        checkBoxDiabetico = new javax.swing.JCheckBox();</span>
+<span class="nc" id="L76">        checkBoxHipertension = new javax.swing.JCheckBox();</span>
+<span class="nc" id="L77">        etiquetaErrorContraseña = new javax.swing.JLabel();</span>
+<span class="nc" id="L78">        etiquetaErrorApellido = new javax.swing.JLabel();</span>
+<span class="nc" id="L79">        etiquetaErrorNombreUsuario = new javax.swing.JLabel();</span>
+<span class="nc" id="L80">        etiquetaErrorAltura = new javax.swing.JLabel();</span>
+<span class="nc" id="L81">        etiquetaErrorPeso = new javax.swing.JLabel();</span>
+<span class="nc" id="L82">        etiquetaMensajeAlAceptar = new javax.swing.JLabel();</span>
+<span class="nc" id="L83">        fotoPerfil = new javax.swing.JLabel();</span>
+<span class="nc" id="L84">        fechaNacimiento = new com.toedter.calendar.JDateChooser();</span>
+<span class="nc" id="L85">        etiquetaErrorFechaNacimiento = new javax.swing.JLabel();</span>
+<span class="nc" id="L86">        etiquetaPreferencias = new javax.swing.JLabel();</span>
+<span class="nc" id="L87">        rBVegano = new javax.swing.JRadioButton();</span>
+<span class="nc" id="L88">        rBVegetariano = new javax.swing.JRadioButton();</span>
+<span class="nc" id="L89">        rBMacrobiotico = new javax.swing.JRadioButton();</span>
+<span class="nc" id="L90">        rBOrganico = new javax.swing.JRadioButton();</span>
+<span class="nc" id="L91">        btnCambiarFoto = new javax.swing.JButton();</span>
+<span class="nc" id="L92">        btnVolver = new javax.swing.JButton();</span>
+<span class="nc" id="L93">        etiquetaNombre1 = new javax.swing.JLabel();</span>
+<span class="nc" id="L94">        cajaNombre1 = new javax.swing.JTextField();</span>
+<span class="nc" id="L95">        etiquetaErrorNombre1 = new javax.swing.JLabel();</span>
 
-<span class="nc" id="L96">        setPreferredSize(new java.awt.Dimension(1147, 784));</span>
+<span class="nc" id="L97">        setPreferredSize(new java.awt.Dimension(1147, 784));</span>
 
-<span class="nc" id="L98">        panelEditarPerfilUsuario.setBackground(new java.awt.Color(255, 255, 255));</span>
-<span class="nc" id="L99">        panelEditarPerfilUsuario.setPreferredSize(new java.awt.Dimension(1147, 784));</span>
-<span class="nc" id="L100">        panelEditarPerfilUsuario.setLayout(null);</span>
+<span class="nc" id="L99">        panelEditarPerfilUsuario.setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L100">        panelEditarPerfilUsuario.setPreferredSize(new java.awt.Dimension(1147, 784));</span>
+<span class="nc" id="L101">        panelEditarPerfilUsuario.setLayout(null);</span>
 
-<span class="nc" id="L102">        etiquetaNombre.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L103">        etiquetaNombre.setText(&quot;Nombre:&quot;);</span>
-<span class="nc" id="L104">        panelEditarPerfilUsuario.add(etiquetaNombre);</span>
-<span class="nc" id="L105">        etiquetaNombre.setBounds(370, 80, 92, 29);</span>
+<span class="nc" id="L103">        etiquetaContraseña.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L104">        etiquetaContraseña.setText(&quot;Contraseña:&quot;);</span>
+<span class="nc" id="L105">        panelEditarPerfilUsuario.add(etiquetaContraseña);</span>
+<span class="nc" id="L106">        etiquetaContraseña.setBounds(330, 130, 130, 29);</span>
 
-<span class="nc" id="L107">        etiquetaApellidos.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L108">        etiquetaApellidos.setText(&quot;Apellidos:&quot;);</span>
-<span class="nc" id="L109">        panelEditarPerfilUsuario.add(etiquetaApellidos);</span>
-<span class="nc" id="L110">        etiquetaApellidos.setBounds(360, 130, 110, 26);</span>
+<span class="nc" id="L108">        etiquetaApellidos.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L109">        etiquetaApellidos.setText(&quot;Apellidos:&quot;);</span>
+<span class="nc" id="L110">        panelEditarPerfilUsuario.add(etiquetaApellidos);</span>
+<span class="nc" id="L111">        etiquetaApellidos.setBounds(360, 90, 110, 26);</span>
 
-<span class="nc" id="L112">        etiquetaFDNaciomiento.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L113">        etiquetaFDNaciomiento.setText(&quot;Fecha de Nacimiento:&quot;);</span>
-<span class="nc" id="L114">        panelEditarPerfilUsuario.add(etiquetaFDNaciomiento);</span>
-<span class="nc" id="L115">        etiquetaFDNaciomiento.setBounds(240, 230, 230, 26);</span>
+<span class="nc" id="L113">        etiquetaFDNaciomiento.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L114">        etiquetaFDNaciomiento.setText(&quot;Fecha de Nacimiento:&quot;);</span>
+<span class="nc" id="L115">        panelEditarPerfilUsuario.add(etiquetaFDNaciomiento);</span>
+<span class="nc" id="L116">        etiquetaFDNaciomiento.setBounds(240, 230, 230, 26);</span>
 
-<span class="nc" id="L117">        etiquetaFotoPerfil.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L118">        etiquetaFotoPerfil.setText(&quot;Foto de Perfil:&quot;);</span>
-<span class="nc" id="L119">        panelEditarPerfilUsuario.add(etiquetaFotoPerfil);</span>
-<span class="nc" id="L120">        etiquetaFotoPerfil.setBounds(60, 110, 160, 29);</span>
+<span class="nc" id="L118">        etiquetaFotoPerfil.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L119">        etiquetaFotoPerfil.setText(&quot;Foto de Perfil:&quot;);</span>
+<span class="nc" id="L120">        panelEditarPerfilUsuario.add(etiquetaFotoPerfil);</span>
+<span class="nc" id="L121">        etiquetaFotoPerfil.setBounds(60, 110, 160, 29);</span>
 
-<span class="nc" id="L122">        cajaNombre.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L123">        cajaNombre.addFocusListener(new java.awt.event.FocusAdapter() {</span>
+<span class="nc" id="L123">        cajaContraseña.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L124">        cajaContraseña.addFocusListener(new java.awt.event.FocusAdapter() {</span>
             public void focusLost(java.awt.event.FocusEvent evt) {
-<span class="nc" id="L125">                cajaNombreFocusLost(evt);</span>
-<span class="nc" id="L126">            }</span>
+<span class="nc" id="L126">                cajaContraseñaFocusLost(evt);</span>
+<span class="nc" id="L127">            }</span>
         });
-<span class="nc" id="L128">        cajaNombre.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L129">        cajaContraseña.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L130">                cajaNombreActionPerformed(evt);</span>
-<span class="nc" id="L131">            }</span>
+<span class="nc" id="L131">                cajaContraseñaActionPerformed(evt);</span>
+<span class="nc" id="L132">            }</span>
         });
-<span class="nc" id="L133">        panelEditarPerfilUsuario.add(cajaNombre);</span>
-<span class="nc" id="L134">        cajaNombre.setBounds(480, 80, 160, 35);</span>
+<span class="nc" id="L134">        panelEditarPerfilUsuario.add(cajaContraseña);</span>
+<span class="nc" id="L135">        cajaContraseña.setBounds(480, 130, 160, 37);</span>
 
-<span class="nc" id="L136">        cajaApellidos.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L137">        cajaApellidos.addFocusListener(new java.awt.event.FocusAdapter() {</span>
+<span class="nc" id="L137">        cajaApellidos.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L138">        cajaApellidos.addFocusListener(new java.awt.event.FocusAdapter() {</span>
             public void focusLost(java.awt.event.FocusEvent evt) {
-<span class="nc" id="L139">                cajaApellidosFocusLost(evt);</span>
-<span class="nc" id="L140">            }</span>
+<span class="nc" id="L140">                cajaApellidosFocusLost(evt);</span>
+<span class="nc" id="L141">            }</span>
         });
-<span class="nc" id="L142">        panelEditarPerfilUsuario.add(cajaApellidos);</span>
-<span class="nc" id="L143">        cajaApellidos.setBounds(480, 130, 160, 35);</span>
+<span class="nc" id="L143">        panelEditarPerfilUsuario.add(cajaApellidos);</span>
+<span class="nc" id="L144">        cajaApellidos.setBounds(480, 90, 160, 37);</span>
 
-<span class="nc" id="L145">        etiquetaPeso.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L146">        etiquetaPeso.setText(&quot;Peso:&quot;);</span>
-<span class="nc" id="L147">        panelEditarPerfilUsuario.add(etiquetaPeso);</span>
-<span class="nc" id="L148">        etiquetaPeso.setBounds(410, 330, 60, 26);</span>
+<span class="nc" id="L146">        etiquetaPeso.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L147">        etiquetaPeso.setText(&quot;Peso:&quot;);</span>
+<span class="nc" id="L148">        panelEditarPerfilUsuario.add(etiquetaPeso);</span>
+<span class="nc" id="L149">        etiquetaPeso.setBounds(410, 330, 60, 26);</span>
 
-<span class="nc" id="L150">        etiquetaAltura.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L151">        etiquetaAltura.setText(&quot;Altura:&quot;);</span>
-<span class="nc" id="L152">        panelEditarPerfilUsuario.add(etiquetaAltura);</span>
-<span class="nc" id="L153">        etiquetaAltura.setBounds(400, 280, 70, 26);</span>
+<span class="nc" id="L151">        etiquetaAltura.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L152">        etiquetaAltura.setText(&quot;Altura:&quot;);</span>
+<span class="nc" id="L153">        panelEditarPerfilUsuario.add(etiquetaAltura);</span>
+<span class="nc" id="L154">        etiquetaAltura.setBounds(400, 280, 70, 26);</span>
 
-<span class="nc" id="L155">        cajaAltura.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L156">        cajaAltura.addFocusListener(new java.awt.event.FocusAdapter() {</span>
+<span class="nc" id="L156">        cajaAltura.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L157">        cajaAltura.addFocusListener(new java.awt.event.FocusAdapter() {</span>
             public void focusLost(java.awt.event.FocusEvent evt) {
-<span class="nc" id="L158">                cajaAlturaFocusLost(evt);</span>
-<span class="nc" id="L159">            }</span>
+<span class="nc" id="L159">                cajaAlturaFocusLost(evt);</span>
+<span class="nc" id="L160">            }</span>
         });
-<span class="nc" id="L161">        cajaAltura.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L162">        cajaAltura.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L163">                cajaAlturaActionPerformed(evt);</span>
-<span class="nc" id="L164">            }</span>
+<span class="nc" id="L164">                cajaAlturaActionPerformed(evt);</span>
+<span class="nc" id="L165">            }</span>
         });
-<span class="nc" id="L166">        panelEditarPerfilUsuario.add(cajaAltura);</span>
-<span class="nc" id="L167">        cajaAltura.setBounds(480, 330, 160, 35);</span>
+<span class="nc" id="L167">        panelEditarPerfilUsuario.add(cajaAltura);</span>
+<span class="nc" id="L168">        cajaAltura.setBounds(480, 330, 160, 37);</span>
 
-<span class="nc" id="L169">        cajaPeso.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L170">        cajaPeso.addFocusListener(new java.awt.event.FocusAdapter() {</span>
+<span class="nc" id="L170">        cajaPeso.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L171">        cajaPeso.addFocusListener(new java.awt.event.FocusAdapter() {</span>
             public void focusLost(java.awt.event.FocusEvent evt) {
-<span class="nc" id="L172">                cajaPesoFocusLost(evt);</span>
-<span class="nc" id="L173">            }</span>
+<span class="nc" id="L173">                cajaPesoFocusLost(evt);</span>
+<span class="nc" id="L174">            }</span>
         });
-<span class="nc" id="L175">        panelEditarPerfilUsuario.add(cajaPeso);</span>
-<span class="nc" id="L176">        cajaPeso.setBounds(480, 280, 160, 35);</span>
+<span class="nc" id="L176">        panelEditarPerfilUsuario.add(cajaPeso);</span>
+<span class="nc" id="L177">        cajaPeso.setBounds(480, 280, 160, 37);</span>
 
-<span class="nc" id="L178">        etiquetaMedidaPeso.setText(&quot;Kg&quot;);</span>
-<span class="nc" id="L179">        panelEditarPerfilUsuario.add(etiquetaMedidaPeso);</span>
-<span class="nc" id="L180">        etiquetaMedidaPeso.setBounds(650, 330, 24, 26);</span>
+<span class="nc" id="L179">        etiquetaMedidaPeso.setText(&quot;Kg&quot;);</span>
+<span class="nc" id="L180">        panelEditarPerfilUsuario.add(etiquetaMedidaPeso);</span>
+<span class="nc" id="L181">        etiquetaMedidaPeso.setBounds(650, 330, 20, 16);</span>
 
-<span class="nc" id="L182">        etiquetaMedidaAltura.setText(&quot;Cm&quot;);</span>
-<span class="nc" id="L183">        panelEditarPerfilUsuario.add(etiquetaMedidaAltura);</span>
-<span class="nc" id="L184">        etiquetaMedidaAltura.setBounds(650, 280, 31, 26);</span>
+<span class="nc" id="L183">        etiquetaMedidaAltura.setText(&quot;Cm&quot;);</span>
+<span class="nc" id="L184">        panelEditarPerfilUsuario.add(etiquetaMedidaAltura);</span>
+<span class="nc" id="L185">        etiquetaMedidaAltura.setBounds(650, 280, 40, 16);</span>
 
-<span class="nc" id="L186">        btnAceptarUsuario.setBackground(new java.awt.Color(255, 0, 102));</span>
-<span class="nc" id="L187">        btnAceptarUsuario.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L188">        btnAceptarUsuario.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="nc" id="L189">        btnAceptarUsuario.setText(&quot;Aceptar&quot;);</span>
-<span class="nc" id="L190">        btnAceptarUsuario.setContentAreaFilled(false);</span>
-<span class="nc" id="L191">        btnAceptarUsuario.setOpaque(true);</span>
-<span class="nc" id="L192">        btnAceptarUsuario.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L187">        btnAceptarUsuario.setBackground(new java.awt.Color(255, 0, 102));</span>
+<span class="nc" id="L188">        btnAceptarUsuario.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L189">        btnAceptarUsuario.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L190">        btnAceptarUsuario.setText(&quot;Aceptar&quot;);</span>
+<span class="nc" id="L191">        btnAceptarUsuario.setContentAreaFilled(false);</span>
+<span class="nc" id="L192">        btnAceptarUsuario.setOpaque(true);</span>
+<span class="nc" id="L193">        btnAceptarUsuario.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L194">                btnAceptarUsuarioActionPerformed(evt);</span>
-<span class="nc" id="L195">            }</span>
+<span class="nc" id="L195">                btnAceptarUsuarioActionPerformed(evt);</span>
+<span class="nc" id="L196">            }</span>
         });
-<span class="nc" id="L197">        panelEditarPerfilUsuario.add(btnAceptarUsuario);</span>
-<span class="nc" id="L198">        btnAceptarUsuario.setBounds(850, 590, 200, 40);</span>
+<span class="nc" id="L198">        panelEditarPerfilUsuario.add(btnAceptarUsuario);</span>
+<span class="nc" id="L199">        btnAceptarUsuario.setBounds(850, 590, 200, 40);</span>
 
-<span class="nc" id="L200">        etiquetaTitulo.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 36)); // NOI18N</span>
-<span class="nc" id="L201">        etiquetaTitulo.setForeground(new java.awt.Color(255, 0, 102));</span>
-<span class="nc" id="L202">        etiquetaTitulo.setText(&quot;Editar perfil del usuario&quot;);</span>
-<span class="nc" id="L203">        panelEditarPerfilUsuario.add(etiquetaTitulo);</span>
-<span class="nc" id="L204">        etiquetaTitulo.setBounds(390, 0, 380, 44);</span>
+<span class="nc" id="L201">        etiquetaTitulo.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 36)); // NOI18N</span>
+<span class="nc" id="L202">        etiquetaTitulo.setForeground(new java.awt.Color(255, 0, 102));</span>
+<span class="nc" id="L203">        etiquetaTitulo.setText(&quot;Editar perfil del usuario&quot;);</span>
+<span class="nc" id="L204">        panelEditarPerfilUsuario.add(etiquetaTitulo);</span>
+<span class="nc" id="L205">        etiquetaTitulo.setBounds(390, 0, 380, 44);</span>
 
-<span class="nc" id="L206">        etiquetaNacionalidadUsuario.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L207">        etiquetaNacionalidadUsuario.setText(&quot;Nacionalidad:&quot;);</span>
-<span class="nc" id="L208">        panelEditarPerfilUsuario.add(etiquetaNacionalidadUsuario);</span>
-<span class="nc" id="L209">        etiquetaNacionalidadUsuario.setBounds(330, 180, 160, 29);</span>
+<span class="nc" id="L207">        etiquetaNacionalidadUsuario.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L208">        etiquetaNacionalidadUsuario.setText(&quot;Nacionalidad:&quot;);</span>
+<span class="nc" id="L209">        panelEditarPerfilUsuario.add(etiquetaNacionalidadUsuario);</span>
+<span class="nc" id="L210">        etiquetaNacionalidadUsuario.setBounds(330, 180, 160, 29);</span>
 
-<span class="nc" id="L211">        listaNacionalidadesUsuario.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L212">        listaNacionalidadesUsuario.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L212">        listaNacionalidadesUsuario.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L213">        listaNacionalidadesUsuario.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L214">                listaNacionalidadesUsuarioActionPerformed(evt);</span>
-<span class="nc" id="L215">            }</span>
+<span class="nc" id="L215">                listaNacionalidadesUsuarioActionPerformed(evt);</span>
+<span class="nc" id="L216">            }</span>
         });
-<span class="nc" id="L217">        panelEditarPerfilUsuario.add(listaNacionalidadesUsuario);</span>
-<span class="nc" id="L218">        listaNacionalidadesUsuario.setBounds(480, 180, 160, 35);</span>
+<span class="nc" id="L218">        panelEditarPerfilUsuario.add(listaNacionalidadesUsuario);</span>
+<span class="nc" id="L219">        listaNacionalidadesUsuario.setBounds(480, 180, 160, 39);</span>
 
-<span class="nc" id="L220">        etiquetaSexo.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L221">        etiquetaSexo.setText(&quot;Sexo:&quot;);</span>
-<span class="nc" id="L222">        panelEditarPerfilUsuario.add(etiquetaSexo);</span>
-<span class="nc" id="L223">        etiquetaSexo.setBounds(410, 370, 70, 29);</span>
+<span class="nc" id="L221">        etiquetaSexo.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L222">        etiquetaSexo.setText(&quot;Sexo:&quot;);</span>
+<span class="nc" id="L223">        panelEditarPerfilUsuario.add(etiquetaSexo);</span>
+<span class="nc" id="L224">        etiquetaSexo.setBounds(410, 370, 70, 29);</span>
 
-<span class="nc" id="L225">        rBtnMasculinoUsuario.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L226">        rBtnMasculinoUsuario.setText(&quot;Masculino&quot;);</span>
-<span class="nc" id="L227">        rBtnMasculinoUsuario.setContentAreaFilled(false);</span>
-<span class="nc" id="L228">        rBtnMasculinoUsuario.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L226">        rBtnMasculinoUsuario.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L227">        rBtnMasculinoUsuario.setText(&quot;Masculino&quot;);</span>
+<span class="nc" id="L228">        rBtnMasculinoUsuario.setContentAreaFilled(false);</span>
+<span class="nc" id="L229">        rBtnMasculinoUsuario.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L230">                rBtnMasculinoUsuarioActionPerformed(evt);</span>
-<span class="nc" id="L231">            }</span>
+<span class="nc" id="L231">                rBtnMasculinoUsuarioActionPerformed(evt);</span>
+<span class="nc" id="L232">            }</span>
         });
-<span class="nc" id="L233">        panelEditarPerfilUsuario.add(rBtnMasculinoUsuario);</span>
-<span class="nc" id="L234">        rBtnMasculinoUsuario.setBounds(480, 370, 150, 35);</span>
+<span class="nc" id="L234">        panelEditarPerfilUsuario.add(rBtnMasculinoUsuario);</span>
+<span class="nc" id="L235">        rBtnMasculinoUsuario.setBounds(480, 370, 150, 35);</span>
 
-<span class="nc" id="L236">        rBtnFemeninoUsuario.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L237">        rBtnFemeninoUsuario.setText(&quot;Femenino&quot;);</span>
-<span class="nc" id="L238">        rBtnFemeninoUsuario.setContentAreaFilled(false);</span>
-<span class="nc" id="L239">        rBtnFemeninoUsuario.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L237">        rBtnFemeninoUsuario.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L238">        rBtnFemeninoUsuario.setText(&quot;Femenino&quot;);</span>
+<span class="nc" id="L239">        rBtnFemeninoUsuario.setContentAreaFilled(false);</span>
+<span class="nc" id="L240">        rBtnFemeninoUsuario.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L241">                rBtnFemeninoUsuarioActionPerformed(evt);</span>
-<span class="nc" id="L242">            }</span>
+<span class="nc" id="L242">                rBtnFemeninoUsuarioActionPerformed(evt);</span>
+<span class="nc" id="L243">            }</span>
         });
-<span class="nc" id="L244">        panelEditarPerfilUsuario.add(rBtnFemeninoUsuario);</span>
-<span class="nc" id="L245">        rBtnFemeninoUsuario.setBounds(630, 370, 160, 35);</span>
+<span class="nc" id="L245">        panelEditarPerfilUsuario.add(rBtnFemeninoUsuario);</span>
+<span class="nc" id="L246">        rBtnFemeninoUsuario.setBounds(630, 370, 160, 35);</span>
 
-<span class="nc" id="L247">        etiquetaRestricciones.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L248">        etiquetaRestricciones.setText(&quot;Restricciones:&quot;);</span>
-<span class="nc" id="L249">        panelEditarPerfilUsuario.add(etiquetaRestricciones);</span>
-<span class="nc" id="L250">        etiquetaRestricciones.setBounds(320, 410, 150, 26);</span>
+<span class="nc" id="L248">        etiquetaRestricciones.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L249">        etiquetaRestricciones.setText(&quot;Restricciones:&quot;);</span>
+<span class="nc" id="L250">        panelEditarPerfilUsuario.add(etiquetaRestricciones);</span>
+<span class="nc" id="L251">        etiquetaRestricciones.setBounds(320, 410, 150, 26);</span>
 
-<span class="nc" id="L252">        checkBoxCeliaco.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L253">        checkBoxCeliaco.setText(&quot;Celíaco&quot;);</span>
-<span class="nc" id="L254">        checkBoxCeliaco.setContentAreaFilled(false);</span>
-<span class="nc" id="L255">        checkBoxCeliaco.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L253">        checkBoxCeliaco.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L254">        checkBoxCeliaco.setText(&quot;Celíaco&quot;);</span>
+<span class="nc" id="L255">        checkBoxCeliaco.setContentAreaFilled(false);</span>
+<span class="nc" id="L256">        checkBoxCeliaco.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L257">                checkBoxCeliacoActionPerformed(evt);</span>
-<span class="nc" id="L258">            }</span>
+<span class="nc" id="L258">                checkBoxCeliacoActionPerformed(evt);</span>
+<span class="nc" id="L259">            }</span>
         });
-<span class="nc" id="L260">        panelEditarPerfilUsuario.add(checkBoxCeliaco);</span>
-<span class="nc" id="L261">        checkBoxCeliaco.setBounds(480, 410, 120, 35);</span>
+<span class="nc" id="L261">        panelEditarPerfilUsuario.add(checkBoxCeliaco);</span>
+<span class="nc" id="L262">        checkBoxCeliaco.setBounds(480, 410, 120, 35);</span>
 
-<span class="nc" id="L263">        checkBoxIntoleranteLactosa.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L264">        checkBoxIntoleranteLactosa.setText(&quot;Intolerante a la lactosa&quot;);</span>
-<span class="nc" id="L265">        checkBoxIntoleranteLactosa.setContentAreaFilled(false);</span>
-<span class="nc" id="L266">        checkBoxIntoleranteLactosa.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L264">        checkBoxIntoleranteLactosa.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L265">        checkBoxIntoleranteLactosa.setText(&quot;Intolerante a la lactosa&quot;);</span>
+<span class="nc" id="L266">        checkBoxIntoleranteLactosa.setContentAreaFilled(false);</span>
+<span class="nc" id="L267">        checkBoxIntoleranteLactosa.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L268">                checkBoxIntoleranteLactosaActionPerformed(evt);</span>
-<span class="nc" id="L269">            }</span>
+<span class="nc" id="L269">                checkBoxIntoleranteLactosaActionPerformed(evt);</span>
+<span class="nc" id="L270">            }</span>
         });
-<span class="nc" id="L271">        panelEditarPerfilUsuario.add(checkBoxIntoleranteLactosa);</span>
-<span class="nc" id="L272">        checkBoxIntoleranteLactosa.setBounds(590, 410, 285, 37);</span>
+<span class="nc" id="L272">        panelEditarPerfilUsuario.add(checkBoxIntoleranteLactosa);</span>
+<span class="nc" id="L273">        checkBoxIntoleranteLactosa.setBounds(590, 410, 274, 33);</span>
 
-<span class="nc" id="L274">        checkBoxDiabetico.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L275">        checkBoxDiabetico.setText(&quot;Diabético&quot;);</span>
-<span class="nc" id="L276">        checkBoxDiabetico.setContentAreaFilled(false);</span>
-<span class="nc" id="L277">        checkBoxDiabetico.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L275">        checkBoxDiabetico.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L276">        checkBoxDiabetico.setText(&quot;Diabético&quot;);</span>
+<span class="nc" id="L277">        checkBoxDiabetico.setContentAreaFilled(false);</span>
+<span class="nc" id="L278">        checkBoxDiabetico.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L279">                checkBoxDiabeticoActionPerformed(evt);</span>
-<span class="nc" id="L280">            }</span>
+<span class="nc" id="L280">                checkBoxDiabeticoActionPerformed(evt);</span>
+<span class="nc" id="L281">            }</span>
         });
-<span class="nc" id="L282">        panelEditarPerfilUsuario.add(checkBoxDiabetico);</span>
-<span class="nc" id="L283">        checkBoxDiabetico.setBounds(880, 410, 140, 35);</span>
+<span class="nc" id="L283">        panelEditarPerfilUsuario.add(checkBoxDiabetico);</span>
+<span class="nc" id="L284">        checkBoxDiabetico.setBounds(880, 410, 140, 35);</span>
 
-<span class="nc" id="L285">        checkBoxHipertension.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L286">        checkBoxHipertension.setText(&quot;Hipertensión&quot;);</span>
-<span class="nc" id="L287">        checkBoxHipertension.setContentAreaFilled(false);</span>
-<span class="nc" id="L288">        checkBoxHipertension.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L286">        checkBoxHipertension.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L287">        checkBoxHipertension.setText(&quot;Hipertensión&quot;);</span>
+<span class="nc" id="L288">        checkBoxHipertension.setContentAreaFilled(false);</span>
+<span class="nc" id="L289">        checkBoxHipertension.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L290">                checkBoxHipertensionActionPerformed(evt);</span>
-<span class="nc" id="L291">            }</span>
+<span class="nc" id="L291">                checkBoxHipertensionActionPerformed(evt);</span>
+<span class="nc" id="L292">            }</span>
         });
-<span class="nc" id="L293">        panelEditarPerfilUsuario.add(checkBoxHipertension);</span>
-<span class="nc" id="L294">        checkBoxHipertension.setBounds(480, 450, 170, 35);</span>
+<span class="nc" id="L294">        panelEditarPerfilUsuario.add(checkBoxHipertension);</span>
+<span class="nc" id="L295">        checkBoxHipertension.setBounds(480, 450, 170, 35);</span>
 
-<span class="nc" id="L296">        etiquetaErrorNombre.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L297">        panelEditarPerfilUsuario.add(etiquetaErrorNombre);</span>
-<span class="nc" id="L298">        etiquetaErrorNombre.setBounds(660, 80, 400, 30);</span>
+<span class="nc" id="L297">        etiquetaErrorContraseña.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L298">        panelEditarPerfilUsuario.add(etiquetaErrorContraseña);</span>
+<span class="nc" id="L299">        etiquetaErrorContraseña.setBounds(650, 130, 400, 30);</span>
 
-<span class="nc" id="L300">        etiquetaErrorApellido.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L301">        panelEditarPerfilUsuario.add(etiquetaErrorApellido);</span>
-<span class="nc" id="L302">        etiquetaErrorApellido.setBounds(660, 130, 370, 30);</span>
+<span class="nc" id="L301">        etiquetaErrorApellido.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L302">        panelEditarPerfilUsuario.add(etiquetaErrorApellido);</span>
+<span class="nc" id="L303">        etiquetaErrorApellido.setBounds(650, 90, 370, 30);</span>
 
-<span class="nc" id="L304">        etiquetaErrorNombreUsuario.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L305">        panelEditarPerfilUsuario.add(etiquetaErrorNombreUsuario);</span>
-<span class="nc" id="L306">        etiquetaErrorNombreUsuario.setBounds(660, 180, 390, 30);</span>
+<span class="nc" id="L305">        etiquetaErrorNombreUsuario.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L306">        panelEditarPerfilUsuario.add(etiquetaErrorNombreUsuario);</span>
+<span class="nc" id="L307">        etiquetaErrorNombreUsuario.setBounds(660, 180, 390, 30);</span>
 
-<span class="nc" id="L308">        etiquetaErrorAltura.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L309">        panelEditarPerfilUsuario.add(etiquetaErrorAltura);</span>
-<span class="nc" id="L310">        etiquetaErrorAltura.setBounds(790, 330, 230, 0);</span>
+<span class="nc" id="L309">        etiquetaErrorAltura.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L310">        panelEditarPerfilUsuario.add(etiquetaErrorAltura);</span>
+<span class="nc" id="L311">        etiquetaErrorAltura.setBounds(790, 330, 230, 0);</span>
 
-<span class="nc" id="L312">        etiquetaErrorPeso.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L313">        panelEditarPerfilUsuario.add(etiquetaErrorPeso);</span>
-<span class="nc" id="L314">        etiquetaErrorPeso.setBounds(790, 380, 310, 0);</span>
+<span class="nc" id="L313">        etiquetaErrorPeso.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L314">        panelEditarPerfilUsuario.add(etiquetaErrorPeso);</span>
+<span class="nc" id="L315">        etiquetaErrorPeso.setBounds(790, 380, 310, 0);</span>
 
-<span class="nc" id="L316">        etiquetaMensajeAlAceptar.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L317">        panelEditarPerfilUsuario.add(etiquetaMensajeAlAceptar);</span>
-<span class="nc" id="L318">        etiquetaMensajeAlAceptar.setBounds(670, 550, 450, 26);</span>
+<span class="nc" id="L317">        etiquetaMensajeAlAceptar.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L318">        panelEditarPerfilUsuario.add(etiquetaMensajeAlAceptar);</span>
+<span class="nc" id="L319">        etiquetaMensajeAlAceptar.setBounds(670, 550, 450, 26);</span>
 
-<span class="nc" id="L320">        fotoPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/imagenes/predeterminadaUsuario.jpg&quot;))); // NOI18N</span>
-<span class="nc" id="L321">        fotoPerfil.setMaximumSize(new java.awt.Dimension(210, 240));</span>
-<span class="nc" id="L322">        fotoPerfil.setMinimumSize(new java.awt.Dimension(210, 240));</span>
-<span class="nc" id="L323">        fotoPerfil.setPreferredSize(new java.awt.Dimension(210, 240));</span>
-<span class="nc" id="L324">        panelEditarPerfilUsuario.add(fotoPerfil);</span>
-<span class="nc" id="L325">        fotoPerfil.setBounds(30, 150, 210, 220);</span>
+<span class="nc" id="L321">        fotoPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/imagenes/predeterminadaUsuario.jpg&quot;))); // NOI18N</span>
+<span class="nc" id="L322">        fotoPerfil.setMaximumSize(new java.awt.Dimension(210, 240));</span>
+<span class="nc" id="L323">        fotoPerfil.setMinimumSize(new java.awt.Dimension(210, 240));</span>
+<span class="nc" id="L324">        fotoPerfil.setPreferredSize(new java.awt.Dimension(210, 240));</span>
+<span class="nc" id="L325">        panelEditarPerfilUsuario.add(fotoPerfil);</span>
+<span class="nc" id="L326">        fotoPerfil.setBounds(30, 150, 210, 220);</span>
 
-<span class="nc" id="L327">        fechaNacimiento.addFocusListener(new java.awt.event.FocusAdapter() {</span>
+<span class="nc" id="L328">        fechaNacimiento.addFocusListener(new java.awt.event.FocusAdapter() {</span>
             public void focusLost(java.awt.event.FocusEvent evt) {
-<span class="nc" id="L329">                fechaNacimientoFocusLost(evt);</span>
-<span class="nc" id="L330">            }</span>
+<span class="nc" id="L330">                fechaNacimientoFocusLost(evt);</span>
+<span class="nc" id="L331">            }</span>
         });
-<span class="nc" id="L332">        panelEditarPerfilUsuario.add(fechaNacimiento);</span>
-<span class="nc" id="L333">        fechaNacimiento.setBounds(480, 230, 160, 32);</span>
+<span class="nc" id="L333">        panelEditarPerfilUsuario.add(fechaNacimiento);</span>
+<span class="nc" id="L334">        fechaNacimiento.setBounds(480, 230, 160, 29);</span>
 
-<span class="nc" id="L335">        etiquetaErrorFechaNacimiento.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L336">        panelEditarPerfilUsuario.add(etiquetaErrorFechaNacimiento);</span>
-<span class="nc" id="L337">        etiquetaErrorFechaNacimiento.setBounds(660, 280, 310, 0);</span>
+<span class="nc" id="L336">        etiquetaErrorFechaNacimiento.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L337">        panelEditarPerfilUsuario.add(etiquetaErrorFechaNacimiento);</span>
+<span class="nc" id="L338">        etiquetaErrorFechaNacimiento.setBounds(660, 280, 310, 0);</span>
 
-<span class="nc" id="L339">        etiquetaPreferencias.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L340">        etiquetaPreferencias.setText(&quot;Preferencias:&quot;);</span>
-<span class="nc" id="L341">        panelEditarPerfilUsuario.add(etiquetaPreferencias);</span>
-<span class="nc" id="L342">        etiquetaPreferencias.setBounds(320, 490, 150, 26);</span>
+<span class="nc" id="L340">        etiquetaPreferencias.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L341">        etiquetaPreferencias.setText(&quot;Preferencias:&quot;);</span>
+<span class="nc" id="L342">        panelEditarPerfilUsuario.add(etiquetaPreferencias);</span>
+<span class="nc" id="L343">        etiquetaPreferencias.setBounds(320, 490, 150, 26);</span>
 
-<span class="nc" id="L344">        rBVegano.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L345">        rBVegano.setText(&quot;Vegano&quot;);</span>
-<span class="nc" id="L346">        rBVegano.setContentAreaFilled(false);</span>
-<span class="nc" id="L347">        rBVegano.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L345">        rBVegano.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L346">        rBVegano.setText(&quot;Vegano&quot;);</span>
+<span class="nc" id="L347">        rBVegano.setContentAreaFilled(false);</span>
+<span class="nc" id="L348">        rBVegano.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L349">                rBVeganoActionPerformed(evt);</span>
-<span class="nc" id="L350">            }</span>
+<span class="nc" id="L350">                rBVeganoActionPerformed(evt);</span>
+<span class="nc" id="L351">            }</span>
         });
-<span class="nc" id="L352">        panelEditarPerfilUsuario.add(rBVegano);</span>
-<span class="nc" id="L353">        rBVegano.setBounds(470, 490, 120, 37);</span>
+<span class="nc" id="L353">        panelEditarPerfilUsuario.add(rBVegano);</span>
+<span class="nc" id="L354">        rBVegano.setBounds(470, 490, 120, 37);</span>
 
-<span class="nc" id="L355">        rBVegetariano.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L356">        rBVegetariano.setText(&quot;Vegetariano&quot;);</span>
-<span class="nc" id="L357">        rBVegetariano.setContentAreaFilled(false);</span>
-<span class="nc" id="L358">        rBVegetariano.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L356">        rBVegetariano.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L357">        rBVegetariano.setText(&quot;Vegetariano&quot;);</span>
+<span class="nc" id="L358">        rBVegetariano.setContentAreaFilled(false);</span>
+<span class="nc" id="L359">        rBVegetariano.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L360">                rBVegetarianoActionPerformed(evt);</span>
-<span class="nc" id="L361">            }</span>
+<span class="nc" id="L361">                rBVegetarianoActionPerformed(evt);</span>
+<span class="nc" id="L362">            }</span>
         });
-<span class="nc" id="L363">        panelEditarPerfilUsuario.add(rBVegetariano);</span>
-<span class="nc" id="L364">        rBVegetariano.setBounds(590, 490, 170, 37);</span>
+<span class="nc" id="L364">        panelEditarPerfilUsuario.add(rBVegetariano);</span>
+<span class="nc" id="L365">        rBVegetariano.setBounds(590, 490, 170, 37);</span>
 
-<span class="nc" id="L366">        rBMacrobiotico.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L367">        rBMacrobiotico.setText(&quot;Macrobiótico&quot;);</span>
-<span class="nc" id="L368">        rBMacrobiotico.setContentAreaFilled(false);</span>
-<span class="nc" id="L369">        rBMacrobiotico.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L367">        rBMacrobiotico.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L368">        rBMacrobiotico.setText(&quot;Macrobiótico&quot;);</span>
+<span class="nc" id="L369">        rBMacrobiotico.setContentAreaFilled(false);</span>
+<span class="nc" id="L370">        rBMacrobiotico.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L371">                rBMacrobioticoActionPerformed(evt);</span>
-<span class="nc" id="L372">            }</span>
+<span class="nc" id="L372">                rBMacrobioticoActionPerformed(evt);</span>
+<span class="nc" id="L373">            }</span>
         });
-<span class="nc" id="L374">        panelEditarPerfilUsuario.add(rBMacrobiotico);</span>
-<span class="nc" id="L375">        rBMacrobiotico.setBounds(760, 490, 180, 37);</span>
+<span class="nc" id="L375">        panelEditarPerfilUsuario.add(rBMacrobiotico);</span>
+<span class="nc" id="L376">        rBMacrobiotico.setBounds(760, 490, 180, 37);</span>
 
-<span class="nc" id="L377">        rBOrganico.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L378">        rBOrganico.setText(&quot;Orgánico&quot;);</span>
-<span class="nc" id="L379">        rBOrganico.setContentAreaFilled(false);</span>
-<span class="nc" id="L380">        rBOrganico.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L378">        rBOrganico.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L379">        rBOrganico.setText(&quot;Orgánico&quot;);</span>
+<span class="nc" id="L380">        rBOrganico.setContentAreaFilled(false);</span>
+<span class="nc" id="L381">        rBOrganico.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L382">                rBOrganicoActionPerformed(evt);</span>
-<span class="nc" id="L383">            }</span>
+<span class="nc" id="L383">                rBOrganicoActionPerformed(evt);</span>
+<span class="nc" id="L384">            }</span>
         });
-<span class="nc" id="L385">        panelEditarPerfilUsuario.add(rBOrganico);</span>
-<span class="nc" id="L386">        rBOrganico.setBounds(940, 490, 140, 37);</span>
+<span class="nc" id="L386">        panelEditarPerfilUsuario.add(rBOrganico);</span>
+<span class="nc" id="L387">        rBOrganico.setBounds(940, 490, 140, 37);</span>
 
-<span class="nc" id="L388">        btnCambiarFoto.setBackground(new java.awt.Color(255, 0, 102));</span>
-<span class="nc" id="L389">        btnCambiarFoto.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L390">        btnCambiarFoto.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="nc" id="L391">        btnCambiarFoto.setText(&quot;Cambiar Foto&quot;);</span>
-<span class="nc" id="L392">        btnCambiarFoto.setContentAreaFilled(false);</span>
-<span class="nc" id="L393">        btnCambiarFoto.setOpaque(true);</span>
-<span class="nc" id="L394">        btnCambiarFoto.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L389">        btnCambiarFoto.setBackground(new java.awt.Color(255, 0, 102));</span>
+<span class="nc" id="L390">        btnCambiarFoto.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L391">        btnCambiarFoto.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L392">        btnCambiarFoto.setText(&quot;Cambiar Foto&quot;);</span>
+<span class="nc" id="L393">        btnCambiarFoto.setContentAreaFilled(false);</span>
+<span class="nc" id="L394">        btnCambiarFoto.setOpaque(true);</span>
+<span class="nc" id="L395">        btnCambiarFoto.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L396">                btnCambiarFotoActionPerformed(evt);</span>
-<span class="nc" id="L397">            }</span>
+<span class="nc" id="L397">                btnCambiarFotoActionPerformed(evt);</span>
+<span class="nc" id="L398">            }</span>
         });
-<span class="nc" id="L399">        panelEditarPerfilUsuario.add(btnCambiarFoto);</span>
-<span class="nc" id="L400">        btnCambiarFoto.setBounds(30, 390, 210, 37);</span>
+<span class="nc" id="L400">        panelEditarPerfilUsuario.add(btnCambiarFoto);</span>
+<span class="nc" id="L401">        btnCambiarFoto.setBounds(30, 390, 210, 45);</span>
 
-<span class="nc" id="L402">        btnVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/imagenes/volver.png&quot;))); // NOI18N</span>
-<span class="nc" id="L403">        btnVolver.setBorderPainted(false);</span>
-<span class="nc" id="L404">        btnVolver.setContentAreaFilled(false);</span>
-<span class="nc" id="L405">        btnVolver.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L403">        btnVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/imagenes/volver.png&quot;))); // NOI18N</span>
+<span class="nc" id="L404">        btnVolver.setBorderPainted(false);</span>
+<span class="nc" id="L405">        btnVolver.setContentAreaFilled(false);</span>
+<span class="nc" id="L406">        btnVolver.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L407">                btnVolverActionPerformed(evt);</span>
-<span class="nc" id="L408">            }</span>
+<span class="nc" id="L408">                btnVolverActionPerformed(evt);</span>
+<span class="nc" id="L409">            }</span>
         });
-<span class="nc" id="L410">        panelEditarPerfilUsuario.add(btnVolver);</span>
-<span class="nc" id="L411">        btnVolver.setBounds(30, 10, 100, 80);</span>
+<span class="nc" id="L411">        panelEditarPerfilUsuario.add(btnVolver);</span>
+<span class="nc" id="L412">        btnVolver.setBounds(30, 10, 100, 80);</span>
 
-<span class="nc" id="L413">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);</span>
-<span class="nc" id="L414">        this.setLayout(layout);</span>
-<span class="nc" id="L415">        layout.setHorizontalGroup(</span>
-<span class="nc" id="L416">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L417">            .addGap(0, 1147, Short.MAX_VALUE)</span>
-<span class="nc" id="L418">            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L419">                .addGroup(layout.createSequentialGroup()</span>
-<span class="nc" id="L420">                    .addGap(0, 0, Short.MAX_VALUE)</span>
-<span class="nc" id="L421">                    .addComponent(panelEditarPerfilUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L422">                    .addGap(0, 0, Short.MAX_VALUE)))</span>
+<span class="nc" id="L414">        etiquetaNombre1.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L415">        etiquetaNombre1.setText(&quot;Nombre:&quot;);</span>
+<span class="nc" id="L416">        panelEditarPerfilUsuario.add(etiquetaNombre1);</span>
+<span class="nc" id="L417">        etiquetaNombre1.setBounds(370, 50, 92, 29);</span>
+
+<span class="nc" id="L419">        cajaNombre1.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L420">        cajaNombre1.addFocusListener(new java.awt.event.FocusAdapter() {</span>
+            public void focusLost(java.awt.event.FocusEvent evt) {
+<span class="nc" id="L422">                cajaNombre1FocusLost(evt);</span>
+<span class="nc" id="L423">            }</span>
+        });
+<span class="nc" id="L425">        cajaNombre1.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L427">                cajaNombre1ActionPerformed(evt);</span>
+<span class="nc" id="L428">            }</span>
+        });
+<span class="nc" id="L430">        panelEditarPerfilUsuario.add(cajaNombre1);</span>
+<span class="nc" id="L431">        cajaNombre1.setBounds(480, 50, 160, 37);</span>
+
+<span class="nc" id="L433">        etiquetaErrorNombre1.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L434">        panelEditarPerfilUsuario.add(etiquetaErrorNombre1);</span>
+<span class="nc" id="L435">        etiquetaErrorNombre1.setBounds(650, 50, 400, 30);</span>
+
+<span class="nc" id="L437">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);</span>
+<span class="nc" id="L438">        this.setLayout(layout);</span>
+<span class="nc" id="L439">        layout.setHorizontalGroup(</span>
+<span class="nc" id="L440">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L441">            .addGap(0, 1147, Short.MAX_VALUE)</span>
+<span class="nc" id="L442">            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L443">                .addGroup(layout.createSequentialGroup()</span>
+<span class="nc" id="L444">                    .addGap(0, 0, Short.MAX_VALUE)</span>
+<span class="nc" id="L445">                    .addComponent(panelEditarPerfilUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L446">                    .addGap(0, 0, Short.MAX_VALUE)))</span>
         );
-<span class="nc" id="L424">        layout.setVerticalGroup(</span>
-<span class="nc" id="L425">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L426">            .addGap(0, 784, Short.MAX_VALUE)</span>
-<span class="nc" id="L427">            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L428">                .addGroup(layout.createSequentialGroup()</span>
-<span class="nc" id="L429">                    .addGap(0, 0, Short.MAX_VALUE)</span>
-<span class="nc" id="L430">                    .addComponent(panelEditarPerfilUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L431">                    .addGap(0, 0, Short.MAX_VALUE)))</span>
+<span class="nc" id="L448">        layout.setVerticalGroup(</span>
+<span class="nc" id="L449">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L450">            .addGap(0, 784, Short.MAX_VALUE)</span>
+<span class="nc" id="L451">            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="nc" id="L452">                .addGroup(layout.createSequentialGroup()</span>
+<span class="nc" id="L453">                    .addGap(0, 0, Short.MAX_VALUE)</span>
+<span class="nc" id="L454">                    .addComponent(panelEditarPerfilUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="nc" id="L455">                    .addGap(0, 0, Short.MAX_VALUE)))</span>
         );
-<span class="nc" id="L433">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+<span class="nc" id="L457">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
 
-    private void cajaNombreFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaNombreFocusLost
-<span class="nc" id="L436">        String nombre = cajaNombre.getText();</span>
-<span class="nc bnc" id="L437" title="All 2 branches missed.">        if (nombre.trim().isEmpty()) {</span>
-<span class="nc" id="L438">            etiquetaErrorNombre.setText(&quot;El nombre no puede ser vacío&quot;);</span>
+    private void cajaContraseñaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaContraseñaFocusLost
+<span class="nc" id="L460">        String contraseña = cajaContraseña.getText();</span>
+<span class="nc bnc" id="L461" title="All 2 branches missed.">        if (contraseña.trim().isEmpty()) {</span>
+<span class="nc" id="L462">            etiquetaErrorContraseña.setText(&quot;La contraseña no puede ser vacía&quot;);</span>
         }
-<span class="nc" id="L440">    }//GEN-LAST:event_cajaNombreFocusLost</span>
+<span class="nc" id="L464">    }//GEN-LAST:event_cajaContraseñaFocusLost</span>
 
     private void cajaApellidosFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaApellidosFocusLost
-<span class="nc" id="L443">        String apellido = cajaApellidos.getText();</span>
-<span class="nc bnc" id="L444" title="All 2 branches missed.">        if (apellido.trim().isEmpty()) {</span>
-<span class="nc" id="L445">            etiquetaErrorApellido.setText(&quot;El apellido no puede ser vacío&quot;);</span>
+<span class="nc" id="L467">        String apellido = cajaApellidos.getText();</span>
+<span class="nc bnc" id="L468" title="All 2 branches missed.">        if (apellido.trim().isEmpty()) {</span>
+<span class="nc" id="L469">            etiquetaErrorApellido.setText(&quot;El apellido no puede ser vacío&quot;);</span>
         }
-<span class="nc" id="L447">    }//GEN-LAST:event_cajaApellidosFocusLost</span>
+<span class="nc" id="L471">    }//GEN-LAST:event_cajaApellidosFocusLost</span>
 
     private void cajaAlturaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaAlturaFocusLost
-<span class="nc" id="L450">        String altura = cajaAltura.getText();</span>
-<span class="nc bnc" id="L451" title="All 2 branches missed.">        if (altura.trim().isEmpty()) {</span>
-<span class="nc" id="L452">            etiquetaErrorAltura.setText(&quot;La altura no puede estar vacía&quot;);</span>
+<span class="nc" id="L474">        String altura = cajaAltura.getText();</span>
+<span class="nc bnc" id="L475" title="All 2 branches missed.">        if (altura.trim().isEmpty()) {</span>
+<span class="nc" id="L476">            etiquetaErrorAltura.setText(&quot;La altura no puede estar vacía&quot;);</span>
         }
-<span class="nc" id="L454">    }//GEN-LAST:event_cajaAlturaFocusLost</span>
+<span class="nc" id="L478">    }//GEN-LAST:event_cajaAlturaFocusLost</span>
 
     private void cajaPesoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaPesoFocusLost
-<span class="nc" id="L457">        String peso = cajaPeso.getText();</span>
-<span class="nc bnc" id="L458" title="All 2 branches missed.">        if (peso.trim().isEmpty()) {</span>
-<span class="nc" id="L459">            etiquetaErrorAltura.setText(&quot;El peso no puede estar vacío&quot;);</span>
+<span class="nc" id="L481">        String peso = cajaPeso.getText();</span>
+<span class="nc bnc" id="L482" title="All 2 branches missed.">        if (peso.trim().isEmpty()) {</span>
+<span class="nc" id="L483">            etiquetaErrorAltura.setText(&quot;El peso no puede estar vacío&quot;);</span>
         }
-<span class="nc" id="L461">    }//GEN-LAST:event_cajaPesoFocusLost</span>
+<span class="nc" id="L485">    }//GEN-LAST:event_cajaPesoFocusLost</span>
 
     private void btnAceptarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarUsuarioActionPerformed
-<span class="nc bnc" id="L464" title="All 2 branches missed.">        boolean nombreValido = !cajaNombre.getText().trim().isEmpty();</span>
-<span class="nc bnc" id="L465" title="All 2 branches missed.">        boolean apellidoValido = !cajaApellidos.getText().trim().isEmpty();</span>
-<span class="nc bnc" id="L466" title="All 2 branches missed.">        boolean fNacimientoValido = fechaNacimiento.getCalendar() != null;</span>
-<span class="nc" id="L467">        boolean altura = pidoDatoNumerico(cajaAltura.getText(), 0, 265, etiquetaErrorAltura);</span>
-<span class="nc" id="L468">        boolean peso = pidoDatoNumerico(cajaPeso.getText(), 0, 265, etiquetaErrorPeso);</span>
-<span class="nc" id="L469">        boolean sexoPred = sexoPredeterminado();</span>
-<span class="nc bnc" id="L470" title="All 10 branches missed.">        if (nombreValido &amp;&amp; apellidoValido</span>
-                &amp;&amp; altura &amp;&amp; peso &amp;&amp; fNacimientoValido) {
-<span class="nc" id="L472">            usuario.setNombre(cajaNombre.getText());</span>
-<span class="nc" id="L473">            usuario.setApellidos(cajaApellidos.getText());</span>
-<span class="nc" id="L474">            usuario.setNacionalidad(usuario.getListaEnumNac()[listaNacionalidadesUsuario.getSelectedIndex()]);</span>
-<span class="nc" id="L475">            SimpleDateFormat formatter = new SimpleDateFormat(&quot;dd/MM/yyyy&quot;);</span>
-<span class="nc" id="L476">            String fNacimiento = formatter.format(fechaNacimiento.getCalendar().getTime());</span>
-<span class="nc" id="L477">            usuario.setFechaNacimiento(fNacimiento);</span>
-<span class="nc bnc" id="L478" title="All 2 branches missed.">            if (sexoPred == true) {</span>
-<span class="nc" id="L479">                usuario.setSexo(&quot;Masculino&quot;);</span>
+<span class="nc bnc" id="L488" title="All 2 branches missed.">        boolean nombreValido = !cajaNombre1.getText().trim().isEmpty();</span>
+<span class="nc bnc" id="L489" title="All 2 branches missed.">        boolean apellidoValido = !cajaApellidos.getText().trim().isEmpty();</span>
+<span class="nc bnc" id="L490" title="All 2 branches missed.">        boolean fNacimientoValido = fechaNacimiento.getCalendar() != null;</span>
+<span class="nc" id="L491">        boolean altura = pidoDatoNumerico(cajaAltura.getText(), 0, 265, etiquetaErrorAltura);</span>
+<span class="nc" id="L492">        boolean peso = pidoDatoNumerico(cajaPeso.getText(), 0, 265, etiquetaErrorPeso);</span>
+<span class="nc" id="L493">        boolean sexoPred = sexoPredeterminado();</span>
+<span class="nc" id="L494">         boolean contraseñaValida = validarContraseña(cajaContraseña.getText().trim());</span>
+<span class="nc bnc" id="L495" title="All 12 branches missed.">        if (nombreValido &amp;&amp; apellidoValido</span>
+                &amp;&amp; altura &amp;&amp; peso &amp;&amp; fNacimientoValido &amp;&amp; contraseñaValida) {
+<span class="nc" id="L497">            usuario.setNombre(cajaNombre1.getText());</span>
+<span class="nc" id="L498">            usuario.setApellidos(cajaApellidos.getText());</span>
+<span class="nc" id="L499">            usuario.setNacionalidad(usuario.getListaEnumNac()[listaNacionalidadesUsuario.getSelectedIndex()]);</span>
+<span class="nc" id="L500">            SimpleDateFormat formatter = new SimpleDateFormat(&quot;dd/MM/yyyy&quot;);</span>
+<span class="nc" id="L501">            String fNacimiento = formatter.format(fechaNacimiento.getCalendar().getTime());</span>
+<span class="nc" id="L502">            usuario.setFechaNacimiento(fNacimiento);</span>
+<span class="nc bnc" id="L503" title="All 2 branches missed.">            if (sexoPred == true) {</span>
+<span class="nc" id="L504">                usuario.setSexo(&quot;Masculino&quot;);</span>
             } else {
-<span class="nc" id="L481">                usuario.setSexo(&quot;Femenino&quot;);</span>
+<span class="nc" id="L506">                usuario.setSexo(&quot;Femenino&quot;);</span>
             }
-<span class="nc" id="L483">            usuario.setAlturaCm(Integer.parseInt(cajaAltura.getText()));</span>
-<span class="nc" id="L484">            usuario.setPesoKg(Integer.parseInt(cajaPeso.getText()));</span>
-<span class="nc" id="L485">            usuario.setFotoPerfil((ImageIcon) fotoPerfil.getIcon());</span>
-<span class="nc" id="L486">            etiquetaMensajeAlAceptar.setText(&quot;Usuario editado correctamente&quot;);</span>
-
-<span class="nc" id="L488">        } else {</span>
-<span class="nc" id="L489">            etiquetaMensajeAlAceptar.setText(&quot;Error al editar el usuario&quot;);</span>
-<span class="nc bnc" id="L490" title="All 2 branches missed.">            if (nombreValido == false) {</span>
-<span class="nc" id="L491">                etiquetaErrorNombre.setText(&quot;El nombre no puede ser vacío&quot;);</span>
+<span class="nc" id="L508">            usuario.setAlturaCm(Integer.parseInt(cajaAltura.getText()));</span>
+<span class="nc" id="L509">            usuario.setPesoKg(Integer.parseInt(cajaPeso.getText()));</span>
+<span class="nc" id="L510">            usuario.setFotoPerfil((ImageIcon) fotoPerfil.getIcon());</span>
+<span class="nc" id="L511">            etiquetaMensajeAlAceptar.setText(&quot;Usuario editado correctamente&quot;);</span>
+<span class="nc" id="L512">            usuario.setContraseña(cajaContraseña.getText().trim());</span>
+<span class="nc" id="L513">            etiquetaMensajeAlAceptar.setText(&quot;Profesional editado correctamente&quot;);</span>
+<span class="nc" id="L514">            etiquetaErrorApellido.setText(&quot;&quot;);</span>
+<span class="nc" id="L515">            etiquetaErrorFechaNacimiento.setText(&quot;&quot;);</span>
+<span class="nc" id="L516">            etiquetaErrorNombre1.setText(&quot;&quot;);</span>
+<span class="nc" id="L517">            etiquetaErrorNombreUsuario.setText(&quot;&quot;);</span>
+<span class="nc" id="L518">            interfaz.actualizarFotoYNombre();</span>
+<span class="nc" id="L519">        } else {</span>
+<span class="nc" id="L520">            etiquetaMensajeAlAceptar.setText(&quot;Error al editar el usuario&quot;);</span>
+<span class="nc bnc" id="L521" title="All 2 branches missed.">            if (nombreValido == false) {</span>
+<span class="nc" id="L522">                etiquetaErrorContraseña.setText(&quot;El nombre no puede ser vacío&quot;);</span>
             }
-<span class="nc bnc" id="L493" title="All 2 branches missed.">            if (apellidoValido == false) {</span>
-<span class="nc" id="L494">                etiquetaErrorApellido.setText(&quot;El apellido no puede ser vacío&quot;);</span>
+<span class="nc bnc" id="L524" title="All 2 branches missed.">            if (apellidoValido == false) {</span>
+<span class="nc" id="L525">                etiquetaErrorApellido.setText(&quot;El apellido no puede ser vacío&quot;);</span>
             }
-<span class="nc bnc" id="L496" title="All 2 branches missed.">            if (fNacimientoValido == false) {</span>
-<span class="nc" id="L497">                etiquetaErrorFechaNacimiento.setText(&quot;Fecha de nacimiento no válida&quot;);</span>
+<span class="nc bnc" id="L527" title="All 2 branches missed.">            if (fNacimientoValido == false) {</span>
+<span class="nc" id="L528">                etiquetaErrorFechaNacimiento.setText(&quot;Fecha de nacimiento no válida&quot;);</span>
             }
-<span class="nc bnc" id="L499" title="All 2 branches missed.">            if (altura == false) {</span>
-<span class="nc" id="L500">                 etiquetaErrorAltura.setText(&quot;La altura no puede estar vacía&quot;);</span>
+<span class="nc bnc" id="L530" title="All 2 branches missed.">            if (altura == false) {</span>
+<span class="nc" id="L531">                 etiquetaErrorAltura.setText(&quot;La altura no puede estar vacía&quot;);</span>
             }
-<span class="nc bnc" id="L502" title="All 2 branches missed.">            if (peso == false) {</span>
-<span class="nc" id="L503">                 etiquetaErrorPeso.setText(&quot;El peso no puede estar vacío&quot;);</span>
+<span class="nc bnc" id="L533" title="All 2 branches missed.">            if (peso == false) {</span>
+<span class="nc" id="L534">                 etiquetaErrorPeso.setText(&quot;El peso no puede estar vacío&quot;);</span>
+            }
+<span class="nc bnc" id="L536" title="All 2 branches missed.">            if(contraseñaValida == false){</span>
+<span class="nc" id="L537">                etiquetaErrorContraseña.setText(&quot;La contraseña debe tener al menos 8 caracteres&quot;);</span>
             }
         }
-<span class="nc" id="L506">    }//GEN-LAST:event_btnAceptarUsuarioActionPerformed</span>
+<span class="nc" id="L540">    }//GEN-LAST:event_btnAceptarUsuarioActionPerformed</span>
 
     private void rBtnMasculinoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBtnMasculinoUsuarioActionPerformed
-<span class="nc" id="L509">        usuario.setSexo(&quot;Masculino&quot;);</span>
-<span class="nc" id="L510">    }//GEN-LAST:event_rBtnMasculinoUsuarioActionPerformed</span>
+<span class="nc" id="L543">        usuario.setSexo(&quot;Masculino&quot;);</span>
+<span class="nc" id="L544">    }//GEN-LAST:event_rBtnMasculinoUsuarioActionPerformed</span>
 
     private void rBtnFemeninoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBtnFemeninoUsuarioActionPerformed
-<span class="nc" id="L513">        usuario.setSexo(&quot;Femenino&quot;);</span>
-<span class="nc" id="L514">    }//GEN-LAST:event_rBtnFemeninoUsuarioActionPerformed</span>
+<span class="nc" id="L547">        usuario.setSexo(&quot;Femenino&quot;);</span>
+<span class="nc" id="L548">    }//GEN-LAST:event_rBtnFemeninoUsuarioActionPerformed</span>
 
     private void fechaNacimientoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fechaNacimientoFocusLost
         //Metodo para validar que se seleccione la fecha de nacimiento 
-<span class="nc bnc" id="L518" title="All 2 branches missed.">        if (fechaNacimiento.getCalendar() == null) {</span>
-<span class="nc" id="L519">            etiquetaErrorFechaNacimiento.setText(&quot;Debe ingresar una fecha&quot;);</span>
+<span class="nc bnc" id="L552" title="All 2 branches missed.">        if (fechaNacimiento.getCalendar() == null) {</span>
+<span class="nc" id="L553">            etiquetaErrorFechaNacimiento.setText(&quot;Debe ingresar una fecha&quot;);</span>
         }
-<span class="nc" id="L521">    }//GEN-LAST:event_fechaNacimientoFocusLost</span>
+<span class="nc" id="L555">    }//GEN-LAST:event_fechaNacimientoFocusLost</span>
 
     private void checkBoxIntoleranteLactosaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxIntoleranteLactosaActionPerformed
-<span class="nc" id="L524">        int posicionEnum = Usuario.Restricciones.IntoleranteALaLactosa.ordinal();</span>
-<span class="nc" id="L525">        boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];</span>
-<span class="nc bnc" id="L526" title="All 2 branches missed.">        usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;</span>
-<span class="nc" id="L527">    }//GEN-LAST:event_checkBoxIntoleranteLactosaActionPerformed</span>
+<span class="nc" id="L558">        int posicionEnum = Usuario.Restricciones.IntoleranteALaLactosa.ordinal();</span>
+<span class="nc" id="L559">        boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];</span>
+<span class="nc bnc" id="L560" title="All 2 branches missed.">        usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;</span>
+<span class="nc" id="L561">    }//GEN-LAST:event_checkBoxIntoleranteLactosaActionPerformed</span>
 
     private void checkBoxHipertensionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxHipertensionActionPerformed
-<span class="nc" id="L530">        int posicionEnum = Usuario.Restricciones.Hipertension.ordinal();</span>
-<span class="nc" id="L531">        boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];</span>
-<span class="nc bnc" id="L532" title="All 2 branches missed.">        usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;</span>
-<span class="nc" id="L533">    }//GEN-LAST:event_checkBoxHipertensionActionPerformed</span>
+<span class="nc" id="L564">        int posicionEnum = Usuario.Restricciones.Hipertension.ordinal();</span>
+<span class="nc" id="L565">        boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];</span>
+<span class="nc bnc" id="L566" title="All 2 branches missed.">        usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;</span>
+<span class="nc" id="L567">    }//GEN-LAST:event_checkBoxHipertensionActionPerformed</span>
 
     private void rBMacrobioticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBMacrobioticoActionPerformed
-<span class="nc" id="L536">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Macrobiotico);</span>
-<span class="nc" id="L537">    }//GEN-LAST:event_rBMacrobioticoActionPerformed</span>
+<span class="nc" id="L570">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Macrobiotico);</span>
+<span class="nc" id="L571">    }//GEN-LAST:event_rBMacrobioticoActionPerformed</span>
 
     private void listaNacionalidadesUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaNacionalidadesUsuarioActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L541">    }//GEN-LAST:event_listaNacionalidadesUsuarioActionPerformed</span>
+<span class="nc" id="L575">    }//GEN-LAST:event_listaNacionalidadesUsuarioActionPerformed</span>
 
     private void rBVeganoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBVeganoActionPerformed
-<span class="nc" id="L544">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Vegano);</span>
-<span class="nc" id="L545">    }//GEN-LAST:event_rBVeganoActionPerformed</span>
+<span class="nc" id="L578">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Vegano);</span>
+<span class="nc" id="L579">    }//GEN-LAST:event_rBVeganoActionPerformed</span>
 
     private void rBVegetarianoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBVegetarianoActionPerformed
-<span class="nc" id="L548">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Vegetariano);</span>
-<span class="nc" id="L549">    }//GEN-LAST:event_rBVegetarianoActionPerformed</span>
+<span class="nc" id="L582">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Vegetariano);</span>
+<span class="nc" id="L583">    }//GEN-LAST:event_rBVegetarianoActionPerformed</span>
 
     private void rBOrganicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBOrganicoActionPerformed
-<span class="nc" id="L552">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Organico);</span>
-<span class="nc" id="L553">    }//GEN-LAST:event_rBOrganicoActionPerformed</span>
+<span class="nc" id="L586">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Organico);</span>
+<span class="nc" id="L587">    }//GEN-LAST:event_rBOrganicoActionPerformed</span>
 
     private void checkBoxCeliacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxCeliacoActionPerformed
-<span class="nc" id="L556">        int posicionEnum = Usuario.Restricciones.Celiaco.ordinal();</span>
-<span class="nc" id="L557">        boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];</span>
-<span class="nc bnc" id="L558" title="All 2 branches missed.">        usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;</span>
-<span class="nc" id="L559">    }//GEN-LAST:event_checkBoxCeliacoActionPerformed</span>
+<span class="nc" id="L590">        int posicionEnum = Usuario.Restricciones.Celiaco.ordinal();</span>
+<span class="nc" id="L591">        boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];</span>
+<span class="nc bnc" id="L592" title="All 2 branches missed.">        usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;</span>
+<span class="nc" id="L593">    }//GEN-LAST:event_checkBoxCeliacoActionPerformed</span>
 
     private void checkBoxDiabeticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxDiabeticoActionPerformed
-<span class="nc" id="L562">        int posicionEnum = Usuario.Restricciones.Diabetico.ordinal();</span>
-<span class="nc" id="L563">        boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];</span>
-<span class="nc bnc" id="L564" title="All 2 branches missed.">        usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;</span>
-<span class="nc" id="L565">    }//GEN-LAST:event_checkBoxDiabeticoActionPerformed</span>
+<span class="nc" id="L596">        int posicionEnum = Usuario.Restricciones.Diabetico.ordinal();</span>
+<span class="nc" id="L597">        boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];</span>
+<span class="nc bnc" id="L598" title="All 2 branches missed.">        usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;</span>
+<span class="nc" id="L599">    }//GEN-LAST:event_checkBoxDiabeticoActionPerformed</span>
 
-    private void cajaNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreActionPerformed
+    private void cajaContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaContraseñaActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L569">    }//GEN-LAST:event_cajaNombreActionPerformed</span>
+<span class="nc" id="L603">    }//GEN-LAST:event_cajaContraseñaActionPerformed</span>
 
     private void cajaAlturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaAlturaActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L573">    }//GEN-LAST:event_cajaAlturaActionPerformed</span>
+<span class="nc" id="L607">    }//GEN-LAST:event_cajaAlturaActionPerformed</span>
 
     private void btnCambiarFotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarFotoActionPerformed
-<span class="nc" id="L576">        JFileChooser fileChooser = new JFileChooser();</span>
-<span class="nc" id="L577">        FileNameExtensionFilter file = new FileNameExtensionFilter(&quot;Archivo imagen&quot;, &quot;jpg&quot;);</span>
-<span class="nc" id="L578">        fileChooser.setFileFilter(file);</span>
-<span class="nc" id="L579">        int imagen = fileChooser.showOpenDialog(this);</span>
-<span class="nc bnc" id="L580" title="All 2 branches missed.">        if (imagen == JFileChooser.APPROVE_OPTION) {</span>
-<span class="nc" id="L581">            ImageIcon fotoPerfil = new ImageIcon(fileChooser.getSelectedFile().getAbsolutePath());</span>
-<span class="nc" id="L582">            ImageIcon fotoArreglada = resizeImageIcon(fotoPerfil, 210, 240);</span>
-<span class="nc" id="L583">            usuario.setFotoPerfil(fotoArreglada);</span>
+<span class="nc" id="L610">        JFileChooser fileChooser = new JFileChooser();</span>
+<span class="nc" id="L611">        FileNameExtensionFilter file = new FileNameExtensionFilter(&quot;Archivo imagen&quot;, &quot;jpg&quot;);</span>
+<span class="nc" id="L612">        fileChooser.setFileFilter(file);</span>
+<span class="nc" id="L613">        int imagen = fileChooser.showOpenDialog(this);</span>
+<span class="nc bnc" id="L614" title="All 2 branches missed.">        if (imagen == JFileChooser.APPROVE_OPTION) {</span>
+<span class="nc" id="L615">            ImageIcon fotoPerfil = new ImageIcon(fileChooser.getSelectedFile().getAbsolutePath());</span>
+<span class="nc" id="L616">            ImageIcon fotoArreglada = resizeImageIcon(fotoPerfil, 210, 240);</span>
+<span class="nc" id="L617">            usuario.setFotoPerfil(fotoArreglada);</span>
         }
-<span class="nc" id="L585">        actualizar();</span>
-<span class="nc" id="L586">    }//GEN-LAST:event_btnCambiarFotoActionPerformed</span>
+<span class="nc" id="L619">        actualizar();</span>
+<span class="nc" id="L620">    }//GEN-LAST:event_btnCambiarFotoActionPerformed</span>
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
-<span class="nc" id="L589">        ventana.remove(this);</span>
-<span class="nc" id="L590">        PanelPerfilUsuario nuevo = new PanelPerfilUsuario(sistema, ventana, interfaz);</span>
-<span class="nc" id="L591">        interfaz.setActual(nuevo);</span>
-<span class="nc" id="L592">        ventana.add(nuevo);</span>
-<span class="nc" id="L593">        ventana.pack();</span>
-<span class="nc" id="L594">    }//GEN-LAST:event_btnVolverActionPerformed</span>
+<span class="nc" id="L623">        ventana.remove(this);</span>
+<span class="nc" id="L624">        PanelPerfilUsuario nuevo = new PanelPerfilUsuario(sistema, ventana, interfaz);</span>
+<span class="nc" id="L625">        interfaz.setActual(nuevo);</span>
+<span class="nc" id="L626">        ventana.add(nuevo);</span>
+<span class="nc" id="L627">        ventana.pack();</span>
+<span class="nc" id="L628">    }//GEN-LAST:event_btnVolverActionPerformed</span>
+
+    private void cajaNombre1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaNombre1FocusLost
+        // TODO add your handling code here:
+<span class="nc" id="L632">    }//GEN-LAST:event_cajaNombre1FocusLost</span>
+
+    private void cajaNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombre1ActionPerformed
+        // TODO add your handling code here:
+<span class="nc" id="L636">    }//GEN-LAST:event_cajaNombre1ActionPerformed</span>
 
     void actualizar() {
-<span class="nc" id="L597">        fotoPerfil.setIcon(usuario.getFotoPerfil());</span>
-<span class="nc" id="L598">    }</span>
+<span class="nc" id="L639">        fotoPerfil.setIcon(usuario.getFotoPerfil());</span>
+<span class="nc" id="L640">    }</span>
 
     ImageIcon resizeImageIcon(ImageIcon imageIcon, Integer width, Integer height) {
-<span class="nc" id="L601">        BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TRANSLUCENT);</span>
+<span class="nc" id="L643">        BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TRANSLUCENT);</span>
 
-<span class="nc" id="L603">        Graphics2D graphics2D = bufferedImage.createGraphics();</span>
-<span class="nc" id="L604">        graphics2D.drawImage(imageIcon.getImage(), 0, 0, width, height, null);</span>
-<span class="nc" id="L605">        graphics2D.dispose();</span>
+<span class="nc" id="L645">        Graphics2D graphics2D = bufferedImage.createGraphics();</span>
+<span class="nc" id="L646">        graphics2D.drawImage(imageIcon.getImage(), 0, 0, width, height, null);</span>
+<span class="nc" id="L647">        graphics2D.dispose();</span>
 
-<span class="nc" id="L607">        return new ImageIcon(bufferedImage, imageIcon.getDescription());</span>
+<span class="nc" id="L649">        return new ImageIcon(bufferedImage, imageIcon.getDescription());</span>
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -613,7 +655,8 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
     private javax.swing.JButton btnVolver;
     private javax.swing.JTextField cajaAltura;
     private javax.swing.JTextField cajaApellidos;
-    private javax.swing.JTextField cajaNombre;
+    private javax.swing.JTextField cajaContraseña;
+    private javax.swing.JTextField cajaNombre1;
     private javax.swing.JTextField cajaPeso;
     private javax.swing.JCheckBox checkBoxCeliaco;
     private javax.swing.JCheckBox checkBoxDiabetico;
@@ -621,10 +664,12 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
     private javax.swing.JCheckBox checkBoxIntoleranteLactosa;
     private javax.swing.JLabel etiquetaAltura;
     private javax.swing.JLabel etiquetaApellidos;
+    private javax.swing.JLabel etiquetaContraseña;
     private javax.swing.JLabel etiquetaErrorAltura;
     private javax.swing.JLabel etiquetaErrorApellido;
+    private javax.swing.JLabel etiquetaErrorContraseña;
     private javax.swing.JLabel etiquetaErrorFechaNacimiento;
-    private javax.swing.JLabel etiquetaErrorNombre;
+    private javax.swing.JLabel etiquetaErrorNombre1;
     private javax.swing.JLabel etiquetaErrorNombreUsuario;
     private javax.swing.JLabel etiquetaErrorPeso;
     private javax.swing.JLabel etiquetaFDNaciomiento;
@@ -633,7 +678,7 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
     private javax.swing.JLabel etiquetaMedidaPeso;
     private javax.swing.JLabel etiquetaMensajeAlAceptar;
     private javax.swing.JLabel etiquetaNacionalidadUsuario;
-    private javax.swing.JLabel etiquetaNombre;
+    private javax.swing.JLabel etiquetaNombre1;
     private javax.swing.JLabel etiquetaPeso;
     private javax.swing.JLabel etiquetaPreferencias;
     private javax.swing.JLabel etiquetaRestricciones;
@@ -654,28 +699,32 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private boolean pidoDatoNumerico(String dato, int min, int max, JLabel etiqueta) {
-<span class="nc" id="L657">        int datoAVerificar = 0;</span>
-<span class="nc" id="L658">        boolean pidiendo = false;</span>
+<span class="nc" id="L702">        int datoAVerificar = 0;</span>
+<span class="nc" id="L703">        boolean pidiendo = false;</span>
         try {
-<span class="nc" id="L660">            datoAVerificar = Integer.parseInt(dato);</span>
-<span class="nc bnc" id="L661" title="All 4 branches missed.">            if ((datoAVerificar &gt;= min) &amp;&amp; (datoAVerificar &lt;= max)) {</span>
-<span class="nc" id="L662">                pidiendo = true;</span>
+<span class="nc" id="L705">            datoAVerificar = Integer.parseInt(dato);</span>
+<span class="nc bnc" id="L706" title="All 4 branches missed.">            if ((datoAVerificar &gt;= min) &amp;&amp; (datoAVerificar &lt;= max)) {</span>
+<span class="nc" id="L707">                pidiendo = true;</span>
             } else {
-<span class="nc" id="L664">                etiqueta.setText(&quot;El dato no es válido, debe estar entre:&quot;</span>
+<span class="nc" id="L709">                etiqueta.setText(&quot;El dato no es válido, debe estar entre:&quot;</span>
                         + min + &quot;y&quot; + max);
             }
-<span class="nc" id="L667">        } catch (NumberFormatException ex) {</span>
-<span class="nc" id="L668">            etiqueta.setText(&quot;Debe ingresar un valor numérico&quot;);</span>
-<span class="nc" id="L669">        }</span>
-<span class="nc" id="L670">        return pidiendo;</span>
+<span class="nc" id="L712">        } catch (NumberFormatException ex) {</span>
+<span class="nc" id="L713">            etiqueta.setText(&quot;Debe ingresar un valor numérico&quot;);</span>
+<span class="nc" id="L714">        }</span>
+<span class="nc" id="L715">        return pidiendo;</span>
     }
 
     private boolean sexoPredeterminado() {
-<span class="nc" id="L674">        boolean predeterminado = true;</span>
-<span class="nc bnc" id="L675" title="All 2 branches missed.">        if (rBtnMasculinoUsuario.isSelected() == false) {</span>
-<span class="nc" id="L676">            predeterminado = false;</span>
+<span class="nc" id="L719">        boolean predeterminado = true;</span>
+<span class="nc bnc" id="L720" title="All 2 branches missed.">        if (rBtnMasculinoUsuario.isSelected() == false) {</span>
+<span class="nc" id="L721">            predeterminado = false;</span>
         }
-<span class="nc" id="L678">        return predeterminado;</span>
+<span class="nc" id="L723">        return predeterminado;</span>
+    }
+    
+    private boolean validarContraseña(String unaContraseña){
+<span class="nc bnc" id="L727" title="All 2 branches missed.">        return unaContraseña.length() &gt;= 8;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

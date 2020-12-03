@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -29,7 +30,81 @@ public class UsuarioTest {
     @After
     public void tearDown() {
     }
-
+    
+    @Test 
+    public void testInicializoListaNacionalidades(){
+        Usuario instance = new Usuario();
+        String[] expResult = {"Alemana", "Australiana", "Austriaca",
+            "Brasileña","Canadiense", "Chilena", "China", "Colombiana",
+            "Surcoreana", "Cubana", "Ecuatoriana", "Egipcia",
+            "Española", "EstadoUnidense", "Francesa", "Griega",
+            "Holandesa", "India", "Inglesa", "Israeli", "Italiana",
+            "Japonesa", "Méxicana", "Paraguaya", "Peruana",
+            "Portuguesa", "Rusa", "Sudáfricana", "Uruguaya",
+            "Venezolana"};
+        String[] result = instance.inicializoListaNacionalidades();
+        Assert.assertArrayEquals(expResult, result);
+    }
+    
+    @Test
+    public void testGetAlturaCm(){
+        Usuario instance = new Usuario();
+        double expResult = 0;
+        instance.setAlturaCm(0);
+        double result = instance.getAlturaCm();
+        assertEquals((int)expResult, (int)result);
+    }
+    
+    @Test
+    public void testSetProfesionalAsignado(){
+        Usuario instance = new Usuario();
+        Profesional expResult = new Profesional();
+        instance.setProfesionalAsignado(expResult);
+        assertEquals(expResult, instance.getProfesionalAsignado());
+    }
+    
+    @Test
+    public void tesGetProfesionalAsignado(){
+        Usuario instance = new Usuario();
+        Profesional expResult = new Profesional();
+        instance.setProfesionalAsignado(expResult);
+        Profesional result = instance.getProfesionalAsignado();
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testGetCasillaDeEntrada(){
+        Usuario instance = new Usuario();
+        ArrayList<Mensaje> expResult = new ArrayList();
+        ArrayList<Mensaje> result = instance.getCasillaDeEntrada();
+        instance.setCasillaDeEntrada(expResult);
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testSetCasillaDeEntrada(){
+        Usuario instance = new Usuario();
+        ArrayList<Mensaje> expResult = new ArrayList();
+        instance.setCasillaDeEntrada(expResult);
+        assertEquals(expResult, instance.getCasillaDeEntrada());
+    }
+    
+    @Test
+    public void testGetContraseña(){
+        Usuario instance = new Usuario();
+        instance.setContraseña("contraseña");
+        String expResult = "contraseña";
+        String result = instance.getContraseña();
+        assertEquals(expResult, result);
+    }
+    
+    public void testSetContraseña(){
+        Usuario instance = new Usuario();
+        String contraseña = "contraseña";
+        instance.setContraseña(contraseña);
+        assertEquals(contraseña, instance.getContraseña());
+    }
+    
     @Test
     public void testGetFechaUltimaAdicion() {
         System.out.println("getFechaUltimaAdicion");
@@ -541,7 +616,7 @@ public class UsuarioTest {
     public void testGetHistorialComidas() {
         System.out.println("getHistorialComidas");
         Usuario instance = new Usuario();
-        ArrayList<ComidaPorDia> expResult = new ArrayList<ComidaPorDia>();
+        ArrayList<ComidaPorDia> expResult = new ArrayList();
         ArrayList<ComidaPorDia> result = instance.getHistorialComidas();
         assertEquals(expResult, result);
     }
@@ -549,7 +624,7 @@ public class UsuarioTest {
     @Test
     public void testSetHistorialComidas() {
         System.out.println("setHistorialComidas");
-        ArrayList<ComidaPorDia> historialComidas = new ArrayList<ComidaPorDia>();
+        ArrayList<ComidaPorDia> historialComidas = new ArrayList();
         Usuario instance = new Usuario();
         instance.setHistorialComidas(historialComidas);
         assertEquals(instance.getHistorialComidas(),historialComidas);
@@ -613,17 +688,32 @@ public class UsuarioTest {
         String apellido = "apellido";
         String usuario = "usuario";
         String fNacimiento = "19/12/2012";
-        Usuario c = new Usuario();
         Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Uruguaya;
         double peso = 19.0;
         double altura = 19.0;
         Usuario.Preferencias preferencias = Usuario.Preferencias.Macrobiotico;
         Usuario.Restricciones restricciones = Usuario.Restricciones.Celiaco;
-        PlanDeAlimentacion plan = new PlanDeAlimentacion(c);
         String sexo = "Masculino";
         ImageIcon fotoPerfil = new javax.swing.ImageIcon(getClass().getResource("/imagenes/predeterminadaUsuario.jpg"));
-        Usuario nuevo = new Usuario(nacionalidad,peso,altura,preferencias,restricciones,plan,sexo,nombre,apellido,usuario,fNacimiento,fotoPerfil);
-       
+        String contraseña = "contraseña";
+        
+        Usuario esperado = new Usuario();
+        PlanDeAlimentacion plan = new PlanDeAlimentacion(esperado);
+        esperado.setNombre(nombre);
+        esperado.setApellidos(apellido);
+        esperado.setFechaNacimiento(fNacimiento);
+        esperado.setNacionalidad(Usuario.Nacionalidades.Uruguaya);
+        esperado.setPesoKg(peso);
+        esperado.setAlturaCm(altura);
+        esperado.setPreferenciasAlimentarias(Usuario.Preferencias.Macrobiotico);
+        esperado.setRestricciones(Usuario.Restricciones.Celiaco);
+        esperado.setPlan(plan);
+        esperado.setSexo(sexo);
+        esperado.setFotoPerfil(fotoPerfil);
+        esperado.setContraseña(contraseña);
+        
+        Usuario nuevo = new Usuario(nacionalidad,peso,altura,preferencias,restricciones,plan,sexo,nombre,apellido,usuario,fNacimiento,fotoPerfil,contraseña);
+        assertEquals(nuevo,esperado);
     }
     
     @Test

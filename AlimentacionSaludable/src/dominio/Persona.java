@@ -67,7 +67,7 @@ public abstract class Persona implements Serializable {
     }
     
     public String getContraseña() {
-        return contraseña;
+        return this.contraseña;
     }
 
     public void setContraseña(String contraseña) {

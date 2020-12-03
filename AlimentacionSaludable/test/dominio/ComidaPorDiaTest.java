@@ -34,11 +34,43 @@ public class ComidaPorDiaTest {
     public void testGetComidasIngeridas() {
         System.out.println("getComidasIngeridas");
         ComidaPorDia instance = new ComidaPorDia();
-        ArrayList<Alimento> expResult = new ArrayList<Alimento>();
+        ArrayList<Alimento> expResult = new ArrayList();
         ArrayList<Alimento> result = instance.getComidasIngeridas();
         assertEquals(expResult, result);
     }
 
+    @Test
+    public void testToString() {
+        ComidaPorDia instance = new ComidaPorDia();
+        String expResult = "Comidas ingeridas el: "+ instance.getFecha();
+        String result = instance.toString();
+        assertEquals(expResult, result);
+    }
     
+     @Test
+    public void testConstructor() {
+        String fecha = "";
+        ArrayList<Alimento> comidasIngeridas = new ArrayList();
+        ComidaPorDia result = new ComidaPorDia(comidasIngeridas,fecha);
+        ComidaPorDia expResult = new ComidaPorDia();
+        expResult.setComidasIngeridas(comidasIngeridas);
+        expResult.setFecha(fecha);
+        assertEquals(expResult, result);
+    }
     
+     @Test
+    public void testSetFecha() {
+        String expResult = "";
+        ComidaPorDia instance = new ComidaPorDia();
+        instance.setFecha(expResult);
+        assertEquals(expResult, instance.getFecha());
+    }
+    
+     @Test
+    public void testSetComidasIngeridas() {
+        ArrayList<Alimento> expResult = new ArrayList();
+        ComidaPorDia instance = new ComidaPorDia();
+        instance.setComidasIngeridas(expResult);
+        assertEquals(expResult, instance.getComidasIngeridas());
+    }
 }

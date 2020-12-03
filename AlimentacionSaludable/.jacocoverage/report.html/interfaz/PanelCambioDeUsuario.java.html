@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>PanelCambioDeUsuario.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;AlimentacionSaludable&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">interfaz</a> &gt; <span class="el_source">PanelCambioDeUsuario.java</span></div><h1>PanelCambioDeUsuario.java</h1><pre class="source lang-java linenums">package interfaz;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>PanelCambioDeUsuario.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;AlimentacionSaludable&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">interfaz</a> &gt; <span class="el_source">PanelCambioDeUsuario.java</span></div><h1>PanelCambioDeUsuario.java</h1><pre class="source lang-java linenums">package interfaz;
 
 import dominio.Persona;
 import dominio.Profesional;
@@ -23,7 +23,7 @@ public class PanelCambioDeUsuario extends javax.swing.JPanel {
 <span class="nc" id="L23">        ventana = unaVentana;</span>
 <span class="nc" id="L24">        sistema = unSistema;</span>
 <span class="nc" id="L25">        interfazProf = unaInterfaz;</span>
-<span class="nc" id="L26">        listaTiposDeUsuarios.setModel(new DefaultComboBoxModel(sistema.getListaTiposDeUsuario()));</span>
+        
 <span class="nc" id="L27">        actualizarLista();</span>
 <span class="nc" id="L28">    }</span>
 
@@ -35,7 +35,7 @@ public class PanelCambioDeUsuario extends javax.swing.JPanel {
 <span class="nc" id="L35">        ventana = unaVentana;</span>
 <span class="nc" id="L36">        sistema = unSistema;</span>
 <span class="nc" id="L37">        interfazUsr = unaInterfaz;</span>
-<span class="nc" id="L38">        listaTiposDeUsuarios.setModel(new DefaultComboBoxModel(sistema.getListaTiposDeUsuario()));</span>
+        
 <span class="nc" id="L39">        actualizarLista();</span>
 <span class="nc" id="L40">    }</span>
 
@@ -47,181 +47,226 @@ public class PanelCambioDeUsuario extends javax.swing.JPanel {
 <span class="nc" id="L47">        ventana = unaVentana;</span>
 <span class="nc" id="L48">        sistema = unSistema;</span>
 <span class="nc" id="L49">        interfazAdm = unaInterfaz;</span>
-<span class="nc" id="L50">        listaTiposDeUsuarios.setModel(new DefaultComboBoxModel(sistema.getListaTiposDeUsuario()));</span>
-<span class="nc" id="L51">        actualizarLista();</span>
-<span class="nc" id="L52">    }</span>
+<span class="nc" id="L50">        actualizarLista();</span>
+<span class="nc" id="L51">    }</span>
 
     //constructor para comenzar la aplicacion
     public PanelCambioDeUsuario(JFrame unaVentana,
-<span class="nc" id="L56">            Sistema unSistema) {</span>
-<span class="nc" id="L57">        initComponents();</span>
-<span class="nc" id="L58">        ventana = unaVentana;</span>
-<span class="nc" id="L59">        sistema = unSistema;</span>
-<span class="nc" id="L60">        listaTiposDeUsuarios.setModel(new DefaultComboBoxModel(sistema.getListaTiposDeUsuario()));</span>
-<span class="nc" id="L61">        listaTiposDeUsuarios.setSelectedIndex(0);</span>
-<span class="nc" id="L62">        actualizarLista();</span>
-<span class="nc" id="L63">    }</span>
+<span class="nc" id="L55">            Sistema unSistema) {</span>
+<span class="nc" id="L56">        initComponents();</span>
+<span class="nc" id="L57">        ventana = unaVentana;</span>
+<span class="nc" id="L58">        sistema = unSistema;</span>
+<span class="nc" id="L59">        actualizarLista();</span>
+<span class="nc" id="L60">    }</span>
 
     @SuppressWarnings(&quot;unchecked&quot;)
     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<span class="nc" id="L69">        btnCambiarUsuario = new javax.swing.JButton();</span>
-<span class="nc" id="L70">        jScrollPane1 = new javax.swing.JScrollPane();</span>
-<span class="nc" id="L71">        listaUsuarios = new javax.swing.JList();</span>
-<span class="nc" id="L72">        listaTiposDeUsuarios = new javax.swing.JComboBox();</span>
-<span class="nc" id="L73">        etiquetaTiposDeUsuarios = new javax.swing.JLabel();</span>
-<span class="nc" id="L74">        etiquetaTitulo = new javax.swing.JLabel();</span>
-<span class="nc" id="L75">        btnPruebaAdministrador = new javax.swing.JButton();</span>
+<span class="nc" id="L66">        buttonGroup1 = new javax.swing.ButtonGroup();</span>
+<span class="nc" id="L67">        buttonGroup2 = new javax.swing.ButtonGroup();</span>
+<span class="nc" id="L68">        btnCambiarUsuario = new javax.swing.JButton();</span>
+<span class="nc" id="L69">        jScrollPane1 = new javax.swing.JScrollPane();</span>
+<span class="nc" id="L70">        listaUsuarios = new javax.swing.JList();</span>
+<span class="nc" id="L71">        etiquetaTiposDeUsuarios = new javax.swing.JLabel();</span>
+<span class="nc" id="L72">        etiquetaTitulo = new javax.swing.JLabel();</span>
+<span class="nc" id="L73">        btnPruebaAdministrador = new javax.swing.JButton();</span>
+<span class="nc" id="L74">        cajaContraseña = new javax.swing.JTextField();</span>
+<span class="nc" id="L75">        etiquetaContraseña = new javax.swing.JLabel();</span>
+<span class="nc" id="L76">        etiquetaErrorContraseña = new javax.swing.JLabel();</span>
+<span class="nc" id="L77">        radioProfesional = new javax.swing.JRadioButton();</span>
+<span class="nc" id="L78">        radioUsuario = new javax.swing.JRadioButton();</span>
 
-<span class="nc" id="L77">        setBackground(new java.awt.Color(255, 255, 255));</span>
-<span class="nc" id="L78">        setPreferredSize(new java.awt.Dimension(1147, 784));</span>
-<span class="nc" id="L79">        setLayout(null);</span>
+<span class="nc" id="L80">        setBackground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L81">        setPreferredSize(new java.awt.Dimension(1147, 784));</span>
+<span class="nc" id="L82">        setLayout(null);</span>
 
-<span class="nc" id="L81">        btnCambiarUsuario.setBackground(new java.awt.Color(255, 0, 102));</span>
-<span class="nc" id="L82">        btnCambiarUsuario.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L83">        btnCambiarUsuario.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="nc" id="L84">        btnCambiarUsuario.setText(&quot;Cambiar Usuario&quot;);</span>
-<span class="nc" id="L85">        btnCambiarUsuario.setContentAreaFilled(false);</span>
-<span class="nc" id="L86">        btnCambiarUsuario.setOpaque(true);</span>
-<span class="nc" id="L87">        btnCambiarUsuario.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L84">        btnCambiarUsuario.setBackground(new java.awt.Color(255, 0, 102));</span>
+<span class="nc" id="L85">        btnCambiarUsuario.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L86">        btnCambiarUsuario.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L87">        btnCambiarUsuario.setText(&quot;Cambiar Usuario&quot;);</span>
+<span class="nc" id="L88">        btnCambiarUsuario.setContentAreaFilled(false);</span>
+<span class="nc" id="L89">        btnCambiarUsuario.setOpaque(true);</span>
+<span class="nc" id="L90">        btnCambiarUsuario.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L89">                btnCambiarUsuarioActionPerformed(evt);</span>
-<span class="nc" id="L90">            }</span>
+<span class="nc" id="L92">                btnCambiarUsuarioActionPerformed(evt);</span>
+<span class="nc" id="L93">            }</span>
         });
-<span class="nc" id="L92">        add(btnCambiarUsuario);</span>
-<span class="nc" id="L93">        btnCambiarUsuario.setBounds(640, 500, 210, 37);</span>
+<span class="nc" id="L95">        add(btnCambiarUsuario);</span>
+<span class="nc" id="L96">        btnCambiarUsuario.setBounds(670, 370, 210, 45);</span>
 
-<span class="nc" id="L95">        listaUsuarios.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L96">        jScrollPane1.setViewportView(listaUsuarios);</span>
+<span class="nc" id="L98">        listaUsuarios.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L99">        jScrollPane1.setViewportView(listaUsuarios);</span>
 
-<span class="nc" id="L98">        add(jScrollPane1);</span>
-<span class="nc" id="L99">        jScrollPane1.setBounds(500, 120, 290, 340);</span>
+<span class="nc" id="L101">        add(jScrollPane1);</span>
+<span class="nc" id="L102">        jScrollPane1.setBounds(350, 80, 290, 340);</span>
 
-<span class="nc" id="L101">        listaTiposDeUsuarios.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L102">        listaTiposDeUsuarios.addFocusListener(new java.awt.event.FocusAdapter() {</span>
+<span class="nc" id="L104">        etiquetaTiposDeUsuarios.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L105">        etiquetaTiposDeUsuarios.setText(&quot;Tipo de Usuario&quot;);</span>
+<span class="nc" id="L106">        add(etiquetaTiposDeUsuarios);</span>
+<span class="nc" id="L107">        etiquetaTiposDeUsuarios.setBounds(40, 80, 180, 29);</span>
+
+<span class="nc" id="L109">        etiquetaTitulo.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 36)); // NOI18N</span>
+<span class="nc" id="L110">        etiquetaTitulo.setForeground(new java.awt.Color(255, 0, 102));</span>
+<span class="nc" id="L111">        etiquetaTitulo.setText(&quot;Cambio de Usuario&quot;);</span>
+<span class="nc" id="L112">        add(etiquetaTitulo);</span>
+<span class="nc" id="L113">        etiquetaTitulo.setBounds(330, 21, 330, 44);</span>
+
+<span class="nc" id="L115">        btnPruebaAdministrador.setBackground(new java.awt.Color(255, 0, 102));</span>
+<span class="nc" id="L116">        btnPruebaAdministrador.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L117">        btnPruebaAdministrador.setForeground(new java.awt.Color(255, 255, 255));</span>
+<span class="nc" id="L118">        btnPruebaAdministrador.setText(&quot;Modo Administrador&quot;);</span>
+<span class="nc" id="L119">        btnPruebaAdministrador.setContentAreaFilled(false);</span>
+<span class="nc" id="L120">        btnPruebaAdministrador.setOpaque(true);</span>
+<span class="nc" id="L121">        btnPruebaAdministrador.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L123">                btnPruebaAdministradorActionPerformed(evt);</span>
+<span class="nc" id="L124">            }</span>
+        });
+<span class="nc" id="L126">        add(btnPruebaAdministrador);</span>
+<span class="nc" id="L127">        btnPruebaAdministrador.setBounds(40, 280, 250, 45);</span>
+
+<span class="nc" id="L129">        cajaContraseña.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L130">        cajaContraseña.addFocusListener(new java.awt.event.FocusAdapter() {</span>
             public void focusLost(java.awt.event.FocusEvent evt) {
-<span class="nc" id="L104">                listaTiposDeUsuariosFocusLost(evt);</span>
-<span class="nc" id="L105">            }</span>
+<span class="nc" id="L132">                cajaContraseñaFocusLost(evt);</span>
+<span class="nc" id="L133">            }</span>
         });
-<span class="nc" id="L107">        listaTiposDeUsuarios.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L135">        add(cajaContraseña);</span>
+<span class="nc" id="L136">        cajaContraseña.setBounds(670, 130, 190, 37);</span>
+
+<span class="nc" id="L138">        etiquetaContraseña.setText(&quot;Ingrese su contraseña:&quot;);</span>
+<span class="nc" id="L139">        add(etiquetaContraseña);</span>
+<span class="nc" id="L140">        etiquetaContraseña.setBounds(680, 90, 140, 40);</span>
+
+<span class="nc" id="L142">        etiquetaErrorContraseña.setFont(new java.awt.Font(&quot;Haettenschweiler&quot;, 0, 18)); // NOI18N</span>
+<span class="nc" id="L143">        etiquetaErrorContraseña.setForeground(new java.awt.Color(51, 51, 51));</span>
+<span class="nc" id="L144">        add(etiquetaErrorContraseña);</span>
+<span class="nc" id="L145">        etiquetaErrorContraseña.setBounds(670, 190, 300, 50);</span>
+
+<span class="nc" id="L147">        buttonGroup1.add(radioProfesional);</span>
+<span class="nc" id="L148">        radioProfesional.setText(&quot;Profesional&quot;);</span>
+<span class="nc" id="L149">        radioProfesional.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L109">                listaTiposDeUsuariosActionPerformed(evt);</span>
-<span class="nc" id="L110">            }</span>
+<span class="nc" id="L151">                radioProfesionalActionPerformed(evt);</span>
+<span class="nc" id="L152">            }</span>
         });
-<span class="nc" id="L112">        add(listaTiposDeUsuarios);</span>
-<span class="nc" id="L113">        listaTiposDeUsuarios.setBounds(90, 160, 180, 35);</span>
+<span class="nc" id="L154">        add(radioProfesional);</span>
+<span class="nc" id="L155">        radioProfesional.setBounds(60, 130, 110, 28);</span>
 
-<span class="nc" id="L115">        etiquetaTiposDeUsuarios.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L116">        etiquetaTiposDeUsuarios.setText(&quot;Tipo de Usuario&quot;);</span>
-<span class="nc" id="L117">        add(etiquetaTiposDeUsuarios);</span>
-<span class="nc" id="L118">        etiquetaTiposDeUsuarios.setBounds(60, 120, 180, 29);</span>
-
-<span class="nc" id="L120">        etiquetaTitulo.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 36)); // NOI18N</span>
-<span class="nc" id="L121">        etiquetaTitulo.setForeground(new java.awt.Color(255, 0, 102));</span>
-<span class="nc" id="L122">        etiquetaTitulo.setText(&quot;Cambio de Usuario&quot;);</span>
-<span class="nc" id="L123">        add(etiquetaTitulo);</span>
-<span class="nc" id="L124">        etiquetaTitulo.setBounds(330, 21, 330, 44);</span>
-
-<span class="nc" id="L126">        btnPruebaAdministrador.setBackground(new java.awt.Color(255, 0, 102));</span>
-<span class="nc" id="L127">        btnPruebaAdministrador.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L128">        btnPruebaAdministrador.setForeground(new java.awt.Color(255, 255, 255));</span>
-<span class="nc" id="L129">        btnPruebaAdministrador.setText(&quot;Modo Administrador&quot;);</span>
-<span class="nc" id="L130">        btnPruebaAdministrador.setContentAreaFilled(false);</span>
-<span class="nc" id="L131">        btnPruebaAdministrador.setOpaque(true);</span>
-<span class="nc" id="L132">        btnPruebaAdministrador.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L157">        buttonGroup1.add(radioUsuario);</span>
+<span class="nc" id="L158">        radioUsuario.setText(&quot;Usuario&quot;);</span>
+<span class="nc" id="L159">        radioUsuario.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L134">                btnPruebaAdministradorActionPerformed(evt);</span>
-<span class="nc" id="L135">            }</span>
+<span class="nc" id="L161">                radioUsuarioActionPerformed(evt);</span>
+<span class="nc" id="L162">            }</span>
         });
-<span class="nc" id="L137">        add(btnPruebaAdministrador);</span>
-<span class="nc" id="L138">        btnPruebaAdministrador.setBounds(40, 280, 250, 37);</span>
-<span class="nc" id="L139">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+<span class="nc" id="L164">        add(radioUsuario);</span>
+<span class="nc" id="L165">        radioUsuario.setBounds(60, 180, 111, 28);</span>
+<span class="nc" id="L166">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
 
     private void btnCambiarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarUsuarioActionPerformed
-<span class="nc bnc" id="L142" title="All 2 branches missed.">        if (listaUsuarios.getSelectedValue() != null) {</span>
-<span class="nc" id="L143">            this.limpioInterfaces();</span>
-<span class="nc bnc" id="L144" title="All 2 branches missed.">            if (listaTiposDeUsuarios.getSelectedItem() == Sistema.tipoUsuario.Profesional) {</span>
-<span class="nc" id="L145">                Profesional profSeleccionado = (Profesional) listaUsuarios.getSelectedValue();</span>
-<span class="nc" id="L146">                ventana.remove(this);</span>
-<span class="nc" id="L147">                InterfazBotonesProfesional nuevaBotonera = new InterfazBotonesProfesional(sistema, ventana, profSeleccionado);</span>
-<span class="nc" id="L148">                ventana.pack();</span>
+<span class="nc bnc" id="L169" title="All 2 branches missed.">        if (listaUsuarios.getSelectedValue() != null) {</span>
+<span class="nc" id="L170">            this.limpioInterfaces();</span>
+<span class="nc bnc" id="L171" title="All 2 branches missed.">            if ( radioProfesional.isSelected()) {</span>
+<span class="nc" id="L172">                Profesional profSeleccionado = (Profesional) listaUsuarios.getSelectedValue();</span>
+<span class="nc bnc" id="L173" title="All 2 branches missed.">                if(profSeleccionado.getContraseña().equals(cajaContraseña.getText())){</span>
+<span class="nc" id="L174">                    ventana.remove(this);</span>
+<span class="nc" id="L175">                    InterfazBotonesProfesional nuevaBotonera = new InterfazBotonesProfesional(sistema, ventana, profSeleccionado);</span>
+<span class="nc" id="L176">                    ventana.pack();</span>
+<span class="nc" id="L177">                }else{</span>
+<span class="nc" id="L178">                    etiquetaErrorContraseña.setText(&quot;Contraseña incorrecta&quot;);</span>
+                }
             }
-<span class="nc bnc" id="L150" title="All 2 branches missed.">            if (listaTiposDeUsuarios.getSelectedItem() == Sistema.tipoUsuario.Usuario) {</span>
-<span class="nc" id="L151">                Usuario usuarioSeleccionado = (Usuario) listaUsuarios.getSelectedValue();</span>
-<span class="nc" id="L152">                ventana.remove(this);</span>
-<span class="nc" id="L153">                InterfazBotonesUsuario nuevaBotonera = new InterfazBotonesUsuario(sistema, ventana, usuarioSeleccionado);</span>
-<span class="nc" id="L154">                ventana.pack();</span>
+<span class="nc bnc" id="L181" title="All 2 branches missed.">            if ( radioUsuario.isSelected()) {</span>
+<span class="nc" id="L182">                Usuario usuarioSeleccionado = (Usuario) listaUsuarios.getSelectedValue();</span>
+<span class="nc bnc" id="L183" title="All 2 branches missed.">                if(usuarioSeleccionado.getContraseña().equals(cajaContraseña.getText())){</span>
+<span class="nc" id="L184">                    ventana.remove(this);</span>
+<span class="nc" id="L185">                    InterfazBotonesUsuario nuevaBotonera = new InterfazBotonesUsuario(sistema, ventana, usuarioSeleccionado);</span>
+<span class="nc" id="L186">                    ventana.pack();</span>
+<span class="nc" id="L187">                }else{</span>
+<span class="nc" id="L188">                    etiquetaErrorContraseña.setText(&quot;Contraseña incorrecta&quot;);</span>
+                }
             }
         }
-<span class="nc" id="L157">    }//GEN-LAST:event_btnCambiarUsuarioActionPerformed</span>
+<span class="nc" id="L192">    }//GEN-LAST:event_btnCambiarUsuarioActionPerformed</span>
 
     private void btnPruebaAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPruebaAdministradorActionPerformed
-<span class="nc bnc" id="L160" title="All 2 branches missed.">        if (interfazProf != null) {</span>
-<span class="nc" id="L161">            ventana.remove(interfazProf.getActual());</span>
-<span class="nc" id="L162">            ventana.remove(interfazProf);</span>
+<span class="nc bnc" id="L195" title="All 2 branches missed.">        if (interfazProf != null) {</span>
+<span class="nc" id="L196">            ventana.remove(interfazProf.getActual());</span>
+<span class="nc" id="L197">            ventana.remove(interfazProf);</span>
         }
-<span class="nc bnc" id="L164" title="All 2 branches missed.">        if (interfazAdm != null) {</span>
-<span class="nc" id="L165">            ventana.remove(interfazAdm.getActual());</span>
-<span class="nc" id="L166">            ventana.remove(interfazAdm);</span>
+<span class="nc bnc" id="L199" title="All 2 branches missed.">        if (interfazAdm != null) {</span>
+<span class="nc" id="L200">            ventana.remove(interfazAdm.getActual());</span>
+<span class="nc" id="L201">            ventana.remove(interfazAdm);</span>
         }
-<span class="nc bnc" id="L168" title="All 2 branches missed.">        if (interfazUsr != null) {</span>
-<span class="nc" id="L169">            ventana.remove(interfazUsr.getActual());</span>
-<span class="nc" id="L170">            ventana.remove(interfazUsr);</span>
+<span class="nc bnc" id="L203" title="All 2 branches missed.">        if (interfazUsr != null) {</span>
+<span class="nc" id="L204">            ventana.remove(interfazUsr.getActual());</span>
+<span class="nc" id="L205">            ventana.remove(interfazUsr);</span>
         }
-<span class="nc" id="L172">        ventana.remove(this);</span>
-<span class="nc" id="L173">        InterfazBotonesAdministrador nuevaBotonera = new InterfazBotonesAdministrador(sistema, ventana);</span>
-<span class="nc" id="L174">        ventana.pack();</span>
-<span class="nc" id="L175">    }//GEN-LAST:event_btnPruebaAdministradorActionPerformed</span>
+<span class="nc" id="L207">        ventana.remove(this);</span>
+<span class="nc" id="L208">        InterfazBotonesAdministrador nuevaBotonera = new InterfazBotonesAdministrador(sistema, ventana);</span>
+<span class="nc" id="L209">        ventana.pack();</span>
+<span class="nc" id="L210">    }//GEN-LAST:event_btnPruebaAdministradorActionPerformed</span>
 
-    private void listaTiposDeUsuariosFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_listaTiposDeUsuariosFocusLost
-<span class="nc" id="L178">        actualizarLista();</span>
-<span class="nc" id="L179">    }//GEN-LAST:event_listaTiposDeUsuariosFocusLost</span>
+    private void cajaContraseñaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaContraseñaFocusLost
 
-    private void listaTiposDeUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaTiposDeUsuariosActionPerformed
-<span class="nc" id="L182">        actualizarLista();</span>
-<span class="nc" id="L183">    }//GEN-LAST:event_listaTiposDeUsuariosActionPerformed</span>
+<span class="nc" id="L214">    }//GEN-LAST:event_cajaContraseñaFocusLost</span>
+
+    private void radioProfesionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioProfesionalActionPerformed
+<span class="nc" id="L217">        actualizarLista();</span>
+<span class="nc" id="L218">    }//GEN-LAST:event_radioProfesionalActionPerformed</span>
+
+    private void radioUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioUsuarioActionPerformed
+<span class="nc" id="L221">         actualizarLista();</span>
+<span class="nc" id="L222">    }//GEN-LAST:event_radioUsuarioActionPerformed</span>
     void actualizarLista() {
-<span class="nc bnc" id="L185" title="All 4 branches missed.">        if (sistema.getListaUsuarios().size() &lt; 1 &amp;&amp; listaTiposDeUsuarios.getSelectedItem() == Sistema.tipoUsuario.Usuario) {</span>
-<span class="nc" id="L186">            btnCambiarUsuario.setEnabled(false);</span>
+<span class="nc bnc" id="L224" title="All 4 branches missed.">        if (sistema.getListaUsuarios().size() &lt; 1 &amp;&amp; radioUsuario.isSelected()) {</span>
+<span class="nc" id="L225">            btnCambiarUsuario.setEnabled(false);</span>
         } else {
-<span class="nc bnc" id="L188" title="All 4 branches missed.">            if (sistema.getListaProfesionales().size() &lt; 1 &amp;&amp; listaTiposDeUsuarios.getSelectedItem() == Sistema.tipoUsuario.Profesional) {</span>
-<span class="nc" id="L189">                btnCambiarUsuario.setEnabled(false);</span>
+<span class="nc bnc" id="L227" title="All 4 branches missed.">            if (sistema.getListaProfesionales().size() &lt; 1 &amp;&amp; radioProfesional.isSelected()) {</span>
+<span class="nc" id="L228">                btnCambiarUsuario.setEnabled(false);</span>
             } else {
-<span class="nc" id="L191">                btnCambiarUsuario.setEnabled(true);</span>
+<span class="nc" id="L230">                btnCambiarUsuario.setEnabled(true);</span>
             }
         }
-<span class="nc bnc" id="L194" title="All 2 branches missed.">        if (listaTiposDeUsuarios.getSelectedItem() == Sistema.tipoUsuario.Profesional) {</span>
-<span class="nc" id="L195">            listaUsuarios.setListData(sistema.getListaProfesionales().toArray());</span>
+<span class="nc bnc" id="L233" title="All 2 branches missed.">        if ( radioProfesional.isSelected()) {</span>
+<span class="nc" id="L234">            listaUsuarios.setListData(sistema.getListaProfesionales().toArray());</span>
         }
-<span class="nc bnc" id="L197" title="All 2 branches missed.">        if (listaTiposDeUsuarios.getSelectedItem() == Sistema.tipoUsuario.Usuario) {</span>
-<span class="nc" id="L198">            listaUsuarios.setListData(sistema.getListaUsuarios().toArray());</span>
+<span class="nc bnc" id="L236" title="All 2 branches missed.">        if (radioUsuario.isSelected()) {</span>
+<span class="nc" id="L237">            listaUsuarios.setListData(sistema.getListaUsuarios().toArray());</span>
         }
-<span class="nc" id="L200">    }</span>
+<span class="nc" id="L239">    }</span>
 
     void limpioInterfaces() {
-<span class="nc bnc" id="L203" title="All 2 branches missed.">        if (interfazProf != null) {</span>
-<span class="nc" id="L204">            ventana.remove(interfazProf.getActual());</span>
-<span class="nc" id="L205">            ventana.remove(interfazProf);</span>
+<span class="nc bnc" id="L242" title="All 2 branches missed.">        if (interfazProf != null) {</span>
+<span class="nc" id="L243">            ventana.remove(interfazProf.getActual());</span>
+<span class="nc" id="L244">            ventana.remove(interfazProf);</span>
         }
-<span class="nc bnc" id="L207" title="All 2 branches missed.">        if (interfazAdm != null) {</span>
-<span class="nc" id="L208">            ventana.remove(interfazAdm.getActual());</span>
-<span class="nc" id="L209">            ventana.remove(interfazAdm);</span>
+<span class="nc bnc" id="L246" title="All 2 branches missed.">        if (interfazAdm != null) {</span>
+<span class="nc" id="L247">            ventana.remove(interfazAdm.getActual());</span>
+<span class="nc" id="L248">            ventana.remove(interfazAdm);</span>
         }
-<span class="nc bnc" id="L211" title="All 2 branches missed.">        if (interfazUsr != null) {</span>
-<span class="nc" id="L212">            ventana.remove(interfazUsr.getActual());</span>
-<span class="nc" id="L213">            ventana.remove(interfazUsr);</span>
+<span class="nc bnc" id="L250" title="All 2 branches missed.">        if (interfazUsr != null) {</span>
+<span class="nc" id="L251">            ventana.remove(interfazUsr.getActual());</span>
+<span class="nc" id="L252">            ventana.remove(interfazUsr);</span>
         }
-<span class="nc" id="L215">    }</span>
+<span class="nc" id="L254">    }</span>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCambiarUsuario;
     private javax.swing.JButton btnPruebaAdministrador;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JTextField cajaContraseña;
+    private javax.swing.JLabel etiquetaContraseña;
+    private javax.swing.JLabel etiquetaErrorContraseña;
     private javax.swing.JLabel etiquetaTiposDeUsuarios;
     private javax.swing.JLabel etiquetaTitulo;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JComboBox listaTiposDeUsuarios;
     private javax.swing.JList listaUsuarios;
+    private javax.swing.JRadioButton radioProfesional;
+    private javax.swing.JRadioButton radioUsuario;
     // End of variables declaration//GEN-END:variables
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

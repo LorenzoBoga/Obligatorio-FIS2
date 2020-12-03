@@ -31,6 +31,30 @@ public class AlimentoTest {
 
 
     @Test
+    public void testToString() {
+        Alimento instance = new Alimento();
+        String expResult = instance.getNombre();
+        String result = instance.toString();
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testSetNombre(){
+        String expResult = "Nombre";
+        Alimento instance = new Alimento();
+        instance.setNombre("Nombre");
+        assertEquals(expResult, instance.getNombre());
+    }
+    
+    @Test
+    public void testGetNombre() {
+        Alimento instance = new Alimento();
+        String expResult = "sin nombre";
+        String result = instance.getNombre();
+        assertEquals(expResult, result);
+    }
+    
+    @Test
     public void testGetTipoBebidas() {
         System.out.println("getTipo");
         Alimento instance = new Alimento();

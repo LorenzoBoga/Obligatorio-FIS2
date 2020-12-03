@@ -28,4 +28,69 @@ public class MensajeTest {
     public void tearDown() {
     }
     
+    @Test
+    public void testConstructor(){
+        Mensaje nuevo = new Mensaje();
+        
+    }
+    
+    @Test
+    public void testGetMensaje(){
+        String expResult = "mensaje";
+        Mensaje instance = new Mensaje();
+        instance.setMensaje("mensaje");
+        assertEquals(expResult, instance.getMensaje());
+    }
+    
+    @Test
+    public void testSetAsunto(){
+        String expResult = "asunto";
+        Mensaje instance = new Mensaje();
+        instance.setAsunto("asunto");
+        assertEquals(expResult, instance.getAsunto());
+    }
+    
+    @Test
+    public void testToString() {
+        Mensaje instance = new Mensaje();
+        String expResult = "Mensaje de: "+ instance.getOrigen().getNombreUsuario() 
+               + " con Asunto: " + instance.getAsunto();
+        String result = instance.toString();
+        assertEquals(expResult, result);
+    }
+    
+     @Test
+    public void testSetOrigen(){
+        Mensaje instance = new Mensaje();
+        Persona expResult = new Profesional();
+        instance.setOrigen(expResult);
+        assertEquals(expResult, instance.getOrigen());
+    }
+     @Test
+     public void testGetOrigen(){
+        Mensaje instance = new Mensaje();
+        Persona expResult = new Profesional();
+        instance.setOrigen(expResult);
+        Persona result = instance.getOrigen();
+        assertEquals(expResult, result);
+    }
+     
+     @Test
+     public void testSetDestino(){
+        Mensaje instance = new Mensaje();
+        Persona expResult = new Profesional();
+        instance.setDestino(expResult);
+        assertEquals(expResult, instance.getDestino());
+    }
+    
+     @Test
+     public void testGetDestino(){
+        Mensaje instance = new Mensaje();
+        Persona expResult = new Usuario();
+        instance.setDestino(expResult);
+        Persona result = instance.getDestino();
+        assertEquals(expResult, result);
+    }
+    
+    
 }
