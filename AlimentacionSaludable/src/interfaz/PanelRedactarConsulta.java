@@ -132,7 +132,7 @@ public class PanelRedactarConsulta extends javax.swing.JPanel {
         mensajeAEnviar.setOrigen(interfazUsuario.getUsuarioActual());
         mensajeAEnviar.setDestino(destino);
         mensajeAEnviar.setAsunto(cajaAsunto.getText());
-        mensajeAEnviar.setMensaje(textoConsultaAEnviar.getText());
+        mensajeAEnviar.setContenido(textoConsultaAEnviar.getText());
         destino.getCasillaDeEntrada().add(mensajeAEnviar);
         mensajeAlAceptar.setText("Se ha enviado la consulta");
     }//GEN-LAST:event_btnEnviarConsultaActionPerformed

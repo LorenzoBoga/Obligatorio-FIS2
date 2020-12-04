@@ -35,7 +35,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
         grupoBotonesPreferencias.add(rBOrganico);
         Usuario.Nacionalidades[] listaNac = usuario.getListaEnumNac();
         listaNacionalidadesUsuario.setModel(new DefaultComboBoxModel(listaNac));
-        listaNacionalidadesUsuario.setSelectedIndex(Usuario.Nacionalidades.Uruguaya.ordinal());
+        listaNacionalidadesUsuario.setSelectedIndex(Usuario.Nacionalidades.URUGUAYA.ordinal());
         fotoPerfil.setSize(210, 240);
     }
     
@@ -134,7 +134,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
             }
         });
         panelRegUsuario.add(cajaContraseña);
-        cajaContraseña.setBounds(480, 200, 160, 33);
+        cajaContraseña.setBounds(480, 200, 160, 37);
 
         cajaApellidos.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         cajaApellidos.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -143,7 +143,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
             }
         });
         panelRegUsuario.add(cajaApellidos);
-        cajaApellidos.setBounds(480, 100, 160, 33);
+        cajaApellidos.setBounds(480, 100, 160, 37);
 
         cajaNombUsuario.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         cajaNombUsuario.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -157,7 +157,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
             }
         });
         panelRegUsuario.add(cajaNombUsuario);
-        cajaNombUsuario.setBounds(480, 150, 160, 33);
+        cajaNombUsuario.setBounds(480, 150, 160, 37);
 
         etiquetaPeso.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         etiquetaPeso.setText("Peso:");
@@ -181,7 +181,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
             }
         });
         panelRegUsuario.add(cajaAltura);
-        cajaAltura.setBounds(480, 330, 160, 33);
+        cajaAltura.setBounds(480, 330, 160, 37);
 
         cajaPeso.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         cajaPeso.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -190,15 +190,15 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
             }
         });
         panelRegUsuario.add(cajaPeso);
-        cajaPeso.setBounds(480, 380, 160, 33);
+        cajaPeso.setBounds(480, 380, 160, 37);
 
         etiquetaMedidaPeso.setText("Kg");
         panelRegUsuario.add(etiquetaMedidaPeso);
-        etiquetaMedidaPeso.setBounds(650, 380, 14, 14);
+        etiquetaMedidaPeso.setBounds(650, 390, 30, 16);
 
         etiquetaMedidaAltura.setText("Cm");
         panelRegUsuario.add(etiquetaMedidaAltura);
-        etiquetaMedidaAltura.setBounds(650, 330, 18, 14);
+        etiquetaMedidaAltura.setBounds(650, 340, 30, 16);
 
         btnAceptarUsuario.setBackground(new java.awt.Color(255, 0, 102));
         btnAceptarUsuario.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -232,7 +232,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
             }
         });
         panelRegUsuario.add(listaNacionalidadesUsuario);
-        listaNacionalidadesUsuario.setBounds(480, 240, 160, 38);
+        listaNacionalidadesUsuario.setBounds(480, 240, 160, 39);
 
         etiquetaSexo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         etiquetaSexo.setText("Sexo:");
@@ -286,7 +286,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
             }
         });
         panelRegUsuario.add(checkBoxIntoleranteLactosa);
-        checkBoxIntoleranteLactosa.setBounds(590, 460, 271, 37);
+        checkBoxIntoleranteLactosa.setBounds(590, 460, 274, 33);
 
         checkBoxDiabetico.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         checkBoxDiabetico.setText("Diabético");
@@ -347,7 +347,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
             }
         });
         panelRegUsuario.add(fechaNacimiento);
-        fechaNacimiento.setBounds(480, 290, 160, 19);
+        fechaNacimiento.setBounds(480, 290, 160, 29);
 
         etiquetaErrorFechaNacimiento.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegUsuario.add(etiquetaErrorFechaNacimiento);
@@ -414,7 +414,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
             }
         });
         panelRegUsuario.add(btnCambiarFoto);
-        btnCambiarFoto.setBounds(30, 330, 210, 39);
+        btnCambiarFoto.setBounds(30, 330, 210, 45);
 
         etiquetaNombre1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         etiquetaNombre1.setText("Nombre:");
@@ -433,7 +433,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
             }
         });
         panelRegUsuario.add(cajaNombre1);
-        cajaNombre1.setBounds(480, 50, 160, 33);
+        cajaNombre1.setBounds(480, 50, 160, 37);
 
         etiquetaErrorNombre1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         panelRegUsuario.add(etiquetaErrorNombre1);
@@ -584,19 +584,19 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_fechaNacimientoFocusLost
 
     private void checkBoxIntoleranteLactosaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxIntoleranteLactosaActionPerformed
-        int posicionEnum = Usuario.Restricciones.IntoleranteALaLactosa.ordinal();
+        int posicionEnum = Usuario.Restricciones.INOLERANTE_A_LA_LACTOSA.ordinal();
         boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];
         usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;
     }//GEN-LAST:event_checkBoxIntoleranteLactosaActionPerformed
 
     private void checkBoxHipertensionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxHipertensionActionPerformed
-        int posicionEnum = Usuario.Restricciones.Hipertension.ordinal();
+        int posicionEnum = Usuario.Restricciones.HIPERTENSION.ordinal();
         boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];
         usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;
     }//GEN-LAST:event_checkBoxHipertensionActionPerformed
 
     private void rBMacrobioticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBMacrobioticoActionPerformed
-        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Macrobiotico);
+        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.MACROBIOTICO);
     }//GEN-LAST:event_rBMacrobioticoActionPerformed
 
     private void listaNacionalidadesUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaNacionalidadesUsuarioActionPerformed
@@ -604,25 +604,25 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_listaNacionalidadesUsuarioActionPerformed
 
     private void rBVeganoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBVeganoActionPerformed
-        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Vegano);
+        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.VEGANO);
     }//GEN-LAST:event_rBVeganoActionPerformed
 
     private void rBVegetarianoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBVegetarianoActionPerformed
-        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Vegetariano);
+        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.VEGETARIANO);
     }//GEN-LAST:event_rBVegetarianoActionPerformed
 
     private void rBOrganicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBOrganicoActionPerformed
-        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Organico);
+        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.ORGANICO);
     }//GEN-LAST:event_rBOrganicoActionPerformed
 
     private void checkBoxCeliacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxCeliacoActionPerformed
-        int posicionEnum = Usuario.Restricciones.Celiaco.ordinal();
+        int posicionEnum = Usuario.Restricciones.CELIACO.ordinal();
         boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];
         usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;
     }//GEN-LAST:event_checkBoxCeliacoActionPerformed
 
     private void checkBoxDiabeticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxDiabeticoActionPerformed
-        int posicionEnum = Usuario.Restricciones.Diabetico.ordinal();
+        int posicionEnum = Usuario.Restricciones.DIABETICO.ordinal();
         boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];
         usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;
     }//GEN-LAST:event_checkBoxDiabeticoActionPerformed

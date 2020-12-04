@@ -146,8 +146,8 @@ public class UsuarioTest {
     public void testGetNacionalidadEgipcia() {
         System.out.println("getNacionalidadEgipcia");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.Egipcia);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.Egipcia;
+        instance.setNacionalidad(Usuario.Nacionalidades.EGIPCIA);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.EGIPCIA;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -155,7 +155,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadEgipcia() {
         System.out.println("setNacionalidadEgipcia");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Egipcia;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.EGIPCIA;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -165,8 +165,8 @@ public class UsuarioTest {
     public void testGetNacionalidadEspañola() {
         System.out.println("getNacionalidadEspañola");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.Española);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.Española;
+        instance.setNacionalidad(Usuario.Nacionalidades.ESPAÑOLA);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.ESPAÑOLA;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -174,7 +174,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadEspañola() {
         System.out.println("setNacionalidadEspañola");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Española;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.ESPAÑOLA;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -184,8 +184,8 @@ public class UsuarioTest {
     public void testGetNacionalidadEstadoUnidense() {
         System.out.println("getNacionalidadEstadoUnidense");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.EstadoUnidense);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.EstadoUnidense;
+        instance.setNacionalidad(Usuario.Nacionalidades.ESTADOUNIDENSE);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.ESTADOUNIDENSE;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -193,7 +193,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadEstadoUnidense() {
         System.out.println("setNacionalidadEstadoUnidense");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.EstadoUnidense;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.ESTADOUNIDENSE;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -203,8 +203,8 @@ public class UsuarioTest {
     public void testGetNacionalidadFrancesa() {
         System.out.println("getNacionalidadFrancesa");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.Francesa);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.Francesa;
+        instance.setNacionalidad(Usuario.Nacionalidades.FRANCESA);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.FRANCESA;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -212,7 +212,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadFrancesa() {
         System.out.println("setNacionalidadFrancesa");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Francesa;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.FRANCESA;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -222,8 +222,8 @@ public class UsuarioTest {
     public void testGetNacionalidadGriega() {
         System.out.println("getNacionalidadGriega");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.Griega);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.Griega;
+        instance.setNacionalidad(Usuario.Nacionalidades.GRIEGA);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.GRIEGA;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -231,7 +231,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadGriega() {
         System.out.println("setNacionalidadGriega");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Griega;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.GRIEGA;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -241,8 +241,8 @@ public class UsuarioTest {
     public void testGetNacionalidadHolandesa() {
         System.out.println("getNacionalidadHolandesa");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.Holandesa);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.Holandesa;
+        instance.setNacionalidad(Usuario.Nacionalidades.HOLANDESA);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.HOLANDESA;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -250,7 +250,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadHolandesa() {
         System.out.println("setNacionalidadHolandesa");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Griega;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.GRIEGA;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -260,8 +260,8 @@ public class UsuarioTest {
     public void testGetNacionalidadIndia() {
         System.out.println("getNacionalidadIndia");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.India);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.India;
+        instance.setNacionalidad(Usuario.Nacionalidades.INDIA);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.INDIA;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -269,7 +269,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadIndia() {
         System.out.println("setNacionalidadIndia");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.India;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.INDIA;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -279,8 +279,8 @@ public class UsuarioTest {
     public void testGetNacionalidadInglesa() {
         System.out.println("getNacionalidadInglesa");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.Inglesa);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.Inglesa;
+        instance.setNacionalidad(Usuario.Nacionalidades.INGLESA);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.INGLESA;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -288,7 +288,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadInglesa() {
         System.out.println("setNacionalidadInglesa");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Inglesa;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.INGLESA;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -298,8 +298,8 @@ public class UsuarioTest {
     public void testGetNacionalidadIsraeli() {
         System.out.println("getNacionalidadIsraeli");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.Israeli);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.Israeli;
+        instance.setNacionalidad(Usuario.Nacionalidades.ISRAELI);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.ISRAELI;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -307,7 +307,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadIsraeli() {
         System.out.println("setNacionalidadIsraeli");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Israeli;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.ISRAELI;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -317,8 +317,8 @@ public class UsuarioTest {
     public void testGetNacionalidadItaliana() {
         System.out.println("getNacionalidadItaliana");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.Italiana);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.Italiana;
+        instance.setNacionalidad(Usuario.Nacionalidades.ITALIANA);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.ITALIANA;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -326,7 +326,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadItaliana() {
         System.out.println("setNacionalidadItaliana");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Italiana;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.ITALIANA;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -336,8 +336,8 @@ public class UsuarioTest {
     public void testGetNacionalidadJaponesa() {
         System.out.println("getNacionalidadJaponesa");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.Japonesa);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.Japonesa;
+        instance.setNacionalidad(Usuario.Nacionalidades.JAPONESA);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.JAPONESA;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -345,7 +345,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadJaponesa() {
         System.out.println("setNacionalidadJaponesa");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Japonesa;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.JAPONESA;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -355,8 +355,8 @@ public class UsuarioTest {
     public void testGetNacionalidadMéxicana() {
         System.out.println("getNacionalidadMéxicana");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.Méxicana);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.Méxicana;
+        instance.setNacionalidad(Usuario.Nacionalidades.MEXICANA);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.MEXICANA;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -364,7 +364,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadMéxicana() {
         System.out.println("setNacionalidadMéxicana");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Méxicana;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.MEXICANA;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -374,8 +374,8 @@ public class UsuarioTest {
     public void testGetNacionalidadParaguaya() {
         System.out.println("getNacionalidadParaguaya");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.Paraguaya);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.Paraguaya;
+        instance.setNacionalidad(Usuario.Nacionalidades.PARAGUAYA);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.PARAGUAYA;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -383,7 +383,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadParaguaya() {
         System.out.println("setNacionalidadParaguaya");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Paraguaya;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.PARAGUAYA;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -393,8 +393,8 @@ public class UsuarioTest {
     public void testGetNacionalidadPeruana() {
         System.out.println("getNacionalidadPeruana");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.Peruana);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.Peruana;
+        instance.setNacionalidad(Usuario.Nacionalidades.PERUANA);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.PERUANA;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -402,7 +402,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadPeruana() {
         System.out.println("setNacionalidadPeruana");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Peruana;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.PERUANA;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -412,8 +412,8 @@ public class UsuarioTest {
     public void testGetNacionalidadPortuguesa() {
         System.out.println("getNacionalidadPortuguesa");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.Portuguesa);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.Portuguesa;
+        instance.setNacionalidad(Usuario.Nacionalidades.PORTUGUESA);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.PORTUGUESA;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -421,7 +421,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadPortuguesa() {
         System.out.println("setNacionalidadPortuguesa");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Portuguesa;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.PORTUGUESA;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -431,8 +431,8 @@ public class UsuarioTest {
     public void testGetNacionalidadRusa() {
         System.out.println("getNacionalidadRusa");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.Rusa);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.Rusa;
+        instance.setNacionalidad(Usuario.Nacionalidades.RUSA);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.RUSA;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -440,7 +440,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadRusa() {
         System.out.println("setNacionalidadRusa");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Rusa;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.RUSA;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -450,8 +450,8 @@ public class UsuarioTest {
     public void testGetNacionalidadSudáfricana() {
         System.out.println("getNacionalidadSudáfricana");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.Sudáfricana);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.Sudáfricana;
+        instance.setNacionalidad(Usuario.Nacionalidades.SUDÁFRICANA);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.SUDÁFRICANA;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -459,7 +459,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadSudáfricana() {
         System.out.println("setNacionalidadSudáfricana");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Sudáfricana;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.SUDÁFRICANA;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -469,8 +469,8 @@ public class UsuarioTest {
     public void testGetNacionalidadSurcoreana() {
         System.out.println("getNacionalidadSurcoreana");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.Surcoreana);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.Surcoreana;
+        instance.setNacionalidad(Usuario.Nacionalidades.SURCOREANA);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.SURCOREANA;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -478,7 +478,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadSurcoreana() {
         System.out.println("setNacionalidadSurcoreana");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Surcoreana;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.SURCOREANA;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -488,7 +488,7 @@ public class UsuarioTest {
     public void testGetNacionalidadUruguaya() {
         System.out.println("getNacionalidadUruguaya");
         Usuario instance = new Usuario();
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.Uruguaya;
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.URUGUAYA;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -496,7 +496,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadUruguaya() {
         System.out.println("setNacionalidadUruguaya");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Uruguaya;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.URUGUAYA;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -506,8 +506,8 @@ public class UsuarioTest {
     public void testGetNacionalidadVenezolana() {
         System.out.println("getNacionalidadVenezolana");
         Usuario instance = new Usuario();
-        instance.setNacionalidad(Usuario.Nacionalidades.Venezolana);
-        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.Venezolana;
+        instance.setNacionalidad(Usuario.Nacionalidades.VENEZOLANA);
+        Usuario.Nacionalidades expResult = Usuario.Nacionalidades.VENEZOLANA;
         Usuario.Nacionalidades result = instance.getNacionalidad();
         assertEquals(expResult, result);
     }
@@ -515,7 +515,7 @@ public class UsuarioTest {
     @Test
     public void testSetNacionalidadVenezolana() {
         System.out.println("setNacionalidadVenezolana");
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Venezolana;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.VENEZOLANA;
         Usuario instance = new Usuario();
         instance.setNacionalidad(nacionalidad);
         assertEquals(nacionalidad, instance.getNacionalidad());
@@ -688,11 +688,11 @@ public class UsuarioTest {
         String apellido = "apellido";
         String usuario = "usuario";
         String fNacimiento = "19/12/2012";
-        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.Uruguaya;
+        Usuario.Nacionalidades nacionalidad = Usuario.Nacionalidades.URUGUAYA;
         double peso = 19.0;
         double altura = 19.0;
-        Usuario.Preferencias preferencias = Usuario.Preferencias.Macrobiotico;
-        Usuario.Restricciones restricciones = Usuario.Restricciones.Celiaco;
+        Usuario.Preferencias preferencias = Usuario.Preferencias.MACROBIOTICO;
+        Usuario.Restricciones restricciones = Usuario.Restricciones.CELIACO;
         String sexo = "Masculino";
         ImageIcon fotoPerfil = new javax.swing.ImageIcon(getClass().getResource("/imagenes/predeterminadaUsuario.jpg"));
         String contraseña = "contraseña";
@@ -702,11 +702,11 @@ public class UsuarioTest {
         esperado.setNombre(nombre);
         esperado.setApellidos(apellido);
         esperado.setFechaNacimiento(fNacimiento);
-        esperado.setNacionalidad(Usuario.Nacionalidades.Uruguaya);
+        esperado.setNacionalidad(Usuario.Nacionalidades.URUGUAYA);
         esperado.setPesoKg(peso);
         esperado.setAlturaCm(altura);
-        esperado.setPreferenciasAlimentarias(Usuario.Preferencias.Macrobiotico);
-        esperado.setRestricciones(Usuario.Restricciones.Celiaco);
+        esperado.setPreferenciasAlimentarias(Usuario.Preferencias.MACROBIOTICO);
+        esperado.setRestricciones(Usuario.Restricciones.CELIACO);
         esperado.setPlan(plan);
         esperado.setSexo(sexo);
         esperado.setFotoPerfil(fotoPerfil);

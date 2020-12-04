@@ -137,7 +137,7 @@ public class PanelRedactarConsultaDesdeProfesional extends javax.swing.JPanel {
         mensajeAEnviar.setOrigen(interfazProf.getUsuarioActivo());
         mensajeAEnviar.setDestino(destino);
         mensajeAEnviar.setAsunto(cajaAsunto.getText());
-        mensajeAEnviar.setMensaje(textoConsultaAEnviar.getText());
+        mensajeAEnviar.setContenido(textoConsultaAEnviar.getText());
         destino.getCasillaDeEntrada().add(mensajeAEnviar);
         mensajeAlAceptar.setText("Se ha enviado la consulta");
     }//GEN-LAST:event_btnEnviarConsultaActionPerformed

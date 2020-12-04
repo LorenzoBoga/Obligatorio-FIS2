@@ -37,9 +37,9 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
         grupoBotonesPreferencias.add(rBOrganico);
         Usuario.Nacionalidades[] listaNac = usuario.getListaEnumNac();
         listaNacionalidadesUsuario.setModel(new DefaultComboBoxModel(listaNac));
-        listaNacionalidadesUsuario.setSelectedIndex(Usuario.Nacionalidades.Uruguaya.ordinal());
+        listaNacionalidadesUsuario.setSelectedIndex(Usuario.Nacionalidades.URUGUAYA.ordinal());
         usuario.setListaRestricciones(new boolean[usuario.getListaRestricciones().length]);
-        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Ninguna);
+        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.NINGUNA);
         fotoPerfil.setSize(210, 240);
     }
 
@@ -58,8 +58,8 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
         cajaApellidos = new javax.swing.JTextField();
         etiquetaPeso = new javax.swing.JLabel();
         etiquetaAltura = new javax.swing.JLabel();
-        cajaAltura = new javax.swing.JTextField();
         cajaPeso = new javax.swing.JTextField();
+        cajaAltura = new javax.swing.JTextField();
         etiquetaMedidaPeso = new javax.swing.JLabel();
         etiquetaMedidaAltura = new javax.swing.JLabel();
         btnAceptarUsuario = new javax.swing.JButton();
@@ -153,28 +153,28 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
         panelEditarPerfilUsuario.add(etiquetaAltura);
         etiquetaAltura.setBounds(400, 280, 70, 26);
 
-        cajaAltura.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        cajaAltura.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                cajaAlturaFocusLost(evt);
-            }
-        });
-        cajaAltura.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cajaAlturaActionPerformed(evt);
-            }
-        });
-        panelEditarPerfilUsuario.add(cajaAltura);
-        cajaAltura.setBounds(480, 330, 160, 37);
-
         cajaPeso.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         cajaPeso.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 cajaPesoFocusLost(evt);
             }
         });
+        cajaPeso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaPesoActionPerformed(evt);
+            }
+        });
         panelEditarPerfilUsuario.add(cajaPeso);
-        cajaPeso.setBounds(480, 280, 160, 37);
+        cajaPeso.setBounds(480, 330, 160, 37);
+
+        cajaAltura.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        cajaAltura.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                cajaAlturaFocusLost(evt);
+            }
+        });
+        panelEditarPerfilUsuario.add(cajaAltura);
+        cajaAltura.setBounds(480, 280, 160, 37);
 
         etiquetaMedidaPeso.setText("Kg");
         panelEditarPerfilUsuario.add(etiquetaMedidaPeso);
@@ -470,26 +470,26 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_cajaApellidosFocusLost
 
-    private void cajaAlturaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaAlturaFocusLost
-        String altura = cajaAltura.getText();
+    private void cajaPesoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaPesoFocusLost
+        String altura = cajaPeso.getText();
         if (altura.trim().isEmpty()) {
             etiquetaErrorAltura.setText("La altura no puede estar vacía");
         }
-    }//GEN-LAST:event_cajaAlturaFocusLost
+    }//GEN-LAST:event_cajaPesoFocusLost
 
-    private void cajaPesoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaPesoFocusLost
-        String peso = cajaPeso.getText();
+    private void cajaAlturaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaAlturaFocusLost
+        String peso = cajaAltura.getText();
         if (peso.trim().isEmpty()) {
             etiquetaErrorAltura.setText("El peso no puede estar vacío");
         }
-    }//GEN-LAST:event_cajaPesoFocusLost
+    }//GEN-LAST:event_cajaAlturaFocusLost
 
     private void btnAceptarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarUsuarioActionPerformed
         boolean nombreValido = !cajaNombre1.getText().trim().isEmpty();
         boolean apellidoValido = !cajaApellidos.getText().trim().isEmpty();
         boolean fNacimientoValido = fechaNacimiento.getCalendar() != null;
-        boolean altura = pidoDatoNumerico(cajaAltura.getText(), 0, 265, etiquetaErrorAltura);
-        boolean peso = pidoDatoNumerico(cajaPeso.getText(), 0, 265, etiquetaErrorPeso);
+        boolean altura = pidoDatoNumerico(cajaPeso.getText(), 0, 265, etiquetaErrorAltura);
+        boolean peso = pidoDatoNumerico(cajaAltura.getText(), 0, 265, etiquetaErrorPeso);
         boolean sexoPred = sexoPredeterminado();
          boolean contraseñaValida = validarContraseña(cajaContraseña.getText().trim());
         if (nombreValido && apellidoValido
@@ -505,8 +505,8 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
             } else {
                 usuario.setSexo("Femenino");
             }
-            usuario.setAlturaCm(Integer.parseInt(cajaAltura.getText()));
-            usuario.setPesoKg(Integer.parseInt(cajaPeso.getText()));
+            usuario.setAlturaCm(Integer.parseInt(cajaPeso.getText()));
+            usuario.setPesoKg(Integer.parseInt(cajaAltura.getText()));
             usuario.setFotoPerfil((ImageIcon) fotoPerfil.getIcon());
             etiquetaMensajeAlAceptar.setText("Usuario editado correctamente");
             usuario.setContraseña(cajaContraseña.getText().trim());
@@ -555,19 +555,19 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_fechaNacimientoFocusLost
 
     private void checkBoxIntoleranteLactosaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxIntoleranteLactosaActionPerformed
-        int posicionEnum = Usuario.Restricciones.IntoleranteALaLactosa.ordinal();
+        int posicionEnum = Usuario.Restricciones.INOLERANTE_A_LA_LACTOSA.ordinal();
         boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];
         usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;
     }//GEN-LAST:event_checkBoxIntoleranteLactosaActionPerformed
 
     private void checkBoxHipertensionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxHipertensionActionPerformed
-        int posicionEnum = Usuario.Restricciones.Hipertension.ordinal();
+        int posicionEnum = Usuario.Restricciones.HIPERTENSION.ordinal();
         boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];
         usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;
     }//GEN-LAST:event_checkBoxHipertensionActionPerformed
 
     private void rBMacrobioticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBMacrobioticoActionPerformed
-        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Macrobiotico);
+        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.MACROBIOTICO);
     }//GEN-LAST:event_rBMacrobioticoActionPerformed
 
     private void listaNacionalidadesUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaNacionalidadesUsuarioActionPerformed
@@ -575,25 +575,25 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_listaNacionalidadesUsuarioActionPerformed
 
     private void rBVeganoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBVeganoActionPerformed
-        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Vegano);
+        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.VEGANO);
     }//GEN-LAST:event_rBVeganoActionPerformed
 
     private void rBVegetarianoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBVegetarianoActionPerformed
-        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Vegetariano);
+        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.VEGETARIANO);
     }//GEN-LAST:event_rBVegetarianoActionPerformed
 
     private void rBOrganicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBOrganicoActionPerformed
-        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Organico);
+        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.ORGANICO);
     }//GEN-LAST:event_rBOrganicoActionPerformed
 
     private void checkBoxCeliacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxCeliacoActionPerformed
-        int posicionEnum = Usuario.Restricciones.Celiaco.ordinal();
+        int posicionEnum = Usuario.Restricciones.CELIACO.ordinal();
         boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];
         usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;
     }//GEN-LAST:event_checkBoxCeliacoActionPerformed
 
     private void checkBoxDiabeticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxDiabeticoActionPerformed
-        int posicionEnum = Usuario.Restricciones.Diabetico.ordinal();
+        int posicionEnum = Usuario.Restricciones.DIABETICO.ordinal();
         boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];
         usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;
     }//GEN-LAST:event_checkBoxDiabeticoActionPerformed
@@ -602,9 +602,9 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_cajaContraseñaActionPerformed
 
-    private void cajaAlturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaAlturaActionPerformed
+    private void cajaPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaPesoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cajaAlturaActionPerformed
+    }//GEN-LAST:event_cajaPesoActionPerformed
 
     private void btnCambiarFotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarFotoActionPerformed
         JFileChooser fileChooser = new JFileChooser();

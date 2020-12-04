@@ -140,7 +140,7 @@ public class PanelPerfilUsuario extends javax.swing.JPanel {
                 cantidadDeRestricciones++;
             }
         }
-        if (unUsuario.getListaRestricciones()[Usuario.Restricciones.Celiaco.ordinal()] == true) {
+        if (unUsuario.getListaRestricciones()[Usuario.Restricciones.CELIACO.ordinal()] == true) {
             if (contador == cantidadDeRestricciones - 1) {
                 retorno += "Celiaco";
             } else {
@@ -149,7 +149,7 @@ public class PanelPerfilUsuario extends javax.swing.JPanel {
             }
 
         }
-        if (unUsuario.getListaRestricciones()[Usuario.Restricciones.Diabetico.ordinal()] == true) {
+        if (unUsuario.getListaRestricciones()[Usuario.Restricciones.DIABETICO.ordinal()] == true) {
             if (contador == cantidadDeRestricciones - 1) {
                 retorno += "Diabético";
             } else {
@@ -157,7 +157,7 @@ public class PanelPerfilUsuario extends javax.swing.JPanel {
                 contador++;
             }
         }
-        if (unUsuario.getListaRestricciones()[Usuario.Restricciones.Hipertension.ordinal()] == true) {
+        if (unUsuario.getListaRestricciones()[Usuario.Restricciones.HIPERTENSION.ordinal()] == true) {
             if (contador == cantidadDeRestricciones - 1) {
                 retorno += "Hipertensión";
             } else {
@@ -165,7 +165,7 @@ public class PanelPerfilUsuario extends javax.swing.JPanel {
                 contador++;
             }
         }
-        if (unUsuario.getListaRestricciones()[Usuario.Restricciones.IntoleranteALaLactosa.ordinal()] == true) {
+        if (unUsuario.getListaRestricciones()[Usuario.Restricciones.INOLERANTE_A_LA_LACTOSA.ordinal()] == true) {
             if (contador == cantidadDeRestricciones - 1) {
                 retorno += "Intolerancia a la lactosa";
             } else {

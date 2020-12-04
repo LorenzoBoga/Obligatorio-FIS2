@@ -3,7 +3,6 @@ package dominio;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Optional;
-import javax.swing.ImageIcon;
 
 public class Profesional extends Persona implements Serializable {
 
@@ -26,11 +25,21 @@ public class Profesional extends Persona implements Serializable {
                            ("/imagenes/predeterminadaProfesional.png")));
         this.nombreTituloProf = "no ingreso titulo prof";
         this.fechaGraduacion = "no ingreso fecha graduacion";
-        this.paisObtuvoTitulo = Pais.Uruguay;
-        this.casillaDeEntrada = new ArrayList<Mensaje>();
+        this.paisObtuvoTitulo = Pais.URUGUAY;
+        this.casillaDeEntrada = new ArrayList<>();
     }
 
     // Metodos de la clase profesional
+
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
+    
+    
     public ArrayList<Mensaje> getCasillaDeEntrada() {
         return casillaDeEntrada;
     }
@@ -68,8 +77,7 @@ public class Profesional extends Persona implements Serializable {
     }
 
     public Pais[] getListaEnumPais() {
-        Pais[] lista = listaEnumPais;
-        return lista;
+        return listaEnumPais;
     }
 
     public void setListaEnumPais(Pais[] listaEnumPais) {
@@ -80,26 +88,25 @@ public class Profesional extends Persona implements Serializable {
     }
 
     public enum Pais {
-        Alemania, Argentina, Australia, Austria, Brasil, Canadá, Chile, China,
-        Colombia, CoreaDelSur, Cuba, Ecuador, Egipto, España, EstadosUnidos,
-        Francia, Grecia, Holanda, India, Inglaterra, Israel, Italia, Japón,
-        México, Paraguay, Perú, Portugal, Rusia, Sudáfrica, Uruguay, Venezuela
+        ALEMANIA, ARGENTINA, AUSTRALIA, AUSTRIA, BRASIL, CANADÁ, CHILE, CHINA,
+        COLOMBIA, COREA_DEL_SUR, CUBA, ECUADOR, EGIPTO, ESPAÑA, ESTADOS_UNIDOS,
+        FRANCIA, GRECIA, HOLANDA, INDIA, INGLATERRA, ISRAEL, ITALIA, JAPÓN,
+        MÉXICO, PARAGUAY, PERÚ, PORTUGAL, RUSIA, SUDÁFRICA, URUGUAY, VENEZUELA
     }
 
     public Pais[] inicializoListaEnumPaises() {
-        Pais[] listaEnumPivot = {
-            Pais.Alemania, Pais.Argentina, Pais.Australia,
-            Pais.Austria, Pais.Brasil, Pais.Canadá,
-            Pais.Chile, Pais.China, Pais.Colombia,
-            Pais.CoreaDelSur, Pais.Cuba, Pais.Ecuador,
-            Pais.Egipto, Pais.España, Pais.EstadosUnidos,
-            Pais.Francia, Pais.Grecia, Pais.Holanda,
-            Pais.India, Pais.Inglaterra, Pais.Israel,
-            Pais.Italia, Pais.Japón, Pais.México, Pais.Paraguay,
-            Pais.Perú, Pais.Portugal, Pais.Rusia, Pais.Sudáfrica,
-            Pais.Uruguay, Pais.Venezuela
+        return new Pais[] {
+            Pais.ALEMANIA, Pais.ARGENTINA, Pais.AUSTRALIA,
+            Pais.AUSTRIA, Pais.BRASIL, Pais.CANADÁ,
+            Pais.CHILE, Pais.CHINA, Pais.COLOMBIA,
+            Pais.COREA_DEL_SUR, Pais.CUBA, Pais.ECUADOR,
+            Pais.EGIPTO, Pais.ESPAÑA, Pais.ESTADOS_UNIDOS,
+            Pais.FRANCIA, Pais.GRECIA, Pais.HOLANDA,
+            Pais.INDIA, Pais.INGLATERRA, Pais.ISRAEL,
+            Pais.ITALIA, Pais.JAPÓN, Pais.MÉXICO, Pais.PARAGUAY,
+            Pais.PERÚ, Pais.PORTUGAL, Pais.RUSIA, Pais.SUDÁFRICA,
+            Pais.URUGUAY, Pais.VENEZUELA
         };
-        return listaEnumPivot;
     }
 
     //redefino toString

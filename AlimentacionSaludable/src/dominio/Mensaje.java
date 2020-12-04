@@ -10,7 +10,7 @@ public class Mensaje implements Serializable{
     private Persona origen;
     private Persona destino;
     private String asunto;
-    private String mensaje;
+    private String contenido;
     
     //Constructor
     public Mensaje() {
@@ -18,7 +18,7 @@ public class Mensaje implements Serializable{
         this.origen = p;
         this.destino = p;
         this.asunto = "no tiene texto";
-        this.mensaje = "no tiene texto";
+        this.contenido = "no tiene texto";
     }
     
     //Metodos de la clase Mensaje
@@ -47,12 +47,12 @@ public class Mensaje implements Serializable{
         this.asunto = asunto;
     }
 
-    public String getMensaje() {
-        return mensaje;
+    public String getContenido() {
+        return contenido;
     }
 
-    public void setMensaje(String mensaje) {
-        this.mensaje = mensaje;
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
     }
     
     //Redefino toString

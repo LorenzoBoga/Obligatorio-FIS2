@@ -35,17 +35,16 @@ public class Sistema implements Serializable {
     }
 
     public Sistema() {
-        this.listaAlimentos = new ArrayList();
-        this.listaUsuarios = new ArrayList();
-        this.listaProfesionales = new ArrayList();
-        this.usuarioActivo = tipoUsuario.NoSeleccionado;
+        this.listaAlimentos = new ArrayList<>();
+        this.listaUsuarios = new ArrayList<>();
+        this.listaProfesionales = new ArrayList<>();
+        this.usuarioActivo = tipoUsuario.NOSELECCIONADO;
         this.listaTiposDeUsuario = inicializoListaTiposDeUsuario();
     }
     //Metodos de la clase sistema
 
     public tipoUsuario[] getListaTiposDeUsuario() {
-        tipoUsuario[] lista = listaTiposDeUsuario;
-        return lista;
+        return listaTiposDeUsuario;
     }
 
     public void setListaTiposDeUsuario(tipoUsuario[] listaTiposDeUsuario) {
@@ -74,8 +73,7 @@ public class Sistema implements Serializable {
         return listaProfesionales;
     }
 
-    public void setListaProfesionales(ArrayList<Profesional>
-                                      listaProfesionales) {
+    public void setListaProfesionales(ArrayList<Profesional> listaProfesionales) {
         this.listaProfesionales = listaProfesionales;
     }
 
@@ -88,48 +86,57 @@ public class Sistema implements Serializable {
     }
 
     public enum tipoUsuario {
-        Profesional, Usuario, NoSeleccionado
+        PROFESIONAL, USUARIO, NOSELECCIONADO
     }
 
     //Metodo para inicializar lista de enums de tipo de usuario
     tipoUsuario[] inicializoListaTiposDeUsuario() {
-        tipoUsuario[] listaPivot = {tipoUsuario.Profesional,
-            tipoUsuario.Usuario};
-        return listaPivot;
+        return new tipoUsuario[]{tipoUsuario.PROFESIONAL, tipoUsuario.USUARIO};
     }
 
     //CARGAR Y GUARDAR SISTEMA
     public void cargarSistema() {
+        ObjectInputStream in = null;
         try {
-            ObjectInputStream in = new ObjectInputStream
-                                   (new FileInputStream("sis.ser"));
-            ArrayList<Alimento> listAlimentos = (ArrayList<Alimento>)
-                                                in.readObject();
+            in = new ObjectInputStream(new FileInputStream("sis.ser"));
+            ArrayList<Alimento> listAlimentos = (ArrayList<Alimento>) in.readObject();
             listaAlimentos = listAlimentos;
-            ArrayList<Usuario> listUsuarios = (ArrayList<Usuario>)
-                                              in.readObject();
+            ArrayList<Usuario> listUsuarios = (ArrayList<Usuario>) in.readObject();
             listaUsuarios = listUsuarios;
-            ArrayList<Profesional> listProfesionales = (ArrayList<Profesional>)
-                                                        in.readObject();
+            ArrayList<Profesional> listProfesionales = (ArrayList<Profesional>) in.readObject();
             listaProfesionales = listProfesionales;
             in.close();
         } catch (Exception ex) {
-            listaAlimentos = new ArrayList<Alimento>();
-            listaUsuarios = new ArrayList<Usuario>();
-            listaProfesionales = new ArrayList<Profesional>();
+            listaAlimentos = new ArrayList<>();
+            listaUsuarios = new ArrayList<>();
+            listaProfesionales = new ArrayList<>();
+        } finally {
+            if (in != null) {
+                try {
+                    in.close();
+                } catch (IOException ex) {
+                }
+            }
         }
     }
 
     public void guardarSistema() {
+        ObjectOutputStream out = null;
         try {
-            ObjectOutputStream out = new ObjectOutputStream
-                                         (new FileOutputStream("sis.ser"));
+            out = new ObjectOutputStream(new FileOutputStream("sis.ser"));
             out.writeObject(listaAlimentos);
             out.writeObject(listaUsuarios);
             out.writeObject(listaProfesionales);
             out.flush();
             out.close();
         } catch (IOException ex) {
+        } finally {
+            if (out != null) {
+                try {
+                    out.close();
+                } catch (IOException ex) {
+                }
+            }
         }
     }
 
@@ -137,23 +144,18 @@ public class Sistema implements Serializable {
     public boolean pidoDatoNumerico(int dato, int min, int max) {
         int datoAVerificar = 0;
         boolean pidiendo = false;
-        try {
-            datoAVerificar = dato;
-            if ((datoAVerificar >= min) && (datoAVerificar <= max)) {
-                pidiendo = true;
-            }
-        } catch (NumberFormatException ex) {
-            
+        datoAVerificar = dato;
+        if ((datoAVerificar >= min) && (datoAVerificar <= max)) {
+            pidiendo = true;
         }
         return pidiendo;
     }
 
     //Metodo que adapta el tamaño de la imagen al deseado
     ImageIcon resizeImageIcon(ImageIcon imageIcon, Integer width,
-                              Integer height) {
-        BufferedImage bufferedImage = new BufferedImage
-                                      (width, height,
-                                       BufferedImage.TRANSLUCENT);
+            Integer height) {
+        BufferedImage bufferedImage = new BufferedImage(width, height,
+                BufferedImage.TRANSLUCENT);
         Graphics2D graphics2D = bufferedImage.createGraphics();
         graphics2D.drawImage(imageIcon.getImage(), 0, 0, width, height, null);
         graphics2D.dispose();
@@ -161,34 +163,32 @@ public class Sistema implements Serializable {
     }
 
     void registroUsuario(String unNombre, String unApellido, String unUsuario,
-                         String unSexo, String unaFechaNacimiento,
-                         double unaAltura, ImageIcon unaFotoPerfil,
-                         double unPeso,
-                         Usuario.Nacionalidades unaNacionalidad) {
+            String unSexo, String unaFechaNacimiento,
+            double unaAltura, ImageIcon unaFotoPerfil,
+            double unPeso,
+            Usuario.Nacionalidades unaNacionalidad) {
         Usuario usuario = new Usuario();
         usuario.setNombre(unNombre);
         usuario.setApellidos(unApellido);
         usuario.setNombreUsuario(unUsuario);
-        usuario.setNacionalidad(usuario.getListaEnumNac()
-                                [unaNacionalidad.ordinal()]);
+        usuario.setNacionalidad(usuario.getListaEnumNac()[unaNacionalidad.ordinal()]);
         usuario.setFechaNacimiento(unaFechaNacimiento);
         usuario.setSexo(unSexo);
         usuario.setAlturaCm(unaAltura);
         usuario.setPesoKg(unPeso);
         usuario.setFotoPerfil(unaFotoPerfil);
-        if(!this.getListaUsuarios().contains(usuario)){
+        if (!this.getListaUsuarios().contains(usuario)) {
             this.getListaUsuarios().add(usuario);
         }
     }
 
     public void registroProfesional(String unNombre, String unApellido,
-                                    String unNombreUsuario,
-                                    String unNombreTitulo,
-                                    Profesional.Pais unPais,
-                                    ImageIcon unaFotoPerfil,
-                                    String unaFechaNacimiento,
-                                    String unaFechaGraduacion,
-                                    Profesional.Pais unPaisTitulo) {
+            String unNombreUsuario,
+            String unNombreTitulo,
+            ImageIcon unaFotoPerfil,
+            String unaFechaNacimiento,
+            String unaFechaGraduacion,
+            Profesional.Pais unPaisTitulo) {
         Profesional profesional = new Profesional();
         profesional.setNombre(unNombre);
         profesional.setApellidos(unApellido);
@@ -198,20 +198,19 @@ public class Sistema implements Serializable {
         profesional.setFechaGraduacion(unaFechaGraduacion);
         profesional.setPaisObtuvoTitulo(unPaisTitulo);
         profesional.setFotoPerfil(unaFotoPerfil);
-        if(!this.getListaProfesionales().contains(profesional)){
+        if (!this.getListaProfesionales().contains(profesional)) {
             this.getListaProfesionales().add(profesional);
         }
     }
 
     public void registroAlimento(String nombreAlim,
-                                 Alimento.TipoAlimento unTipo,
-                                 boolean[] unaListaNutrientes) {
+            Alimento.TipoAlimento unTipo,
+            boolean[] unaListaNutrientes) {
         Alimento alimento = new Alimento();
         alimento.setNombre(nombreAlim);
-        alimento.setTipo(alimento.getListaEnumTipoAlimento()
-                        [unTipo.ordinal()]);
+        alimento.setTipo(alimento.getListaEnumTipoAlimento()[unTipo.ordinal()]);
         alimento.setListaNutrientesSeleccionados(unaListaNutrientes);
-        if(!this.getListaAlimentos().contains(alimento)){
+        if (!this.getListaAlimentos().contains(alimento)) {
             this.getListaAlimentos().add(alimento);
         }
     }

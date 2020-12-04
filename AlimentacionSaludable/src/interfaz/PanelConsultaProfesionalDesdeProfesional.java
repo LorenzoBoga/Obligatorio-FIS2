@@ -130,7 +130,7 @@ public class PanelConsultaProfesionalDesdeProfesional extends javax.swing.JPanel
     private void listaMensajesValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_listaMensajesValueChanged
         mensajeSeleccionado = (Mensaje) listaMensajes.getSelectedValue();
         if (mensajeSeleccionado != null) {
-            textoLeerMensaje.setText(mensajeSeleccionado.getMensaje());
+            textoLeerMensaje.setText(mensajeSeleccionado.getContenido());
         }
     }//GEN-LAST:event_listaMensajesValueChanged
 

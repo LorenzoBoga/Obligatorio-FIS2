@@ -35,11 +35,11 @@ public class MensajeTest {
     }
     
     @Test
-    public void testGetMensaje(){
+    public void testGetContenido(){
         String expResult = "mensaje";
         Mensaje instance = new Mensaje();
-        instance.setMensaje("mensaje");
-        assertEquals(expResult, instance.getMensaje());
+        instance.setContenido("mensaje");
+        assertEquals(expResult, instance.getContenido());
     }
     
     @Test

@@ -1,11 +1,7 @@
 package dominio;
 
-import static datechooser.beans.pic.Pictures.getResource;
-import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -37,16 +33,16 @@ public class SistemaTest {
     @Test
     public void testSetUsuarioActivo(){
         Sistema instance = new Sistema();
-        instance.setUsuarioActivo(Sistema.tipoUsuario.Usuario);
-        assertEquals(Sistema.tipoUsuario.Usuario, instance.getUsuarioActivo());
+        instance.setUsuarioActivo(Sistema.tipoUsuario.USUARIO);
+        assertEquals(Sistema.tipoUsuario.USUARIO, instance.getUsuarioActivo());
     }
     
     @Test
     public void testGetUsuarioActivo(){
         Sistema instance = new Sistema();
-        instance.setUsuarioActivo(Sistema.tipoUsuario.Usuario);
+        instance.setUsuarioActivo(Sistema.tipoUsuario.USUARIO);
         Sistema.tipoUsuario result = instance.getUsuarioActivo();
-        assertEquals(Sistema.tipoUsuario.Usuario, result);
+        assertEquals(Sistema.tipoUsuario.USUARIO, result);
     }
     
     @Test
@@ -82,7 +78,7 @@ public class SistemaTest {
     @Test
     public void testSetListaTiposDeUsuarios(){
         Sistema instance = new Sistema();
-        Sistema.tipoUsuario[] expResult = {Sistema.tipoUsuario.Profesional, Sistema.tipoUsuario.Usuario};
+        Sistema.tipoUsuario[] expResult = {Sistema.tipoUsuario.PROFESIONAL, Sistema.tipoUsuario.USUARIO};
         instance.setListaTiposDeUsuario(expResult);
         assertArrayEquals(expResult, instance.getListaTiposDeUsuario());
     }
@@ -91,7 +87,7 @@ public class SistemaTest {
     public void testGetListaTiposDeUsuario() {
         System.out.println("getListaTiposDeUsuario");
         Sistema instance = new Sistema();
-        Sistema.tipoUsuario[] expResult = {Sistema.tipoUsuario.Profesional, Sistema.tipoUsuario.Usuario};
+        Sistema.tipoUsuario[] expResult = {Sistema.tipoUsuario.PROFESIONAL, Sistema.tipoUsuario.USUARIO};
         Sistema.tipoUsuario[] result = instance.getListaTiposDeUsuario();
         assertArrayEquals(expResult, result);
     }
@@ -168,7 +164,7 @@ public class SistemaTest {
         double unaAltura = 1.0;
         ImageIcon unaFotoPerfil = new javax.swing.ImageIcon(getClass().getResource("/imagenes/predeterminadaUsuario.jpg"));
         double unPeso = 1.0;
-        Usuario.Nacionalidades unaNacionalidad = Usuario.Nacionalidades.Uruguaya;
+        Usuario.Nacionalidades unaNacionalidad = Usuario.Nacionalidades.URUGUAYA;
         Sistema instance = new Sistema();
         instance.registroUsuario(unNombre, unApellido, unUsuario, unSexo, unaFechaNacimiento, unaAltura, unaFotoPerfil, unPeso, unaNacionalidad);
         assertTrue(instance.getListaUsuarios().size()>0);
@@ -185,7 +181,7 @@ public class SistemaTest {
         double unaAltura = 1.0;
         ImageIcon unaFotoPerfil = new javax.swing.ImageIcon(getClass().getResource("/imagenes/predeterminadaUsuario.jpg"));
         double unPeso = 1.0;
-        Usuario.Nacionalidades unaNacionalidad = Usuario.Nacionalidades.Uruguaya;
+        Usuario.Nacionalidades unaNacionalidad = Usuario.Nacionalidades.URUGUAYA;
         Sistema instance = new Sistema();
         instance.registroUsuario(unNombre, unApellido, unUsuario, unSexo, unaFechaNacimiento, unaAltura, unaFotoPerfil, unPeso, unaNacionalidad);
         instance.registroUsuario(unNombre, unApellido, unUsuario, unSexo, unaFechaNacimiento, unaAltura, unaFotoPerfil, unPeso, unaNacionalidad);
@@ -199,14 +195,13 @@ public class SistemaTest {
         String unApellido = "apellido";
         String unNombreUsuario = "usuario";
         String unNombreTitulo = "titulo";
-        Profesional.Pais unPais = Profesional.Pais.Uruguay;
         ImageIcon unaFotoPerfil = new javax.swing.ImageIcon(getClass().getResource("/imagenes/predeterminadaProfesional.png"));
         String unaFechaNacimiento = "19/11/2004";
         String unaFechaGraduacion = "19/11/2004";
-        Profesional.Pais unPaisTitulo = Profesional.Pais.Uruguay;
+        Profesional.Pais unPaisTitulo = Profesional.Pais.URUGUAY;
         Sistema instance = new Sistema();
-        instance.registroProfesional(unNombre, unApellido, unNombreUsuario, unNombreTitulo, unPais, unaFotoPerfil, unaFechaNacimiento, unaFechaGraduacion, unPaisTitulo);
-        instance.registroProfesional(unNombre, unApellido, unNombreUsuario, unNombreTitulo, unPais, unaFotoPerfil, unaFechaNacimiento, unaFechaGraduacion, unPaisTitulo);
+        instance.registroProfesional(unNombre, unApellido, unNombreUsuario, unNombreTitulo, unaFotoPerfil, unaFechaNacimiento, unaFechaGraduacion, unPaisTitulo);
+        instance.registroProfesional(unNombre, unApellido, unNombreUsuario, unNombreTitulo, unaFotoPerfil, unaFechaNacimiento, unaFechaGraduacion, unPaisTitulo);
         assertFalse(instance.getListaProfesionales().size()>1);
     }
     
@@ -217,13 +212,12 @@ public class SistemaTest {
         String unApellido = "apellido";
         String unNombreUsuario = "usuario";
         String unNombreTitulo = "titulo";
-        Profesional.Pais unPais = Profesional.Pais.Uruguay;
         ImageIcon unaFotoPerfil = new javax.swing.ImageIcon(getClass().getResource("/imagenes/predeterminadaProfesional.png"));
         String unaFechaNacimiento = "19/11/2004";
         String unaFechaGraduacion = "19/11/2004";
-        Profesional.Pais unPaisTitulo = Profesional.Pais.Uruguay;
+        Profesional.Pais unPaisTitulo = Profesional.Pais.URUGUAY;
         Sistema instance = new Sistema();
-        instance.registroProfesional(unNombre, unApellido, unNombreUsuario, unNombreTitulo, unPais, unaFotoPerfil, unaFechaNacimiento, unaFechaGraduacion, unPaisTitulo);
+        instance.registroProfesional(unNombre, unApellido, unNombreUsuario, unNombreTitulo, unaFotoPerfil, unaFechaNacimiento, unaFechaGraduacion, unPaisTitulo);
         assertTrue(instance.getListaProfesionales().size()>0);
     }
 
@@ -231,7 +225,7 @@ public class SistemaTest {
     public void testRegistroAlimento() {
         System.out.println("registroAlimento");
         String nombreAlim = "";
-        Alimento.TipoAlimento unTipo = Alimento.TipoAlimento.Otro;
+        Alimento.TipoAlimento unTipo = Alimento.TipoAlimento.OTRO;
         Alimento a = new Alimento();
         boolean[] unaListaNutrientes = new boolean[a.getListaNutrientesSeleccionados().length];
         Sistema instance = new Sistema();
@@ -243,7 +237,7 @@ public class SistemaTest {
     public void testRegistroAlimentoInvalido() {
         System.out.println("registroAlimentoInvalido");
         String nombreAlim = "";
-        Alimento.TipoAlimento unTipo = Alimento.TipoAlimento.Otro;
+        Alimento.TipoAlimento unTipo = Alimento.TipoAlimento.OTRO;
         Alimento a = new Alimento();
         boolean[] unaListaNutrientes = new boolean[a.getListaNutrientesSeleccionados().length];
         Sistema instance = new Sistema();
@@ -262,7 +256,7 @@ public class SistemaTest {
         ArrayList<Usuario> listaU = new ArrayList<Usuario>();
         ArrayList<Profesional> listaP = new ArrayList<Profesional>();
         ArrayList<Alimento> listaA = new ArrayList<Alimento>();
-        Sistema.tipoUsuario usuarioActivo = Sistema.tipoUsuario.NoSeleccionado;
+        Sistema.tipoUsuario usuarioActivo = Sistema.tipoUsuario.NOSELECCIONADO;
         Sistema s = new Sistema(listaA,listaU,listaP,usuarioActivo);
     }
     

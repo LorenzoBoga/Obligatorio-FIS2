@@ -25,7 +25,7 @@ public class Usuario extends Persona implements Serializable {
     private ArrayList<Mensaje> casillaDeEntrada;
     private String fechaUltimaAdicion;
     private String contraseña;
-
+    private String noSeIngreso= "no se ingreso";
     //Costructor
     public Usuario(Nacionalidades nacionalidad, double pesoKg, double alturaCm,
             Preferencias preferenciasAlimentarias, Restricciones restricciones,
@@ -43,11 +43,11 @@ public class Usuario extends Persona implements Serializable {
         this.necesitoPlan = false;
         this.profesionalAsignado = new Profesional();
         this.sexo = sexo;
-        this.historialComidas = new ArrayList<ComidaPorDia>();
+        this.historialComidas = new ArrayList<>();
         this.historialDelDia = new ComidaPorDia();
         this.listaEnumNac = inicializoListaEnum();
-        this.casillaDeEntrada = new ArrayList<Mensaje>();
-        this.fechaUltimaAdicion = "no se ingreso";
+        this.casillaDeEntrada = new ArrayList<>();
+        this.fechaUltimaAdicion = noSeIngreso;
         this.contraseña = unaContraseña;
     }
 
@@ -58,21 +58,21 @@ public class Usuario extends Persona implements Serializable {
                            .swing.ImageIcon(getClass()
                            .getResource
                            ("/imagenes/predeterminadaUsuario.jpg")));
-        this.nacionalidad = Nacionalidades.Uruguaya;
+        this.nacionalidad = Nacionalidades.URUGUAYA;
         this.pesoKg = 0;
         this.alturaCm = 0;
-        this.preferenciasAlimentarias = Preferencias.Ninguna;
-        this.restricciones = Restricciones.Ninguna;
+        this.preferenciasAlimentarias = Preferencias.NINGUNA;
+        this.restricciones = Restricciones.NINGUNA;
         this.listaRestricciones = new boolean[5];
         this.necesitoPlan = false;
         this.profesionalAsignado = new Profesional();
         this.plan = new PlanDeAlimentacion(this);
-        this.sexo = "no se ingreso";
-        this.historialComidas = new ArrayList<ComidaPorDia>();
+        this.sexo = noSeIngreso;
+        this.historialComidas = new ArrayList<>();
         this.historialDelDia = new ComidaPorDia();
         this.listaEnumNac = inicializoListaEnum();
-        this.casillaDeEntrada = new ArrayList<Mensaje>();
-        this.fechaUltimaAdicion = "no se ingreso";
+        this.casillaDeEntrada = new ArrayList<>();
+        this.fechaUltimaAdicion = noSeIngreso;
     }
 
     // Metodos de la clase usuario
@@ -117,8 +117,7 @@ public class Usuario extends Persona implements Serializable {
     }
 
     public Nacionalidades[] getListaEnumNac() {
-        Nacionalidades[] lista = listaEnumNac;
-        return lista;
+        return listaEnumNac;
     }
 
     public void setListaEnumNac(Nacionalidades[] listaEnumNac) {
@@ -135,7 +134,6 @@ public class Usuario extends Persona implements Serializable {
         if(pesoKg > 0 && pesoKg < 501){
             this.pesoKg = pesoKg;
         }
-        
     }
 
     public double getAlturaCm() {
@@ -184,8 +182,7 @@ public class Usuario extends Persona implements Serializable {
     }
 
     public boolean[] getListaRestricciones() {
-        boolean[] lista = listaRestricciones;
-        return lista;
+        return listaRestricciones;
     }
 
     public void setListaRestricciones(boolean[] listaRestricciones) {
@@ -210,62 +207,61 @@ public class Usuario extends Persona implements Serializable {
         this.historialComidas = historialComidas;
     }
 
+    @Override
     public String getContraseña() {
         return contraseña;
     }
-
+    
+    @Override
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
     }
     
     public enum Nacionalidades {
-        Alemana, Argentina, Australiana, Austriaca, Brasileña, Canadiense,
-        Chilena, China, Colombiana, Cubana, Ecuatoriana, Egipcia,
-        Española, EstadoUnidense, Francesa, Griega, Holandesa, India, Inglesa,
-        Israeli, Italiana, Japonesa, Méxicana, Paraguaya, Peruana, Portuguesa,
-        Rusa, Sudáfricana, Surcoreana, Uruguaya, Venezolana
+        ALEMANA, ARGENTINA, AUSTRALIANA, AUSTRIACA, BRASILEÑA, CANADIENSE,
+        CHILENA, CHINA, COLOMBIANA, CUBANA, ECUATORIANA, EGIPCIA,
+        ESPAÑOLA, ESTADOUNIDENSE, FRANCESA, GRIEGA, HOLANDESA, INDIA, INGLESA,
+        ISRAELI, ITALIANA, JAPONESA, MEXICANA, PARAGUAYA, PERUANA, PORTUGUESA,
+        RUSA, SUDÁFRICANA, SURCOREANA, URUGUAYA, VENEZOLANA
     }
 
     String[] inicializoListaNacionalidades() {
-        String[] listaPaisesPivot = {"Alemana", "Australiana", "Austriaca",
-            "Brasileña","Canadiense", "Chilena", "China", "Colombiana",
-            "Surcoreana", "Cubana", "Ecuatoriana", "Egipcia",
-            "Española", "EstadoUnidense", "Francesa", "Griega",
-            "Holandesa", "India", "Inglesa", "Israeli", "Italiana",
-            "Japonesa", "Méxicana", "Paraguaya", "Peruana",
-            "Portuguesa", "Rusa", "Sudáfricana", "Uruguaya",
-            "Venezolana"};
+        String[] listaPaisesPivot = {"ALEMANA", "AUSTRALIANA", "AUSTRIACA",
+            "BRASILEÑA","CANADIENSE", "CHILENA", "CHINA", "COLOMBIANA",
+            "SURCOREANA", "CUBANA", "ECUATORIANA", "EGIPCIA",
+            "ESPAÑOLA", "ESTADOUNIDENSE", "FRANCESA", "GRIEGA",
+            "HOLANDESA", "INDIA", "INGLESA", "ISRAELI", "ITALIANA",
+            "JAPONESA", "MEXICANA", "PARAGUAYA", "PERUANA",
+            "PORTUGUESA", "RUSA", "SUDÁFRICANA", "URUGUAYA",
+            "VENEZOLANA"};
         return listaPaisesPivot;
     }
 
     public Nacionalidades[] inicializoListaEnum() {
-        Nacionalidades[] listaEnumPivot = {
-            Nacionalidades.Alemana, Nacionalidades.Argentina,
-            Nacionalidades.Australiana, Nacionalidades.Austriaca,
-            Nacionalidades.Brasileña, Nacionalidades.Canadiense,
-            Nacionalidades.Chilena, Nacionalidades.China,
-            Nacionalidades.Colombiana, Nacionalidades.Surcoreana,
-            Nacionalidades.Cubana, Nacionalidades.Ecuatoriana, 
-            Nacionalidades.Egipcia, Nacionalidades.Española, 
-            Nacionalidades.EstadoUnidense, Nacionalidades.Francesa,
-            Nacionalidades.Griega, Nacionalidades.Holandesa,
-            Nacionalidades.India, Nacionalidades.Inglesa,
-            Nacionalidades.Israeli, Nacionalidades.Italiana,
-            Nacionalidades.Japonesa, Nacionalidades.Méxicana,
-            Nacionalidades.Paraguaya, Nacionalidades.Peruana,
-            Nacionalidades.Portuguesa, Nacionalidades.Rusa,
-            Nacionalidades.Sudáfricana, Nacionalidades.Uruguaya,
-            Nacionalidades.Venezolana
-        };
-        return listaEnumPivot;
+        return new Nacionalidades[] {Nacionalidades.ALEMANA, Nacionalidades.ARGENTINA,
+            Nacionalidades.AUSTRALIANA, Nacionalidades.AUSTRIACA,
+            Nacionalidades.BRASILEÑA, Nacionalidades.CANADIENSE,
+            Nacionalidades.CHILENA, Nacionalidades.CHINA,
+            Nacionalidades.COLOMBIANA, Nacionalidades.SURCOREANA,
+            Nacionalidades.CUBANA, Nacionalidades.ECUATORIANA, 
+            Nacionalidades.EGIPCIA, Nacionalidades.ESPAÑOLA, 
+            Nacionalidades.ESTADOUNIDENSE, Nacionalidades.FRANCESA,
+            Nacionalidades.GRIEGA, Nacionalidades.HOLANDESA,
+            Nacionalidades.INDIA, Nacionalidades.INGLESA,
+            Nacionalidades.ISRAELI, Nacionalidades.ITALIANA,
+            Nacionalidades.JAPONESA, Nacionalidades.MEXICANA,
+            Nacionalidades.PARAGUAYA, Nacionalidades.PERUANA,
+            Nacionalidades.PORTUGUESA, Nacionalidades.RUSA,
+            Nacionalidades.SUDÁFRICANA, Nacionalidades.URUGUAYA,
+            Nacionalidades.VENEZOLANA};
     }
 
     public enum Preferencias {
-        Vegano, Vegetariano, Macrobiotico, Organico, Ninguna
+        VEGANO, VEGETARIANO, MACROBIOTICO, ORGANICO, NINGUNA
     }
 
     public enum Restricciones {
-        Celiaco, IntoleranteALaLactosa, Diabetico, Hipertension, Ninguna
+        CELIACO, INOLERANTE_A_LA_LACTOSA, DIABETICO, HIPERTENSION, NINGUNA
     }
 
     @Override

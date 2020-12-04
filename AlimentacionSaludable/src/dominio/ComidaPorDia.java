@@ -2,10 +2,7 @@ package dominio;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Objects;
 
 public class ComidaPorDia implements Serializable{
     //Atributos
@@ -42,7 +39,7 @@ public class ComidaPorDia implements Serializable{
         this.fecha = fecha;
     }
     
-      @Override
+    @Override
     public String toString() {
         return "Comidas ingeridas el: "+this.getFecha();
     }
@@ -53,10 +50,10 @@ public class ComidaPorDia implements Serializable{
         if (obj == null) {
             retorno= false;
         }
-        if (getClass() != obj.getClass()) {
+        if (retorno && getClass() != obj.getClass()) {
             retorno= false;
         }
-        if (retorno == true) {
+        if (retorno) {
             ComidaPorDia other = (ComidaPorDia) obj;
             retorno=other.getComidasIngeridas()
                     .equals(this.getComidasIngeridas()) && 
@@ -65,6 +62,10 @@ public class ComidaPorDia implements Serializable{
         return retorno;
     }
     
+    @Override
+    public int hashCode() {
+        return 7;
+    } 
     
     
 }
