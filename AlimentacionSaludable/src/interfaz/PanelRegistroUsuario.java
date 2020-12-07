@@ -462,7 +462,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cajaContraseñaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaContraseñaFocusLost
-        String nombre = cajaContraseña.getText();
+     
 
     }//GEN-LAST:event_cajaContraseñaFocusLost
 
@@ -492,18 +492,13 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_cajaNombUsuarioFocusLost
 
     private void cajaAlturaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaAlturaFocusLost
-        String altura = cajaAltura.getText();
-        if (pidoDatoNumerico(altura, 0, 265, etiquetaErrorAltura)) {
-            int alturaEnInt = Integer.parseInt(altura);
-        }
+       
     }//GEN-LAST:event_cajaAlturaFocusLost
 
     private void cajaPesoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaPesoFocusLost
         String peso = cajaPeso.getText();
         if (peso.trim().isEmpty()) {
             etiquetaErrorPeso.setText("El peso no puede estar vacío");
-        } else if (pidoDatoNumerico(peso, 0, 265, etiquetaErrorPeso)) {
-            int pesoEnInt = Integer.parseInt(peso);
         }
     }//GEN-LAST:event_cajaPesoFocusLost
 
@@ -532,7 +527,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
             String fNacimiento = formatter.format(fechaNacimiento.getCalendar().getTime());
             usuario.setFechaNacimiento(fNacimiento);    
             usuario.setContraseña(cajaContraseña.getText().trim());
-            if (sexoPred == true) {
+            if (sexoPred) {
                 usuario.setSexo("Masculino");
             } else {
                 usuario.setSexo("Femenino");
@@ -547,22 +542,22 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
         } else {
             etiquetaMensajeAlAceptar.setText("Error al ingresar el usuario");
             
-            if (apellidoValido == false) {
+            if (!apellidoValido) {
                 etiquetaErrorApellido.setText("El apellido no puede ser vacío");
             }
-            if (nombreUsuarioValido == false) {
+            if (!nombreUsuarioValido) {
                 etiquetaErrorNombreUsuario.setText("Nombre de usuario no válido");
             }
-            if (fNacimientoValido == false) {
+            if (!fNacimientoValido) {
                 etiquetaErrorFechaNacimiento.setText("Fecha de nacimiento no válida");
             }
-            if (altura == false) {
+            if (!altura) {
                  etiquetaErrorAltura.setText("La altura no puede estar vacía");
             }
-            if (peso == false) {
+            if (!peso) {
                  etiquetaErrorPeso.setText("El peso no puede estar vacío");
             }
-            if (contraseñaValida == false){
+            if (!contraseñaValida){
                 etiquetaErrorContraseña.setText("La contraseña debe tener al menos 8 caracteres");
             }
         }
@@ -600,7 +595,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_rBMacrobioticoActionPerformed
 
     private void listaNacionalidadesUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaNacionalidadesUsuarioActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_listaNacionalidadesUsuarioActionPerformed
 
     private void rBVeganoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBVeganoActionPerformed
@@ -628,15 +623,15 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_checkBoxDiabeticoActionPerformed
 
     private void cajaContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaContraseñaActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_cajaContraseñaActionPerformed
 
     private void cajaNombUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombUsuarioActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_cajaNombUsuarioActionPerformed
 
     private void cajaAlturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaAlturaActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_cajaAlturaActionPerformed
 
     private void btnCambiarFotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarFotoActionPerformed
@@ -653,11 +648,11 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_btnCambiarFotoActionPerformed
 
     private void cajaNombre1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaNombre1FocusLost
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_cajaNombre1FocusLost
 
     private void cajaNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombre1ActionPerformed
-        // TODO add your handling code here:
+     
     }//GEN-LAST:event_cajaNombre1ActionPerformed
     
     void actualizar() {
@@ -752,11 +747,10 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
     }
     
     private boolean sexoPredeterminado() {
-        boolean predeterminado = true;
-        if (rBtnMasculinoUsuario.isSelected() == false) {
-            predeterminado = false;
+        if (!rBtnMasculinoUsuario.isSelected()) {
+            return false;
         }
-        return predeterminado;
+        return true;
     }
     
     private boolean validarContraseña(String unaContraseña){

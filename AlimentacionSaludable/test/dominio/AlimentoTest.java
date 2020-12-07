@@ -95,6 +95,14 @@ public class AlimentoTest {
     }
     
     @Test
+    public void testHashCode(){
+       Alimento instance = new Alimento();
+       int expResult = 7;
+       int result = instance.hashCode();
+       assertEquals(expResult,result);
+    }
+    
+    @Test
     public void testEquals(){
         Alimento instance = new Alimento();
         Alimento instance2 = new Alimento();

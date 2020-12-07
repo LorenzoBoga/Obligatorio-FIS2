@@ -59,9 +59,9 @@ public class PersonaTest {
     @Test
     public void testSetContraseña(){
         Persona instance = new Usuario();
-        String contraseña = "contraseña";
-        instance.setContraseña(contraseña);
-        assertEquals(contraseña, instance.getContraseña());
+        String expResult = "contraseña";
+        instance.setContraseña(expResult);
+        assertEquals(expResult, instance.getContraseña());
     }
     @Test
     public void testGetFotoPerfil(){
@@ -81,6 +81,13 @@ public class PersonaTest {
         assertEquals(expResult, result);
     }
 
+    @Test
+    public void testHashCode(){
+       Persona instance = new Usuario();
+       int expResult = 7;
+       int result = instance.hashCode();
+       assertEquals(expResult,result);
+    }
     
     @Test
     public void testEqualsFalse() {

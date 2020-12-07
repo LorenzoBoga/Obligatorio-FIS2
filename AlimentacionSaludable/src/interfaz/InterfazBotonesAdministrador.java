@@ -10,7 +10,7 @@ public class InterfazBotonesAdministrador extends javax.swing.JPanel {
     private Sistema sistema;
     private JPanel actual;
     private JFrame ventana;
-
+    
     //Cosntructor
     public InterfazBotonesAdministrador(Sistema unSistema, JFrame unaVentana) {
         initComponents();

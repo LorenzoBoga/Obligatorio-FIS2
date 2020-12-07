@@ -30,6 +30,7 @@ public class SistemaTest {
     public void tearDown() {
     }
 
+   
     @Test
     public void testSetUsuarioActivo(){
         Sistema instance = new Sistema();
@@ -153,6 +154,8 @@ public class SistemaTest {
         assertFalse(heightCorrectas && widthCorrectas);
     }
 
+        
+   
     @Test
     public void testRegistroUsuario() {
         System.out.println("registroUsuario");
@@ -253,9 +256,9 @@ public class SistemaTest {
     
     @Test
     public void testSistemaPorParametro(){
-        ArrayList<Usuario> listaU = new ArrayList<Usuario>();
-        ArrayList<Profesional> listaP = new ArrayList<Profesional>();
-        ArrayList<Alimento> listaA = new ArrayList<Alimento>();
+        ArrayList<Usuario> listaU = new ArrayList<>();
+        ArrayList<Profesional> listaP = new ArrayList<>();
+        ArrayList<Alimento> listaA = new ArrayList<>();
         Sistema.tipoUsuario usuarioActivo = Sistema.tipoUsuario.NOSELECCIONADO;
         Sistema s = new Sistema(listaA,listaU,listaP,usuarioActivo);
     }

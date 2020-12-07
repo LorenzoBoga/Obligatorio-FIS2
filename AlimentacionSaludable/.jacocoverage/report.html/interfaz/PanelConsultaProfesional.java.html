@@ -152,7 +152,7 @@ public class PanelConsultaProfesional extends javax.swing.JPanel {
     private void listaMensajesValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_listaMensajesValueChanged
 <span class="nc" id="L153">        mensajeSeleccionado = (Mensaje) listaMensajes.getSelectedValue();</span>
 <span class="nc bnc" id="L154" title="All 2 branches missed.">        if (mensajeSeleccionado != null) {</span>
-<span class="nc" id="L155">            String textoMensaje = mensajeSeleccionado.getMensaje();</span>
+<span class="nc" id="L155">            String textoMensaje = mensajeSeleccionado.getContenido();</span>
 <span class="nc" id="L156">            textoLeerMensaje.setText(textoMensaje);</span>
         }
 <span class="nc" id="L158">    }//GEN-LAST:event_listaMensajesValueChanged</span>

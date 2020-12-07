@@ -3,7 +3,6 @@ package interfaz;
 import dominio.Alimento;
 import dominio.Sistema;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import javax.swing.JFrame;
 
 

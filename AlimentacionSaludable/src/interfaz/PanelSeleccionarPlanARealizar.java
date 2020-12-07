@@ -1,6 +1,5 @@
 package interfaz;
 
-import dominio.PlanDeAlimentacion;
 import dominio.Sistema;
 import dominio.Usuario;
 import java.util.ArrayList;
@@ -74,7 +73,7 @@ public class PanelSeleccionarPlanARealizar extends javax.swing.JPanel {
     }//GEN-LAST:event_btnRealizarPlanActionPerformed
 
     ArrayList<Usuario> listaConPlanARealizar() {
-        ArrayList<Usuario> retorno = new ArrayList<Usuario>();
+        ArrayList<Usuario> retorno = new ArrayList<>();
         for (int i = 0; i < sistema.getListaUsuarios().size(); i++) {
             if (sistema.getListaUsuarios().get(i).isNecesitoPlan() && sistema.getListaUsuarios().get(i).getProfesionalAsignado().equals(interfaz.getUsuarioActivo())) {
                 retorno.add(sistema.getListaUsuarios().get(i));

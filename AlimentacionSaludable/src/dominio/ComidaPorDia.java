@@ -17,7 +17,7 @@ public class ComidaPorDia implements Serializable{
     }
     
     public ComidaPorDia() {
-        this.comidasIngeridas = new ArrayList<Alimento>();
+        this.comidasIngeridas = new ArrayList<>();
         LocalDate diaActual = LocalDate.now();
         this.fecha = diaActual.toString();
     }

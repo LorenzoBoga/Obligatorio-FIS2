@@ -3,10 +3,7 @@ package interfaz;
 import dominio.Alimento;
 import dominio.ComidaPorDia;
 import dominio.Sistema;
-import dominio.Usuario;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import javax.swing.JFrame;
 
 public class PanelDietaDiariaUsuario extends javax.swing.JPanel {
@@ -15,7 +12,6 @@ public class PanelDietaDiariaUsuario extends javax.swing.JPanel {
     private Sistema sistema;
     private JFrame ventana;
     private InterfazBotonesUsuario interfaz;
-    private boolean deboActualizar;
 
     //Constructor
     public PanelDietaDiariaUsuario(Sistema unSistema,
@@ -110,7 +106,6 @@ public class PanelDietaDiariaUsuario extends javax.swing.JPanel {
     private void etiquetaBtnQuitarComidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_etiquetaBtnQuitarComidaActionPerformed
         if (listaComidasDiarias.getSelectedValue() != null) {
             Alimento alimentoABorrar = (Alimento) listaComidasDiarias.getSelectedValue();
-            int diaActual = interfaz.getUsuarioActual().getHistorialComidas().size();
             interfaz.getUsuarioActual().getHistorialDelDia().getComidasIngeridas().remove(alimentoABorrar);
             listaComidasDiarias.setListData(interfaz.getUsuarioActual().getHistorialDelDia().getComidasIngeridas().toArray());
         }

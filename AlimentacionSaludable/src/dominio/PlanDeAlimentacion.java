@@ -20,13 +20,13 @@ public class PlanDeAlimentacion implements Serializable{
     //Constructor
     public PlanDeAlimentacion(Usuario usuario) {
         this.usuario = usuario;
-        listaLunes = new ArrayList();
-        listaMartes = new ArrayList();
-        listaMiercoles = new ArrayList();
-        listaJueves = new ArrayList();
-        listaViernes = new ArrayList();
-        listaSabado = new ArrayList();
-        listaDomingo = new ArrayList();
+        listaLunes = new ArrayList<>();
+        listaMartes = new ArrayList<>();
+        listaMiercoles = new ArrayList<>();
+        listaJueves = new ArrayList<>();
+        listaViernes = new ArrayList<>();
+        listaSabado = new ArrayList<>();
+        listaDomingo = new ArrayList<>();
     }
     
     //Metodos de la clase PlanDeAliemntacion

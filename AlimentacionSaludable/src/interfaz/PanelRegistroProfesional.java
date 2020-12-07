@@ -321,7 +321,7 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
 
     private void btnAceptarProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarProfActionPerformed
         Profesional profesional = new Profesional();
-        boolean nombreValido = !cajaContraseña.getText().trim().isEmpty();
+        boolean nombreValido = !cajaNombreProf1.getText().trim().isEmpty();
         
         Usuario comparoUsr = new Usuario();
         comparoUsr.setNombreUsuario(cajaUsuarioProf.getText());
@@ -336,7 +336,7 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
         boolean contraseñaValida = validarContraseña(cajaContraseña.getText().trim());
         if (nombreValido && nombreUsuarioValido
                 && fNacimientoValido && nombreTituloValido && fGraduacionValido && contraseñaValida) {
-            profesional.setNombre(cajaContraseña.getText());
+            profesional.setNombre(cajaNombreProf1.getText());
             profesional.setApellidos(cajaApellidosProf.getText());
             profesional.setNombreUsuario(cajaUsuarioProf.getText());
             SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
@@ -409,11 +409,11 @@ public class PanelRegistroProfesional extends javax.swing.JPanel {
     }//GEN-LAST:event_btnCambiarFotoActionPerformed
 
     private void cajaApellidosProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaApellidosProfActionPerformed
-        // TODO add your handling code here:
+     
     }//GEN-LAST:event_cajaApellidosProfActionPerformed
 
     private void cajaNombreProf1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaNombreProf1FocusLost
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_cajaNombreProf1FocusLost
     
     void actualizar() {

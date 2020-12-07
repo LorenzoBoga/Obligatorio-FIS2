@@ -226,7 +226,7 @@ public class Usuario extends Persona implements Serializable {
     }
 
     String[] inicializoListaNacionalidades() {
-        String[] listaPaisesPivot = {"ALEMANA", "AUSTRALIANA", "AUSTRIACA",
+         return new String[]{"ALEMANA", "AUSTRALIANA", "AUSTRIACA",
             "BRASILEÑA","CANADIENSE", "CHILENA", "CHINA", "COLOMBIANA",
             "SURCOREANA", "CUBANA", "ECUATORIANA", "EGIPCIA",
             "ESPAÑOLA", "ESTADOUNIDENSE", "FRANCESA", "GRIEGA",
@@ -234,7 +234,6 @@ public class Usuario extends Persona implements Serializable {
             "JAPONESA", "MEXICANA", "PARAGUAYA", "PERUANA",
             "PORTUGUESA", "RUSA", "SUDÁFRICANA", "URUGUAYA",
             "VENEZOLANA"};
-        return listaPaisesPivot;
     }
 
     public Nacionalidades[] inicializoListaEnum() {

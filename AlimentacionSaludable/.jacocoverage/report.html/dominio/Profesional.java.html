@@ -3,7 +3,6 @@
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Optional;
-import javax.swing.ImageIcon;
 
 public class Profesional extends Persona implements Serializable {
 
@@ -12,100 +11,108 @@ public class Profesional extends Persona implements Serializable {
     private String nombreTituloProf;
     private String fechaGraduacion;
     private Pais paisObtuvoTitulo;
-<span class="fc" id="L15">    private Pais[] listaEnumPais = inicializoListaEnumPaises();</span>
+<span class="fc" id="L14">    private Pais[] listaEnumPais = inicializoListaEnumPaises();</span>
     private ArrayList&lt;Mensaje&gt; casillaDeEntrada;
     private String contraseña;
     //Constructor
 
     public Profesional() {
-<span class="fc" id="L21">        super(&quot;no ingreso nombre&quot;, &quot;no ingreso apellido&quot;, &quot;no ingreso usuario&quot;,</span>
+<span class="fc" id="L20">        super(&quot;no ingreso nombre&quot;, &quot;no ingreso apellido&quot;, &quot;no ingreso usuario&quot;,</span>
               &quot;no ingreso fecha nacimiento&quot;, null,&quot;no ingreso contrasñea&quot;);
-<span class="fc" id="L23">        this.setFotoPerfil(new javax.swing</span>
-<span class="fc" id="L24">                           .ImageIcon(getClass()</span>
+<span class="fc" id="L22">        this.setFotoPerfil(new javax.swing</span>
+<span class="fc" id="L23">                           .ImageIcon(getClass()</span>
                            .getResource
-<span class="fc" id="L26">                           (&quot;/imagenes/predeterminadaProfesional.png&quot;)));</span>
-<span class="fc" id="L27">        this.nombreTituloProf = &quot;no ingreso titulo prof&quot;;</span>
-<span class="fc" id="L28">        this.fechaGraduacion = &quot;no ingreso fecha graduacion&quot;;</span>
-<span class="fc" id="L29">        this.paisObtuvoTitulo = Pais.Uruguay;</span>
-<span class="fc" id="L30">        this.casillaDeEntrada = new ArrayList&lt;Mensaje&gt;();</span>
-<span class="fc" id="L31">    }</span>
+<span class="fc" id="L25">                           (&quot;/imagenes/predeterminadaProfesional.png&quot;)));</span>
+<span class="fc" id="L26">        this.nombreTituloProf = &quot;no ingreso titulo prof&quot;;</span>
+<span class="fc" id="L27">        this.fechaGraduacion = &quot;no ingreso fecha graduacion&quot;;</span>
+<span class="fc" id="L28">        this.paisObtuvoTitulo = Pais.URUGUAY;</span>
+<span class="fc" id="L29">        this.casillaDeEntrada = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L30">    }</span>
 
     // Metodos de la clase profesional
+
+    public String getContraseña() {
+<span class="nc" id="L35">        return contraseña;</span>
+    }
+
+    public void setContraseña(String contraseña) {
+<span class="nc" id="L39">        this.contraseña = contraseña;</span>
+<span class="nc" id="L40">    }</span>
+    
+    
     public ArrayList&lt;Mensaje&gt; getCasillaDeEntrada() {
-<span class="fc" id="L35">        return casillaDeEntrada;</span>
+<span class="fc" id="L44">        return casillaDeEntrada;</span>
     }
 
     public void setCasillaDeEntrada(ArrayList&lt;Mensaje&gt; casillaDeEntrada) {
-<span class="fc" id="L39">        this.casillaDeEntrada = casillaDeEntrada;</span>
-<span class="fc" id="L40">    }</span>
+<span class="fc" id="L48">        this.casillaDeEntrada = casillaDeEntrada;</span>
+<span class="fc" id="L49">    }</span>
 
     public String getNombreTituloProf() {
-<span class="fc" id="L43">        return nombreTituloProf;</span>
+<span class="fc" id="L52">        return nombreTituloProf;</span>
     }
 
     public void setNombreTituloProf(String nombreTituloProf) {
-<span class="pc bpc" id="L47" title="1 of 2 branches missed.">        if(!nombreTituloProf.trim().isEmpty()){</span>
-<span class="fc" id="L48">            this.nombreTituloProf = nombreTituloProf;</span>
+<span class="pc bpc" id="L56" title="1 of 2 branches missed.">        if(!nombreTituloProf.trim().isEmpty()){</span>
+<span class="fc" id="L57">            this.nombreTituloProf = nombreTituloProf;</span>
         }
-<span class="fc" id="L50">    }</span>
+<span class="fc" id="L59">    }</span>
 
     public String getFechaGraduacion() {
-<span class="nc" id="L53">        return fechaGraduacion;</span>
+<span class="nc" id="L62">        return fechaGraduacion;</span>
     }
 
     public void setFechaGraduacion(String fechaGraduacion) {
-<span class="pc bpc" id="L57" title="1 of 2 branches missed.">        if(!fechaGraduacion.trim().isEmpty()){</span>
-<span class="fc" id="L58">            this.fechaGraduacion = fechaGraduacion;</span>
+<span class="pc bpc" id="L66" title="1 of 2 branches missed.">        if(!fechaGraduacion.trim().isEmpty()){</span>
+<span class="fc" id="L67">            this.fechaGraduacion = fechaGraduacion;</span>
         }
-<span class="fc" id="L60">    }</span>
+<span class="fc" id="L69">    }</span>
 
     public Pais getPaisObtuvoTitulo() {
-<span class="fc" id="L63">        return paisObtuvoTitulo;</span>
+<span class="fc" id="L72">        return paisObtuvoTitulo;</span>
     }
 
     public void setPaisObtuvoTitulo(Pais paisObtuvoTitulo) {
-<span class="fc" id="L67">        this.paisObtuvoTitulo = paisObtuvoTitulo;</span>
-<span class="fc" id="L68">    }</span>
+<span class="fc" id="L76">        this.paisObtuvoTitulo = paisObtuvoTitulo;</span>
+<span class="fc" id="L77">    }</span>
 
     public Pais[] getListaEnumPais() {
-<span class="fc" id="L71">        Pais[] lista = listaEnumPais;</span>
-<span class="fc" id="L72">        return lista;</span>
+<span class="fc" id="L80">        return listaEnumPais;</span>
     }
 
     public void setListaEnumPais(Pais[] listaEnumPais) {
-<span class="fc" id="L76">        this.listaEnumPais = Optional</span>
-<span class="fc" id="L77">                .ofNullable(listaEnumPais)</span>
-<span class="fc" id="L78">                .orElse(null);</span>
+<span class="fc" id="L84">        this.listaEnumPais = Optional</span>
+<span class="fc" id="L85">                .ofNullable(listaEnumPais)</span>
+<span class="fc" id="L86">                .orElse(null);</span>
 
-<span class="fc" id="L80">    }</span>
+<span class="fc" id="L88">    }</span>
 
-<span class="pc" id="L82">    public enum Pais {</span>
-<span class="fc" id="L83">        Alemania, Argentina, Australia, Austria, Brasil, Canadá, Chile, China,</span>
-<span class="fc" id="L84">        Colombia, CoreaDelSur, Cuba, Ecuador, Egipto, España, EstadosUnidos,</span>
-<span class="fc" id="L85">        Francia, Grecia, Holanda, India, Inglaterra, Israel, Italia, Japón,</span>
-<span class="fc" id="L86">        México, Paraguay, Perú, Portugal, Rusia, Sudáfrica, Uruguay, Venezuela</span>
+<span class="pc" id="L90">    public enum Pais {</span>
+<span class="fc" id="L91">        ALEMANIA, ARGENTINA, AUSTRALIA, AUSTRIA, BRASIL, CANADÁ, CHILE, CHINA,</span>
+<span class="fc" id="L92">        COLOMBIA, COREA_DEL_SUR, CUBA, ECUADOR, EGIPTO, ESPAÑA, ESTADOS_UNIDOS,</span>
+<span class="fc" id="L93">        FRANCIA, GRECIA, HOLANDA, INDIA, INGLATERRA, ISRAEL, ITALIA, JAPÓN,</span>
+<span class="fc" id="L94">        MÉXICO, PARAGUAY, PERÚ, PORTUGAL, RUSIA, SUDÁFRICA, URUGUAY, VENEZUELA</span>
     }
 
     public Pais[] inicializoListaEnumPaises() {
-<span class="fc" id="L90">        Pais[] listaEnumPivot = {</span>
-            Pais.Alemania, Pais.Argentina, Pais.Australia,
-            Pais.Austria, Pais.Brasil, Pais.Canadá,
-            Pais.Chile, Pais.China, Pais.Colombia,
-            Pais.CoreaDelSur, Pais.Cuba, Pais.Ecuador,
-            Pais.Egipto, Pais.España, Pais.EstadosUnidos,
-            Pais.Francia, Pais.Grecia, Pais.Holanda,
-            Pais.India, Pais.Inglaterra, Pais.Israel,
-            Pais.Italia, Pais.Japón, Pais.México, Pais.Paraguay,
-            Pais.Perú, Pais.Portugal, Pais.Rusia, Pais.Sudáfrica,
-            Pais.Uruguay, Pais.Venezuela
+<span class="fc" id="L98">        return new Pais[] {</span>
+            Pais.ALEMANIA, Pais.ARGENTINA, Pais.AUSTRALIA,
+            Pais.AUSTRIA, Pais.BRASIL, Pais.CANADÁ,
+            Pais.CHILE, Pais.CHINA, Pais.COLOMBIA,
+            Pais.COREA_DEL_SUR, Pais.CUBA, Pais.ECUADOR,
+            Pais.EGIPTO, Pais.ESPAÑA, Pais.ESTADOS_UNIDOS,
+            Pais.FRANCIA, Pais.GRECIA, Pais.HOLANDA,
+            Pais.INDIA, Pais.INGLATERRA, Pais.ISRAEL,
+            Pais.ITALIA, Pais.JAPÓN, Pais.MÉXICO, Pais.PARAGUAY,
+            Pais.PERÚ, Pais.PORTUGAL, Pais.RUSIA, Pais.SUDÁFRICA,
+            Pais.URUGUAY, Pais.VENEZUELA
         };
-<span class="fc" id="L102">        return listaEnumPivot;</span>
     }
 
     //redefino toString
     @Override
     public String toString() {
-<span class="fc" id="L108">        return &quot;Usuario: &quot; + this.getNombreUsuario();</span>
+<span class="fc" id="L115">        return &quot;Usuario: &quot; + this.getNombreUsuario();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

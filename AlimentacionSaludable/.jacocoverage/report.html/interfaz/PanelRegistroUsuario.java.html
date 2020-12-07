@@ -35,7 +35,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
 <span class="nc" id="L35">        grupoBotonesPreferencias.add(rBOrganico);</span>
 <span class="nc" id="L36">        Usuario.Nacionalidades[] listaNac = usuario.getListaEnumNac();</span>
 <span class="nc" id="L37">        listaNacionalidadesUsuario.setModel(new DefaultComboBoxModel(listaNac));</span>
-<span class="nc" id="L38">        listaNacionalidadesUsuario.setSelectedIndex(Usuario.Nacionalidades.Uruguaya.ordinal());</span>
+<span class="nc" id="L38">        listaNacionalidadesUsuario.setSelectedIndex(Usuario.Nacionalidades.URUGUAYA.ordinal());</span>
 <span class="nc" id="L39">        fotoPerfil.setSize(210, 240);</span>
 <span class="nc" id="L40">    }</span>
     
@@ -134,7 +134,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
 <span class="nc" id="L134">            }</span>
         });
 <span class="nc" id="L136">        panelRegUsuario.add(cajaContraseña);</span>
-<span class="nc" id="L137">        cajaContraseña.setBounds(480, 200, 160, 33);</span>
+<span class="nc" id="L137">        cajaContraseña.setBounds(480, 200, 160, 37);</span>
 
 <span class="nc" id="L139">        cajaApellidos.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
 <span class="nc" id="L140">        cajaApellidos.addFocusListener(new java.awt.event.FocusAdapter() {</span>
@@ -143,7 +143,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
 <span class="nc" id="L143">            }</span>
         });
 <span class="nc" id="L145">        panelRegUsuario.add(cajaApellidos);</span>
-<span class="nc" id="L146">        cajaApellidos.setBounds(480, 100, 160, 33);</span>
+<span class="nc" id="L146">        cajaApellidos.setBounds(480, 100, 160, 37);</span>
 
 <span class="nc" id="L148">        cajaNombUsuario.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
 <span class="nc" id="L149">        cajaNombUsuario.addFocusListener(new java.awt.event.FocusAdapter() {</span>
@@ -157,7 +157,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
 <span class="nc" id="L157">            }</span>
         });
 <span class="nc" id="L159">        panelRegUsuario.add(cajaNombUsuario);</span>
-<span class="nc" id="L160">        cajaNombUsuario.setBounds(480, 150, 160, 33);</span>
+<span class="nc" id="L160">        cajaNombUsuario.setBounds(480, 150, 160, 37);</span>
 
 <span class="nc" id="L162">        etiquetaPeso.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
 <span class="nc" id="L163">        etiquetaPeso.setText(&quot;Peso:&quot;);</span>
@@ -181,7 +181,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
 <span class="nc" id="L181">            }</span>
         });
 <span class="nc" id="L183">        panelRegUsuario.add(cajaAltura);</span>
-<span class="nc" id="L184">        cajaAltura.setBounds(480, 330, 160, 33);</span>
+<span class="nc" id="L184">        cajaAltura.setBounds(480, 330, 160, 37);</span>
 
 <span class="nc" id="L186">        cajaPeso.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
 <span class="nc" id="L187">        cajaPeso.addFocusListener(new java.awt.event.FocusAdapter() {</span>
@@ -190,15 +190,15 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
 <span class="nc" id="L190">            }</span>
         });
 <span class="nc" id="L192">        panelRegUsuario.add(cajaPeso);</span>
-<span class="nc" id="L193">        cajaPeso.setBounds(480, 380, 160, 33);</span>
+<span class="nc" id="L193">        cajaPeso.setBounds(480, 380, 160, 37);</span>
 
 <span class="nc" id="L195">        etiquetaMedidaPeso.setText(&quot;Kg&quot;);</span>
 <span class="nc" id="L196">        panelRegUsuario.add(etiquetaMedidaPeso);</span>
-<span class="nc" id="L197">        etiquetaMedidaPeso.setBounds(650, 380, 14, 14);</span>
+<span class="nc" id="L197">        etiquetaMedidaPeso.setBounds(650, 390, 30, 16);</span>
 
 <span class="nc" id="L199">        etiquetaMedidaAltura.setText(&quot;Cm&quot;);</span>
 <span class="nc" id="L200">        panelRegUsuario.add(etiquetaMedidaAltura);</span>
-<span class="nc" id="L201">        etiquetaMedidaAltura.setBounds(650, 330, 18, 14);</span>
+<span class="nc" id="L201">        etiquetaMedidaAltura.setBounds(650, 340, 30, 16);</span>
 
 <span class="nc" id="L203">        btnAceptarUsuario.setBackground(new java.awt.Color(255, 0, 102));</span>
 <span class="nc" id="L204">        btnAceptarUsuario.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
@@ -232,7 +232,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
 <span class="nc" id="L232">            }</span>
         });
 <span class="nc" id="L234">        panelRegUsuario.add(listaNacionalidadesUsuario);</span>
-<span class="nc" id="L235">        listaNacionalidadesUsuario.setBounds(480, 240, 160, 38);</span>
+<span class="nc" id="L235">        listaNacionalidadesUsuario.setBounds(480, 240, 160, 39);</span>
 
 <span class="nc" id="L237">        etiquetaSexo.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
 <span class="nc" id="L238">        etiquetaSexo.setText(&quot;Sexo:&quot;);</span>
@@ -286,7 +286,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
 <span class="nc" id="L286">            }</span>
         });
 <span class="nc" id="L288">        panelRegUsuario.add(checkBoxIntoleranteLactosa);</span>
-<span class="nc" id="L289">        checkBoxIntoleranteLactosa.setBounds(590, 460, 271, 37);</span>
+<span class="nc" id="L289">        checkBoxIntoleranteLactosa.setBounds(590, 460, 274, 33);</span>
 
 <span class="nc" id="L291">        checkBoxDiabetico.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
 <span class="nc" id="L292">        checkBoxDiabetico.setText(&quot;Diabético&quot;);</span>
@@ -347,7 +347,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
 <span class="nc" id="L347">            }</span>
         });
 <span class="nc" id="L349">        panelRegUsuario.add(fechaNacimiento);</span>
-<span class="nc" id="L350">        fechaNacimiento.setBounds(480, 290, 160, 19);</span>
+<span class="nc" id="L350">        fechaNacimiento.setBounds(480, 290, 160, 29);</span>
 
 <span class="nc" id="L352">        etiquetaErrorFechaNacimiento.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
 <span class="nc" id="L353">        panelRegUsuario.add(etiquetaErrorFechaNacimiento);</span>
@@ -414,7 +414,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
 <span class="nc" id="L414">            }</span>
         });
 <span class="nc" id="L416">        panelRegUsuario.add(btnCambiarFoto);</span>
-<span class="nc" id="L417">        btnCambiarFoto.setBounds(30, 330, 210, 39);</span>
+<span class="nc" id="L417">        btnCambiarFoto.setBounds(30, 330, 210, 45);</span>
 
 <span class="nc" id="L419">        etiquetaNombre1.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
 <span class="nc" id="L420">        etiquetaNombre1.setText(&quot;Nombre:&quot;);</span>
@@ -433,7 +433,7 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
 <span class="nc" id="L433">            }</span>
         });
 <span class="nc" id="L435">        panelRegUsuario.add(cajaNombre1);</span>
-<span class="nc" id="L436">        cajaNombre1.setBounds(480, 50, 160, 33);</span>
+<span class="nc" id="L436">        cajaNombre1.setBounds(480, 50, 160, 37);</span>
 
 <span class="nc" id="L438">        etiquetaErrorNombre1.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
 <span class="nc" id="L439">        panelRegUsuario.add(etiquetaErrorNombre1);</span>
@@ -584,19 +584,19 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
 <span class="nc" id="L584">    }//GEN-LAST:event_fechaNacimientoFocusLost</span>
 
     private void checkBoxIntoleranteLactosaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxIntoleranteLactosaActionPerformed
-<span class="nc" id="L587">        int posicionEnum = Usuario.Restricciones.IntoleranteALaLactosa.ordinal();</span>
+<span class="nc" id="L587">        int posicionEnum = Usuario.Restricciones.INOLERANTE_A_LA_LACTOSA.ordinal();</span>
 <span class="nc" id="L588">        boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];</span>
 <span class="nc bnc" id="L589" title="All 2 branches missed.">        usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;</span>
 <span class="nc" id="L590">    }//GEN-LAST:event_checkBoxIntoleranteLactosaActionPerformed</span>
 
     private void checkBoxHipertensionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxHipertensionActionPerformed
-<span class="nc" id="L593">        int posicionEnum = Usuario.Restricciones.Hipertension.ordinal();</span>
+<span class="nc" id="L593">        int posicionEnum = Usuario.Restricciones.HIPERTENSION.ordinal();</span>
 <span class="nc" id="L594">        boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];</span>
 <span class="nc bnc" id="L595" title="All 2 branches missed.">        usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;</span>
 <span class="nc" id="L596">    }//GEN-LAST:event_checkBoxHipertensionActionPerformed</span>
 
     private void rBMacrobioticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBMacrobioticoActionPerformed
-<span class="nc" id="L599">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Macrobiotico);</span>
+<span class="nc" id="L599">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.MACROBIOTICO);</span>
 <span class="nc" id="L600">    }//GEN-LAST:event_rBMacrobioticoActionPerformed</span>
 
     private void listaNacionalidadesUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaNacionalidadesUsuarioActionPerformed
@@ -604,25 +604,25 @@ public class PanelRegistroUsuario extends javax.swing.JPanel {
 <span class="nc" id="L604">    }//GEN-LAST:event_listaNacionalidadesUsuarioActionPerformed</span>
 
     private void rBVeganoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBVeganoActionPerformed
-<span class="nc" id="L607">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Vegano);</span>
+<span class="nc" id="L607">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.VEGANO);</span>
 <span class="nc" id="L608">    }//GEN-LAST:event_rBVeganoActionPerformed</span>
 
     private void rBVegetarianoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBVegetarianoActionPerformed
-<span class="nc" id="L611">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Vegetariano);</span>
+<span class="nc" id="L611">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.VEGETARIANO);</span>
 <span class="nc" id="L612">    }//GEN-LAST:event_rBVegetarianoActionPerformed</span>
 
     private void rBOrganicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBOrganicoActionPerformed
-<span class="nc" id="L615">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Organico);</span>
+<span class="nc" id="L615">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.ORGANICO);</span>
 <span class="nc" id="L616">    }//GEN-LAST:event_rBOrganicoActionPerformed</span>
 
     private void checkBoxCeliacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxCeliacoActionPerformed
-<span class="nc" id="L619">        int posicionEnum = Usuario.Restricciones.Celiaco.ordinal();</span>
+<span class="nc" id="L619">        int posicionEnum = Usuario.Restricciones.CELIACO.ordinal();</span>
 <span class="nc" id="L620">        boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];</span>
 <span class="nc bnc" id="L621" title="All 2 branches missed.">        usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;</span>
 <span class="nc" id="L622">    }//GEN-LAST:event_checkBoxCeliacoActionPerformed</span>
 
     private void checkBoxDiabeticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxDiabeticoActionPerformed
-<span class="nc" id="L625">        int posicionEnum = Usuario.Restricciones.Diabetico.ordinal();</span>
+<span class="nc" id="L625">        int posicionEnum = Usuario.Restricciones.DIABETICO.ordinal();</span>
 <span class="nc" id="L626">        boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];</span>
 <span class="nc bnc" id="L627" title="All 2 branches missed.">        usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;</span>
 <span class="nc" id="L628">    }//GEN-LAST:event_checkBoxDiabeticoActionPerformed</span>

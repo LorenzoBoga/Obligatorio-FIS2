@@ -97,7 +97,7 @@ public class PanelHomeUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_btnHistorialDeComidasActionPerformed
 
     private void listaDiasDeLaSemanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaDiasDeLaSemanaActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_listaDiasDeLaSemanaActionPerformed
 
     void actualizarLista() {

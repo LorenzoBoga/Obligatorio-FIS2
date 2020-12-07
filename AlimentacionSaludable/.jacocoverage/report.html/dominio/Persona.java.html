@@ -82,15 +82,20 @@ public abstract class Persona implements Serializable {
 <span class="fc bfc" id="L82" title="All 2 branches covered.">        if (obj == null) {</span>
 <span class="fc" id="L83">            retorno = false;</span>
         }
-<span class="fc bfc" id="L85" title="All 2 branches covered.">        if (obj.getClass() != this.getClass()) {</span>
+<span class="fc bfc" id="L85" title="All 4 branches covered.">        if (retorno &amp;&amp; obj.getClass() != this.getClass()) {</span>
 <span class="fc" id="L86">            retorno = false;</span>
         }
-<span class="fc bfc" id="L88" title="All 2 branches covered.">        if(retorno == true){</span>
+<span class="fc bfc" id="L88" title="All 2 branches covered.">        if(retorno){</span>
 <span class="fc" id="L89">            Persona p = (Persona) obj;</span>
 <span class="fc" id="L90">            retorno = this.getNombreUsuario()</span>
 <span class="fc" id="L91">                      .equalsIgnoreCase(p.getNombreUsuario());</span>
         }
 <span class="fc" id="L93">        return retorno;</span>
     }
+    
+    @Override
+    public int hashCode() {
+<span class="fc" id="L98">        return 7;</span>
+    } 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

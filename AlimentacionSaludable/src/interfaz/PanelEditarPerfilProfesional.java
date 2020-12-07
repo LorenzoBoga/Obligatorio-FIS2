@@ -292,12 +292,9 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
             etiquetaErrorNombreTituloProf.setText("El nombre de titulo no puede estar vacío");
         }
     }//GEN-LAST:event_cajaNombreTituloProfFocusLost
-    private void fechaGraduacionFocusLost(java.awt.event.FocusEvent evt){
-        boolean fecha = fechaGraduacion.getCalendar() != null;
-        if(fecha==false) {
-            etiquetaErrorFechaGProf.setText("La fecha de graduacion no puede ser vacía");
-        }
-    }
+    
+    
+    
 
     private void btnAceptarProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarProfActionPerformed
         boolean nombreValido = !cajaNombreProf1.getText().trim().isEmpty();
@@ -308,7 +305,7 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
         boolean contraseñaValida = validarContraseña(cajaContraseñaProfesional.getText().trim());
         if (nombreValido && apellidoValido
                 && fNacimientoValido && nombreTituloValido && fGraduacionValido && contraseñaValida) {
-            profesional.setNombre(cajaContraseñaProfesional.getText());
+            profesional.setNombre(cajaNombreProf1.getText());
             profesional.setContraseña(cajaContraseñaProfesional.getText().trim());
             profesional.setApellidos(cajaApellidosProf.getText());
             SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
@@ -328,37 +325,37 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
             interfaz.actualizarFotoYNombre();
         } else {
             etiquetaMensajeAlAceptar.setText("Error al editar el profesional");
-            if (fGraduacionValido==false){
+            if (!fGraduacionValido){
                 etiquetaErrorFechaGProf.setText("Debe ingresar una fecha");
             }
             else{
                 etiquetaErrorFechaGProf.setText("");
             }
-            if (fNacimientoValido==false){
+            if (!fNacimientoValido){
                 etiquetaErrorFechaNacimiento.setText("Debe ingresar una fecha");
             }
             else{
                 etiquetaErrorFechaNacimiento.setText("");
             }
-            if (nombreValido==false){
+            if (!nombreValido){
                 etiquetaErrorNombreProf1.setText("Debe ingresar un nombre");
             }
             else{
                 etiquetaErrorNombreProf1.setText("");
             }
-            if (apellidoValido==false){
+            if (!apellidoValido){
                 etiquetaErrorApellidoProf.setText("Debe ingresar un apellido");
             }
             else{
                 etiquetaErrorApellidoProf.setText("");
             }
-            if (nombreTituloValido==false){
+            if (!nombreTituloValido){
                 etiquetaErrorNombreTituloProf.setText("Debe ingresar un título");
             }
             else{
                 etiquetaErrorNombreTituloProf.setText("");
             }
-            if (contraseñaValida==false){
+            if (!contraseñaValida){
                 etiquetaErrorContraseñaProf.setText("Debe ingresar una contraseña");
             }
             else{
@@ -377,14 +374,14 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
             etiquetaErrorFechaNacimiento.setText("La fecha no puede ser vacía");
         }
     }//GEN-LAST:event_fechaNacimientoFocusLost
-/*
+
     private void fechaGraduacionFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fechaGraduacionFocusLost
-        //Metodo para validar que se seleccione la fecha de graduacion 
-        if (fechaGraduacion.getCalendar() == null) {
-            etiquetaErrorFechaGraduacion.setText("Debe ingresar una fecha");
+        boolean fecha = fechaGraduacion.getCalendar() != null;
+        if(!fecha) {
+            etiquetaErrorFechaGProf.setText("La fecha de graduacion no puede ser vacía");
         }
     }//GEN-LAST:event_fechaGraduacionFocusLost
-*/
+
     private void btnCambiarFotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarFotoActionPerformed
         JFileChooser fileChooser = new JFileChooser();
         FileNameExtensionFilter file = new FileNameExtensionFilter("Archivo imagen", "jpg");
@@ -399,7 +396,7 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
     }//GEN-LAST:event_btnCambiarFotoActionPerformed
 
     private void cajaApellidosProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaApellidosProfActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_cajaApellidosProfActionPerformed
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
@@ -411,7 +408,7 @@ public class PanelEditarPerfilProfesional extends javax.swing.JPanel {
     }//GEN-LAST:event_btnVolverActionPerformed
 
     private void cajaNombreProf1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaNombreProf1FocusLost
-        // TODO add your handling code here:
+     
     }//GEN-LAST:event_cajaNombreProf1FocusLost
 
     void actualizar() {

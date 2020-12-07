@@ -19,7 +19,7 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
     private Usuario usuario;
     private JFrame ventana;
     private InterfazBotonesUsuario interfaz;
-
+    
     //Constructor
     public PanelEditarPerfilUsuario(Sistema unSistema, JFrame unaVentana,
             InterfazBotonesUsuario interfazActual) {
@@ -500,7 +500,7 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
             SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
             String fNacimiento = formatter.format(fechaNacimiento.getCalendar().getTime());
             usuario.setFechaNacimiento(fNacimiento);
-            if (sexoPred == true) {
+            if (sexoPred) {
                 usuario.setSexo("Masculino");
             } else {
                 usuario.setSexo("Femenino");
@@ -518,22 +518,22 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
             interfaz.actualizarFotoYNombre();
         } else {
             etiquetaMensajeAlAceptar.setText("Error al editar el usuario");
-            if (nombreValido == false) {
+            if (!nombreValido) {
                 etiquetaErrorContraseña.setText("El nombre no puede ser vacío");
             }
-            if (apellidoValido == false) {
+            if (!apellidoValido) {
                 etiquetaErrorApellido.setText("El apellido no puede ser vacío");
             }
-            if (fNacimientoValido == false) {
+            if (!fNacimientoValido) {
                 etiquetaErrorFechaNacimiento.setText("Fecha de nacimiento no válida");
             }
-            if (altura == false) {
+            if (!altura) {
                  etiquetaErrorAltura.setText("La altura no puede estar vacía");
             }
-            if (peso == false) {
+            if (!peso) {
                  etiquetaErrorPeso.setText("El peso no puede estar vacío");
             }
-            if(contraseñaValida == false){
+            if(!contraseñaValida){
                 etiquetaErrorContraseña.setText("La contraseña debe tener al menos 8 caracteres");
             }
         }
@@ -571,7 +571,7 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_rBMacrobioticoActionPerformed
 
     private void listaNacionalidadesUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaNacionalidadesUsuarioActionPerformed
-        // TODO add your handling code here:
+      
     }//GEN-LAST:event_listaNacionalidadesUsuarioActionPerformed
 
     private void rBVeganoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBVeganoActionPerformed
@@ -599,11 +599,11 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_checkBoxDiabeticoActionPerformed
 
     private void cajaContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaContraseñaActionPerformed
-        // TODO add your handling code here:
+      
     }//GEN-LAST:event_cajaContraseñaActionPerformed
 
     private void cajaPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaPesoActionPerformed
-        // TODO add your handling code here:
+     
     }//GEN-LAST:event_cajaPesoActionPerformed
 
     private void btnCambiarFotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarFotoActionPerformed
@@ -612,8 +612,8 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
         fileChooser.setFileFilter(file);
         int imagen = fileChooser.showOpenDialog(this);
         if (imagen == JFileChooser.APPROVE_OPTION) {
-            ImageIcon fotoPerfil = new ImageIcon(fileChooser.getSelectedFile().getAbsolutePath());
-            ImageIcon fotoArreglada = resizeImageIcon(fotoPerfil, 210, 240);
+            ImageIcon fotoPerfil2 = new ImageIcon(fileChooser.getSelectedFile().getAbsolutePath());
+            ImageIcon fotoArreglada = resizeImageIcon(fotoPerfil2, 210, 240);
             usuario.setFotoPerfil(fotoArreglada);
         }
         actualizar();
@@ -628,11 +628,11 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_btnVolverActionPerformed
 
     private void cajaNombre1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaNombre1FocusLost
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_cajaNombre1FocusLost
 
     private void cajaNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombre1ActionPerformed
-        // TODO add your handling code here:
+      
     }//GEN-LAST:event_cajaNombre1ActionPerformed
 
     void actualizar() {
@@ -717,7 +717,7 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
 
     private boolean sexoPredeterminado() {
         boolean predeterminado = true;
-        if (rBtnMasculinoUsuario.isSelected() == false) {
+        if (!rBtnMasculinoUsuario.isSelected()) {
             predeterminado = false;
         }
         return predeterminado;

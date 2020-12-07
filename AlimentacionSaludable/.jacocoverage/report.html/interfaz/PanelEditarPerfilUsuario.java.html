@@ -37,9 +37,9 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
 <span class="nc" id="L37">        grupoBotonesPreferencias.add(rBOrganico);</span>
 <span class="nc" id="L38">        Usuario.Nacionalidades[] listaNac = usuario.getListaEnumNac();</span>
 <span class="nc" id="L39">        listaNacionalidadesUsuario.setModel(new DefaultComboBoxModel(listaNac));</span>
-<span class="nc" id="L40">        listaNacionalidadesUsuario.setSelectedIndex(Usuario.Nacionalidades.Uruguaya.ordinal());</span>
+<span class="nc" id="L40">        listaNacionalidadesUsuario.setSelectedIndex(Usuario.Nacionalidades.URUGUAYA.ordinal());</span>
 <span class="nc" id="L41">        usuario.setListaRestricciones(new boolean[usuario.getListaRestricciones().length]);</span>
-<span class="nc" id="L42">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Ninguna);</span>
+<span class="nc" id="L42">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.NINGUNA);</span>
 <span class="nc" id="L43">        fotoPerfil.setSize(210, 240);</span>
 <span class="nc" id="L44">    }</span>
 
@@ -58,8 +58,8 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
 <span class="nc" id="L58">        cajaApellidos = new javax.swing.JTextField();</span>
 <span class="nc" id="L59">        etiquetaPeso = new javax.swing.JLabel();</span>
 <span class="nc" id="L60">        etiquetaAltura = new javax.swing.JLabel();</span>
-<span class="nc" id="L61">        cajaAltura = new javax.swing.JTextField();</span>
-<span class="nc" id="L62">        cajaPeso = new javax.swing.JTextField();</span>
+<span class="nc" id="L61">        cajaPeso = new javax.swing.JTextField();</span>
+<span class="nc" id="L62">        cajaAltura = new javax.swing.JTextField();</span>
 <span class="nc" id="L63">        etiquetaMedidaPeso = new javax.swing.JLabel();</span>
 <span class="nc" id="L64">        etiquetaMedidaAltura = new javax.swing.JLabel();</span>
 <span class="nc" id="L65">        btnAceptarUsuario = new javax.swing.JButton();</span>
@@ -153,28 +153,28 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
 <span class="nc" id="L153">        panelEditarPerfilUsuario.add(etiquetaAltura);</span>
 <span class="nc" id="L154">        etiquetaAltura.setBounds(400, 280, 70, 26);</span>
 
-<span class="nc" id="L156">        cajaAltura.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L157">        cajaAltura.addFocusListener(new java.awt.event.FocusAdapter() {</span>
+<span class="nc" id="L156">        cajaPeso.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L157">        cajaPeso.addFocusListener(new java.awt.event.FocusAdapter() {</span>
             public void focusLost(java.awt.event.FocusEvent evt) {
-<span class="nc" id="L159">                cajaAlturaFocusLost(evt);</span>
+<span class="nc" id="L159">                cajaPesoFocusLost(evt);</span>
 <span class="nc" id="L160">            }</span>
         });
-<span class="nc" id="L162">        cajaAltura.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L162">        cajaPeso.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L164">                cajaAlturaActionPerformed(evt);</span>
+<span class="nc" id="L164">                cajaPesoActionPerformed(evt);</span>
 <span class="nc" id="L165">            }</span>
         });
-<span class="nc" id="L167">        panelEditarPerfilUsuario.add(cajaAltura);</span>
-<span class="nc" id="L168">        cajaAltura.setBounds(480, 330, 160, 37);</span>
+<span class="nc" id="L167">        panelEditarPerfilUsuario.add(cajaPeso);</span>
+<span class="nc" id="L168">        cajaPeso.setBounds(480, 330, 160, 37);</span>
 
-<span class="nc" id="L170">        cajaPeso.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
-<span class="nc" id="L171">        cajaPeso.addFocusListener(new java.awt.event.FocusAdapter() {</span>
+<span class="nc" id="L170">        cajaAltura.setFont(new java.awt.Font(&quot;Tahoma&quot;, 0, 24)); // NOI18N</span>
+<span class="nc" id="L171">        cajaAltura.addFocusListener(new java.awt.event.FocusAdapter() {</span>
             public void focusLost(java.awt.event.FocusEvent evt) {
-<span class="nc" id="L173">                cajaPesoFocusLost(evt);</span>
+<span class="nc" id="L173">                cajaAlturaFocusLost(evt);</span>
 <span class="nc" id="L174">            }</span>
         });
-<span class="nc" id="L176">        panelEditarPerfilUsuario.add(cajaPeso);</span>
-<span class="nc" id="L177">        cajaPeso.setBounds(480, 280, 160, 37);</span>
+<span class="nc" id="L176">        panelEditarPerfilUsuario.add(cajaAltura);</span>
+<span class="nc" id="L177">        cajaAltura.setBounds(480, 280, 160, 37);</span>
 
 <span class="nc" id="L179">        etiquetaMedidaPeso.setText(&quot;Kg&quot;);</span>
 <span class="nc" id="L180">        panelEditarPerfilUsuario.add(etiquetaMedidaPeso);</span>
@@ -470,26 +470,26 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
         }
 <span class="nc" id="L471">    }//GEN-LAST:event_cajaApellidosFocusLost</span>
 
-    private void cajaAlturaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaAlturaFocusLost
-<span class="nc" id="L474">        String altura = cajaAltura.getText();</span>
+    private void cajaPesoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaPesoFocusLost
+<span class="nc" id="L474">        String altura = cajaPeso.getText();</span>
 <span class="nc bnc" id="L475" title="All 2 branches missed.">        if (altura.trim().isEmpty()) {</span>
 <span class="nc" id="L476">            etiquetaErrorAltura.setText(&quot;La altura no puede estar vacía&quot;);</span>
         }
-<span class="nc" id="L478">    }//GEN-LAST:event_cajaAlturaFocusLost</span>
+<span class="nc" id="L478">    }//GEN-LAST:event_cajaPesoFocusLost</span>
 
-    private void cajaPesoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaPesoFocusLost
-<span class="nc" id="L481">        String peso = cajaPeso.getText();</span>
+    private void cajaAlturaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cajaAlturaFocusLost
+<span class="nc" id="L481">        String peso = cajaAltura.getText();</span>
 <span class="nc bnc" id="L482" title="All 2 branches missed.">        if (peso.trim().isEmpty()) {</span>
 <span class="nc" id="L483">            etiquetaErrorAltura.setText(&quot;El peso no puede estar vacío&quot;);</span>
         }
-<span class="nc" id="L485">    }//GEN-LAST:event_cajaPesoFocusLost</span>
+<span class="nc" id="L485">    }//GEN-LAST:event_cajaAlturaFocusLost</span>
 
     private void btnAceptarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarUsuarioActionPerformed
 <span class="nc bnc" id="L488" title="All 2 branches missed.">        boolean nombreValido = !cajaNombre1.getText().trim().isEmpty();</span>
 <span class="nc bnc" id="L489" title="All 2 branches missed.">        boolean apellidoValido = !cajaApellidos.getText().trim().isEmpty();</span>
 <span class="nc bnc" id="L490" title="All 2 branches missed.">        boolean fNacimientoValido = fechaNacimiento.getCalendar() != null;</span>
-<span class="nc" id="L491">        boolean altura = pidoDatoNumerico(cajaAltura.getText(), 0, 265, etiquetaErrorAltura);</span>
-<span class="nc" id="L492">        boolean peso = pidoDatoNumerico(cajaPeso.getText(), 0, 265, etiquetaErrorPeso);</span>
+<span class="nc" id="L491">        boolean altura = pidoDatoNumerico(cajaPeso.getText(), 0, 265, etiquetaErrorAltura);</span>
+<span class="nc" id="L492">        boolean peso = pidoDatoNumerico(cajaAltura.getText(), 0, 265, etiquetaErrorPeso);</span>
 <span class="nc" id="L493">        boolean sexoPred = sexoPredeterminado();</span>
 <span class="nc" id="L494">         boolean contraseñaValida = validarContraseña(cajaContraseña.getText().trim());</span>
 <span class="nc bnc" id="L495" title="All 12 branches missed.">        if (nombreValido &amp;&amp; apellidoValido</span>
@@ -505,8 +505,8 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
             } else {
 <span class="nc" id="L506">                usuario.setSexo(&quot;Femenino&quot;);</span>
             }
-<span class="nc" id="L508">            usuario.setAlturaCm(Integer.parseInt(cajaAltura.getText()));</span>
-<span class="nc" id="L509">            usuario.setPesoKg(Integer.parseInt(cajaPeso.getText()));</span>
+<span class="nc" id="L508">            usuario.setAlturaCm(Integer.parseInt(cajaPeso.getText()));</span>
+<span class="nc" id="L509">            usuario.setPesoKg(Integer.parseInt(cajaAltura.getText()));</span>
 <span class="nc" id="L510">            usuario.setFotoPerfil((ImageIcon) fotoPerfil.getIcon());</span>
 <span class="nc" id="L511">            etiquetaMensajeAlAceptar.setText(&quot;Usuario editado correctamente&quot;);</span>
 <span class="nc" id="L512">            usuario.setContraseña(cajaContraseña.getText().trim());</span>
@@ -555,19 +555,19 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
 <span class="nc" id="L555">    }//GEN-LAST:event_fechaNacimientoFocusLost</span>
 
     private void checkBoxIntoleranteLactosaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxIntoleranteLactosaActionPerformed
-<span class="nc" id="L558">        int posicionEnum = Usuario.Restricciones.IntoleranteALaLactosa.ordinal();</span>
+<span class="nc" id="L558">        int posicionEnum = Usuario.Restricciones.INOLERANTE_A_LA_LACTOSA.ordinal();</span>
 <span class="nc" id="L559">        boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];</span>
 <span class="nc bnc" id="L560" title="All 2 branches missed.">        usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;</span>
 <span class="nc" id="L561">    }//GEN-LAST:event_checkBoxIntoleranteLactosaActionPerformed</span>
 
     private void checkBoxHipertensionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxHipertensionActionPerformed
-<span class="nc" id="L564">        int posicionEnum = Usuario.Restricciones.Hipertension.ordinal();</span>
+<span class="nc" id="L564">        int posicionEnum = Usuario.Restricciones.HIPERTENSION.ordinal();</span>
 <span class="nc" id="L565">        boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];</span>
 <span class="nc bnc" id="L566" title="All 2 branches missed.">        usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;</span>
 <span class="nc" id="L567">    }//GEN-LAST:event_checkBoxHipertensionActionPerformed</span>
 
     private void rBMacrobioticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBMacrobioticoActionPerformed
-<span class="nc" id="L570">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Macrobiotico);</span>
+<span class="nc" id="L570">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.MACROBIOTICO);</span>
 <span class="nc" id="L571">    }//GEN-LAST:event_rBMacrobioticoActionPerformed</span>
 
     private void listaNacionalidadesUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaNacionalidadesUsuarioActionPerformed
@@ -575,25 +575,25 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
 <span class="nc" id="L575">    }//GEN-LAST:event_listaNacionalidadesUsuarioActionPerformed</span>
 
     private void rBVeganoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBVeganoActionPerformed
-<span class="nc" id="L578">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Vegano);</span>
+<span class="nc" id="L578">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.VEGANO);</span>
 <span class="nc" id="L579">    }//GEN-LAST:event_rBVeganoActionPerformed</span>
 
     private void rBVegetarianoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBVegetarianoActionPerformed
-<span class="nc" id="L582">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Vegetariano);</span>
+<span class="nc" id="L582">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.VEGETARIANO);</span>
 <span class="nc" id="L583">    }//GEN-LAST:event_rBVegetarianoActionPerformed</span>
 
     private void rBOrganicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rBOrganicoActionPerformed
-<span class="nc" id="L586">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.Organico);</span>
+<span class="nc" id="L586">        usuario.setPreferenciasAlimentarias(Usuario.Preferencias.ORGANICO);</span>
 <span class="nc" id="L587">    }//GEN-LAST:event_rBOrganicoActionPerformed</span>
 
     private void checkBoxCeliacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxCeliacoActionPerformed
-<span class="nc" id="L590">        int posicionEnum = Usuario.Restricciones.Celiaco.ordinal();</span>
+<span class="nc" id="L590">        int posicionEnum = Usuario.Restricciones.CELIACO.ordinal();</span>
 <span class="nc" id="L591">        boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];</span>
 <span class="nc bnc" id="L592" title="All 2 branches missed.">        usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;</span>
 <span class="nc" id="L593">    }//GEN-LAST:event_checkBoxCeliacoActionPerformed</span>
 
     private void checkBoxDiabeticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxDiabeticoActionPerformed
-<span class="nc" id="L596">        int posicionEnum = Usuario.Restricciones.Diabetico.ordinal();</span>
+<span class="nc" id="L596">        int posicionEnum = Usuario.Restricciones.DIABETICO.ordinal();</span>
 <span class="nc" id="L597">        boolean valorEnPos = usuario.getListaRestricciones()[posicionEnum];</span>
 <span class="nc bnc" id="L598" title="All 2 branches missed.">        usuario.getListaRestricciones()[posicionEnum] = !valorEnPos;</span>
 <span class="nc" id="L599">    }//GEN-LAST:event_checkBoxDiabeticoActionPerformed</span>
@@ -602,9 +602,9 @@ public class PanelEditarPerfilUsuario extends javax.swing.JPanel {
         // TODO add your handling code here:
 <span class="nc" id="L603">    }//GEN-LAST:event_cajaContraseñaActionPerformed</span>
 
-    private void cajaAlturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaAlturaActionPerformed
+    private void cajaPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaPesoActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L607">    }//GEN-LAST:event_cajaAlturaActionPerformed</span>
+<span class="nc" id="L607">    }//GEN-LAST:event_cajaPesoActionPerformed</span>
 
     private void btnCambiarFotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarFotoActionPerformed
 <span class="nc" id="L610">        JFileChooser fileChooser = new JFileChooser();</span>

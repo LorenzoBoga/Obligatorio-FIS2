@@ -136,11 +136,11 @@ public class PanelPerfilUsuario extends javax.swing.JPanel {
         String retorno = "";
         int contador = 0;
         for (int i = 0; i < unUsuario.getListaRestricciones().length; i++) {
-            if (unUsuario.getListaRestricciones()[i] == true) {
+            if (unUsuario.getListaRestricciones()[i]) {
                 cantidadDeRestricciones++;
             }
         }
-        if (unUsuario.getListaRestricciones()[Usuario.Restricciones.CELIACO.ordinal()] == true) {
+        if (unUsuario.getListaRestricciones()[Usuario.Restricciones.CELIACO.ordinal()]) {
             if (contador == cantidadDeRestricciones - 1) {
                 retorno += "Celiaco";
             } else {
@@ -149,7 +149,7 @@ public class PanelPerfilUsuario extends javax.swing.JPanel {
             }
 
         }
-        if (unUsuario.getListaRestricciones()[Usuario.Restricciones.DIABETICO.ordinal()] == true) {
+        if (unUsuario.getListaRestricciones()[Usuario.Restricciones.DIABETICO.ordinal()]) {
             if (contador == cantidadDeRestricciones - 1) {
                 retorno += "Diabético";
             } else {
@@ -157,7 +157,7 @@ public class PanelPerfilUsuario extends javax.swing.JPanel {
                 contador++;
             }
         }
-        if (unUsuario.getListaRestricciones()[Usuario.Restricciones.HIPERTENSION.ordinal()] == true) {
+        if (unUsuario.getListaRestricciones()[Usuario.Restricciones.HIPERTENSION.ordinal()]) {
             if (contador == cantidadDeRestricciones - 1) {
                 retorno += "Hipertensión";
             } else {
@@ -165,7 +165,7 @@ public class PanelPerfilUsuario extends javax.swing.JPanel {
                 contador++;
             }
         }
-        if (unUsuario.getListaRestricciones()[Usuario.Restricciones.INOLERANTE_A_LA_LACTOSA.ordinal()] == true) {
+        if (unUsuario.getListaRestricciones()[Usuario.Restricciones.INOLERANTE_A_LA_LACTOSA.ordinal()]) {
             if (contador == cantidadDeRestricciones - 1) {
                 retorno += "Intolerancia a la lactosa";
             } else {

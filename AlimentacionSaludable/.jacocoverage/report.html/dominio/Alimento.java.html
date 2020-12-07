@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Alimento.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;AlimentacionSaludable&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">dominio</a> &gt; <span class="el_source">Alimento.java</span></div><h1>Alimento.java</h1><pre class="source lang-java linenums">package dominio;
 
 import java.io.Serializable;
-import java.util.Objects;
 import java.util.Optional;
 
 public class Alimento implements Serializable {
@@ -10,118 +9,122 @@ public class Alimento implements Serializable {
     private static final long serialVersionUID = 6106269076155338045L;
     private String nombre;
     private TipoAlimento tipo;
-<span class="fc" id="L13">    private TipoAlimento[] listaEnumTipoAlimento = inicializoEnumTipoAlimento();</span>
-<span class="fc" id="L14">    private Nutrientes[] listaEnumNutrientes = inicializoEnumNutrientes();</span>
+<span class="fc" id="L12">    private TipoAlimento[] listaEnumTipoAlimento = inicializoEnumTipoAlimento();</span>
+<span class="fc" id="L13">    private Nutrientes[] listaEnumNutrientes = inicializoEnumNutrientes();</span>
     private boolean[] listaNutrientesSeleccionados;
 
     //Constructor
-<span class="fc" id="L18">    public Alimento() {</span>
-<span class="fc" id="L19">        this.nombre = &quot;sin nombre&quot;;</span>
-<span class="fc" id="L20">        this.tipo = TipoAlimento.Otro;</span>
-<span class="fc" id="L21">        this.listaNutrientesSeleccionados = new boolean[listaEnumNutrientes</span>
-                                                        .length];
-<span class="fc" id="L23">    }</span>
+<span class="fc" id="L17">    public Alimento() {</span>
+<span class="fc" id="L18">        this.nombre = &quot;sin nombre&quot;;</span>
+<span class="fc" id="L19">        this.tipo = TipoAlimento.OTRO;</span>
+<span class="fc" id="L20">        this.listaNutrientesSeleccionados = new boolean[listaEnumNutrientes.length];</span>
+<span class="fc" id="L21">    }</span>
 
     //Metodos de la clase Aliemntos
     public String getNombre() {
-<span class="fc" id="L27">        return nombre;</span>
+<span class="fc" id="L25">        return nombre;</span>
     }
 
     public void setNombre(String nombre) {
-<span class="fc bfc" id="L31" title="All 2 branches covered.">        if(!nombre.trim().isEmpty()){</span>
-<span class="fc" id="L32">            this.nombre = nombre;</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">        if (!nombre.trim().isEmpty()) {</span>
+<span class="fc" id="L30">            this.nombre = nombre;</span>
         }
-<span class="fc" id="L34">    }</span>
+<span class="fc" id="L32">    }</span>
 
     public TipoAlimento getTipo() {
-<span class="fc" id="L37">        return tipo;</span>
+<span class="fc" id="L35">        return tipo;</span>
     }
 
     public void setTipo(TipoAlimento tipo) {
-<span class="fc" id="L41">        this.tipo = tipo;</span>
-<span class="fc" id="L42">    }</span>
+<span class="fc" id="L39">        this.tipo = tipo;</span>
+<span class="fc" id="L40">    }</span>
 
     public Nutrientes[] getListaEnumNutrientes() {
-<span class="nc" id="L45">        Nutrientes[] lista = listaEnumNutrientes;</span>
-<span class="nc" id="L46">        return lista;</span>
+<span class="nc" id="L43">        return listaEnumNutrientes;</span>
     }
 
     public void setListaEnumNutrientes(Nutrientes[] listaEnumNutrientes) {
-<span class="nc" id="L50">        this.listaEnumNutrientes = Optional</span>
-<span class="nc" id="L51">                .ofNullable(listaEnumNutrientes)</span>
-<span class="nc" id="L52">                .orElse(null);</span>
-<span class="nc" id="L53">    }</span>
+<span class="nc" id="L47">        this.listaEnumNutrientes = Optional</span>
+<span class="nc" id="L48">                .ofNullable(listaEnumNutrientes)</span>
+<span class="nc" id="L49">                .orElse(null);</span>
+<span class="nc" id="L50">    }</span>
 
     public TipoAlimento[] getListaEnumTipoAlimento() {
-<span class="fc" id="L56">        TipoAlimento[] lista = listaEnumTipoAlimento;</span>
-<span class="fc" id="L57">        return lista;</span>
+<span class="fc" id="L53">        return listaEnumTipoAlimento;</span>
     }
 
-    public void setListaEnumTipoAlimento(TipoAlimento[]
-                                         listaEnumTipoAlimento) {
-<span class="nc" id="L62">        this.listaEnumTipoAlimento = Optional</span>
-<span class="nc" id="L63">                .ofNullable(listaEnumTipoAlimento)</span>
-<span class="nc" id="L64">                .orElse(null);</span>
-<span class="nc" id="L65">    }</span>
+    public void setListaEnumTipoAlimento(TipoAlimento[] listaEnumTipoAlimento) {
+<span class="nc" id="L57">        this.listaEnumTipoAlimento = Optional</span>
+<span class="nc" id="L58">                .ofNullable(listaEnumTipoAlimento)</span>
+<span class="nc" id="L59">                .orElse(null);</span>
+<span class="nc" id="L60">    }</span>
 
     public boolean[] getListaNutrientesSeleccionados() {
-<span class="fc" id="L68">        boolean[] lista = listaNutrientesSeleccionados;</span>
-<span class="fc" id="L69">        return lista;</span>
+<span class="fc" id="L63">        return listaNutrientesSeleccionados;</span>
     }
 
-    public void setListaNutrientesSeleccionados(boolean[]
-                                                listaNutrientesSeleccionados) {
-<span class="fc" id="L74">        this.listaNutrientesSeleccionados = Optional</span>
-<span class="fc" id="L75">                .ofNullable(listaNutrientesSeleccionados)</span>
-<span class="fc" id="L76">                .orElse(null);</span>
-<span class="fc" id="L77">    }</span>
+    public void setListaNutrientesSeleccionados(boolean[] listaNutrientesSeleccionados) {
+<span class="fc" id="L67">        this.listaNutrientesSeleccionados = Optional</span>
+<span class="fc" id="L68">                .ofNullable(listaNutrientesSeleccionados)</span>
+<span class="fc" id="L69">                .orElse(null);</span>
+<span class="fc" id="L70">    }</span>
 
-<span class="pc" id="L79">    public enum TipoAlimento {</span>
-<span class="fc" id="L80">        Fruta, Cereal, Legumbre, CarnesBlancas, CarnesRojas, Vegetales,</span>
-<span class="fc" id="L81">        Embutidos, Lacteos, Bebidas, Mariscos, Postres, Otro,</span>
-<span class="fc" id="L82">        ProvenienteDeAnimales</span>
+<span class="pc" id="L72">    public enum TipoAlimento {</span>
+<span class="fc" id="L73">        FRUTA, CEREAL, LEGUMBRE, CARNES_BLANCAS, CARNES_ROJAS, VEGETALES,</span>
+<span class="fc" id="L74">        EMBUTIDOS, LACTEOS, BEBIDAS, MARISCOS, POSTRES, OTRO,</span>
+<span class="fc" id="L75">        PROVENIENTE_DE_ANIMALES</span>
     }
 
     public TipoAlimento[] inicializoEnumTipoAlimento() {
-<span class="fc" id="L86">        TipoAlimento[] listaEnumPivot = {</span>
-            TipoAlimento.Bebidas, TipoAlimento.CarnesBlancas,
-            TipoAlimento.CarnesRojas, TipoAlimento.Cereal,
-            TipoAlimento.Embutidos, TipoAlimento.Fruta,
-            TipoAlimento.Lacteos, TipoAlimento.Legumbre,
-            TipoAlimento.Mariscos, TipoAlimento.Otro,
-            TipoAlimento.Postres, TipoAlimento.ProvenienteDeAnimales,
-            TipoAlimento.Vegetales
+<span class="fc" id="L79">        return new TipoAlimento[] {</span>
+            TipoAlimento.BEBIDAS, TipoAlimento.CARNES_BLANCAS,
+            TipoAlimento.CARNES_ROJAS, TipoAlimento.CEREAL,
+            TipoAlimento.EMBUTIDOS, TipoAlimento.FRUTA,
+            TipoAlimento.LACTEOS, TipoAlimento.LEGUMBRE,
+            TipoAlimento.MARISCOS, TipoAlimento.OTRO,
+            TipoAlimento.POSTRES, TipoAlimento.PROVENIENTE_DE_ANIMALES,
+            TipoAlimento.VEGETALES
         };
-<span class="fc" id="L95">        return listaEnumPivot;</span>
     }
 
-<span class="pc" id="L98">    public enum Nutrientes {</span>
-<span class="fc" id="L99">        Proteinas, Lipidos, HidratosDeCarbono, Vitaminas, Minerales, Agua,</span>
-<span class="fc" id="L100">        Fibra, Ninguna</span>
+<span class="pc" id="L90">    public enum Nutrientes {</span>
+<span class="fc" id="L91">        PROTEINAS, LIPIDOS, HIDRATOS_DE_CARBONO, VITAMINAS, MINERALES, AGUA,</span>
+<span class="fc" id="L92">        FIBRA, NINGUNA</span>
     }
 
     public Nutrientes[] inicializoEnumNutrientes() {
-<span class="fc" id="L104">        Nutrientes[] listaEnumPivot = {</span>
-            Nutrientes.Agua, Nutrientes.Fibra,
-            Nutrientes.HidratosDeCarbono,
-            Nutrientes.Lipidos, Nutrientes.Minerales,
-            Nutrientes.Proteinas, Nutrientes.Vitaminas
+<span class="fc" id="L96">        return new Nutrientes[]{</span>
+            Nutrientes.AGUA, Nutrientes.FIBRA,
+            Nutrientes.HIDRATOS_DE_CARBONO,
+            Nutrientes.LIPIDOS, Nutrientes.MINERALES,
+            Nutrientes.PROTEINAS, Nutrientes.VITAMINAS
         };
-<span class="fc" id="L110">        return listaEnumPivot;</span>
     }
 
     //redefino toString
     @Override
     public String toString() {
-<span class="fc" id="L116">        return nombre;</span>
+<span class="fc" id="L107">        return nombre;</span>
     }
 
     @Override
     public int hashCode() {
-<span class="nc" id="L121">        int hash = 7;</span>
-<span class="nc" id="L122">        return hash;</span>
-    } 
-    
+<span class="nc" id="L112">        return 7;</span>
+    }
 
+    @Override
+    public boolean equals(Object obj) {
+<span class="fc" id="L117">        boolean retorno=true;</span>
+<span class="pc bpc" id="L118" title="1 of 2 branches missed.">        if (obj == null) {</span>
+<span class="nc" id="L119">            retorno= false;</span>
+        }
+<span class="pc bpc" id="L121" title="2 of 4 branches missed.">        if (retorno &amp;&amp; getClass() != obj.getClass()) {</span>
+<span class="nc" id="L122">            retorno= false;</span>
+        }
+<span class="pc bpc" id="L124" title="1 of 2 branches missed.">        if (retorno) {</span>
+<span class="fc" id="L125">            retorno=this.nombre.equals(((Alimento) obj).nombre);</span>
+        }
+<span class="fc" id="L127">        return retorno;</span>
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

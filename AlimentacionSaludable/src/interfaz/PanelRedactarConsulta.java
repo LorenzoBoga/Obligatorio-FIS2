@@ -123,7 +123,7 @@ public class PanelRedactarConsulta extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void listaProfConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaProfConsultaActionPerformed
-        // TODO add your handling code here:
+     
     }//GEN-LAST:event_listaProfConsultaActionPerformed
 
     private void btnEnviarConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarConsultaActionPerformed
@@ -146,7 +146,7 @@ public class PanelRedactarConsulta extends javax.swing.JPanel {
     }//GEN-LAST:event_btnVolverConsultasActionPerformed
 
     private void cajaAsuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaAsuntoActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_cajaAsuntoActionPerformed
 
 
